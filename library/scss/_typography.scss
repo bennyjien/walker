@@ -1,0 +1,189 @@
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	color: $color-text;
+	font: 400 100%/1.5 $sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+ol, ul, dl,
+p, address, blockquote, figure, pre, table, hr {
+	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	text-rendering: optimizelegibility;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	font-size: 2.25em;
+	line-height: 1.111111111;
+}
+
+h2 {
+	font-size: 1.875em;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1.333333333;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.2;
+}
+
+h5 {
+	font-size: 1.125em;
+	line-height: 1.333333333;
+}
+
+h6 {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+a {
+	color: $color-one;
+	text-decoration: none;
+
+	&:visited {
+		color: $color-one-dark;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-one-light;
+		text-decoration: underline;
+	}
+
+	&:active {
+		color: $color-one-light;
+	}
+}
+
+ol,
+ul {
+	margin-top: 0;
+
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+dl {
+	margin-top: 0;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-left: 0;
+}
+
+blockquote {
+	border-left: 4px solid $shade;
+	margin-left: 0;
+	padding: 0.75em 1.5em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	small {
+		color: $color-text-light;
+
+		&:before {
+			content: "— ";
+		}
+	}
+}
+
+abbr[title] {
+	border-bottom: 1px dotted $color-border;
+	cursor: help;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: $monospace;
+}
+
+code {
+	background-color: $shade;
+	font-size: 0.875em;
+	padding: 0.125rem 0.25rem;
+}
+
+kbd {
+	background-color: $color-dark;
+	border-radius: 3px;
+	color: $white;
+	font-size: 0.875em;
+	padding: 0.125rem 0.25rem;
+
+	kbd {
+		font-size: 1em;
+		font-weight: 700;
+		padding: 0;
+	}
+}
+
+pre {
+	background-color: $shade;
+	border: 1px solid $shade;
+	border-radius: 3px;
+	display: block;
+	font-size: 0.875em;
+	padding: 0.75rem;
+	word-break: break-all;
+	word-wrap: break-word;
+
+	code {
+		background-color: transparent;
+		border-radius: 0;
+		color: inherit;
+		font-size: inherit;
+		padding: 0;
+		white-space: pre-wrap;
+	}
+}
+
+small {
+	font-size: 0.875em;
+}
+
+hr {
+	background-color: $shade;
+	border: 0;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 66%;
+}

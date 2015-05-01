@@ -1,0 +1,43 @@
+/*!
+Theme Name: Walker
+Theme URI: http://icubic.co.id/
+Description: This site is infected with Walker. Switching to another theme is not recommended since this theme is definitely more awesome.
+Author: Benny Jien
+Author URI: http://bennyjien.com/
+Version: 2.13
+Tags: sass, responsive, animsition, velocity, woocommerce
+*/
+
+@import "mixins";
+
+@import "normalize";
+@import "typography";
+@import "table";
+@import "form";
+
+@import "font-awesome";
+
+@import "magnific-popup";
+@import "photoswipe";
+
+@import "ninja-forms";
+@import "woocommerce";
+
+@import "layout";
+@import "header";
+@import "sidebar";
+@import "footer";
+
+@import "helper";
+@import "global";
+@import "entry";
+
+@import "archive";
+@import "comments";
+@import "index";
+@import "search";
+@import "single";
+
+@import "keyframes";
+
+@media print { @import "print"; }

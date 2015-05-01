@@ -1,0 +1,11 @@
+.archive-content {
+
+	.post {
+
+		+ .post {
+			border-top: 1px solid $shade;
+			margin-top: 1.5em;
+			padding-top: 1.5em;
+		}
+	}
+}

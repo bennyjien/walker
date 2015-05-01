@@ -1,0 +1,157 @@
+// BREAKPOINT
+
+@mixin breakpoint($zombie) {
+	@if $zombie == creeper {
+		@media only screen and (min-width: 480px) { @content; }
+	}
+	@else if $zombie == crawler {
+		@media only screen and (min-width: 640px) { @content; }
+	}
+	@else if $zombie == walker {
+		@media only screen and (min-width: 768px) { @content; }
+	}
+	@else if $zombie == runner {
+		@media only screen and (min-width: 1024px) { @content; }
+	}
+	@else if $zombie == jumper {
+		@media only screen and (min-width: 1152px) { @content; }
+	}
+	@else if $zombie == flyer {
+		@media only screen and (min-width: 1280px) { @content; }
+	}
+	@else if $zombie == teleporter {
+		@media only screen and (min-width: 1440px) { @content; }
+	}
+	@else if $zombie == demigod {
+		@media only screen and (min-width: 1600px) { @content; }
+	}
+	@else if $zombie == god {
+		@media only screen and (min-width: 1920px) { @content; }
+	}
+	@else if $zombie == watcher {
+		@media only screen and (-o-min-device-pixel-ratio: 1.5),
+			   only screen and (-webkit-min-device-pixel-ratio: 1.5),
+			   only screen and (min-resolution: 144dpi) { @content; }
+	}
+}
+
+
+// OPACITY
+
+$opacity: 					0.08;
+$opacity-lower: 			0.16;
+$opacity-low: 				0.24;
+$opacity-medium: 			0.48;
+$opacity-high: 				0.64;
+$opacity-higher: 			0.88;
+$opacity-cover: 			0.96;
+
+$opacity-percent: 			$opacity*100%;
+$opacity-lower-percent: 	$opacity-lower*100%;
+$opacity-low-percent: 		$opacity-low*100%;
+$opacity-medium-percent: 	$opacity-medium*100%;
+$opacity-high-percent: 		$opacity-high*100%;
+$opacity-higher-percent: 	$opacity-higher*100%;
+$opacity-cover-percent: 	$opacity-cover*100%;
+
+
+// COLORS
+
+$white: 				#ffffff;
+$black: 				#000000;
+
+$white-smoke: 			#eeeeee;
+$silver: 				#dddddd;
+$suva-grey: 			#888888;
+$charcoal: 				#444444;
+$night-rider: 			#303030;
+
+$forest-green: 			#259b24;
+$lime-green: 			#2bad29;
+$green: 				#056f00;
+
+$torch-red: 			#e00032;
+$crimson: 				#f20e3c;
+$free-speech-red: 		#c00010;
+
+$color-lighter: 		$white-smoke;
+$color-light: 			$silver;
+$color-medium: 			$suva-grey;
+$color-dark: 			$charcoal;
+$color-darker: 			$night-rider;
+
+$color-one: 			$forest-green;
+$color-one-light: 		$lime-green;
+$color-one-dark: 		$green;
+
+$color-two: 			$torch-red;
+$color-two-light: 		$crimson;
+$color-two-dark: 		$free-speech-red;
+
+$tint: 					rgba($white, $opacity);
+$tint-lower: 			rgba($white, $opacity-lower);
+$tint-low: 				rgba($white, $opacity-low);
+$tint-medium: 			rgba($white, $opacity-medium);
+$tint-high: 			rgba($white, $opacity-high);
+$tint-higher: 			rgba($white, $opacity-higher);
+$tint-cover: 			rgba($white, $opacity-cover);
+
+$shade: 				rgba($black, $opacity);
+$shade-lower: 			rgba($black, $opacity-lower);
+$shade-low: 			rgba($black, $opacity-low);
+$shade-medium: 			rgba($black, $opacity-medium);
+$shade-high: 			rgba($black, $opacity-high);
+$shade-higher: 			rgba($black, $opacity-higher);
+$shade-cover: 			rgba($black, $opacity-cover);
+
+$color-viewport: 		$color-darker;
+$color-background: 		$white;
+
+$color-text: 			$color-darker;
+$color-text-light: 		$color-dark;
+
+$color-border: 			$color-light;
+
+$color-dribbble: 		#ea4c89;
+$color-facebook: 		#3b5998;
+$color-google: 			#cc3732;
+$color-instagram: 		#3f729b;
+$color-linkedin: 		#0077b5;
+$color-pinterest: 		#cc2127;
+$color-twitter: 		#00aced;
+$color-youtube: 		#cd201f;
+
+
+// TYPOGRAPHY
+
+$sans-serif: 	"Helvetica Neue", sans-serif;
+$serif: 		"Georgia", serif;
+$monospace: 	monospace, serif;
+
+
+// TRANSITION
+
+$ease: 		ease-in-out;
+$bounce: 	cubic-bezier(0.8, 0.2, 0.3, 1.2);
+
+
+// MIXINS
+
+@mixin clearfix {
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -1,0 +1,56 @@
+table {
+	background-color: $white;
+	border: 1px solid $color-border;
+	max-width: 100%;
+	width: 100%;
+
+	caption {
+		color: $color-dark;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+		text-align: left;
+
+		strong {
+			color: $color-text;
+		}
+	}
+
+
+	> thead,
+	> tbody,
+	> tfoot {
+
+		> tr {
+
+			> th,
+			> td {
+				border: 1px solid $color-border;
+				padding: 0.25rem 0.5rem;
+				text-align: left;
+				vertical-align: top;
+			}
+		}
+	}
+
+	> thead > tr > th {
+		vertical-align: bottom;
+		border-bottom: 2px solid $color-border;
+	}
+
+	> caption + thead,
+	> colgroup + thead,
+	> thead:first-child {
+
+		> tr:first-child {
+
+			> th,
+			> td {
+				border-top: 0;
+			}
+		}
+	}
+
+	> tbody + tbody {
+		border-top: 2px solid $color-border;
+	}
+}

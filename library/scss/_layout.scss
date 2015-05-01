@@ -1,0 +1,189 @@
+* {
+	box-sizing: border-box;
+
+	&:after,
+	&:before {
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: $color-viewport;
+}
+
+nav {
+
+	ol,
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.container {
+	background-color: $color-background;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	> * {
+		transition: transform 0.3s $ease;
+	}
+}
+
+.js-nav-active {
+	user-select: none;
+
+	.container {
+
+		&:before {
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 5;
+		}
+
+		> * {
+			transform: translateX(-16rem);
+
+			@include breakpoint(walker) {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 28em;
+	padding: 0 1em;
+
+	@include breakpoint(creeper) {
+		max-width: 70em;
+		padding: 0 2em;
+	}
+
+	@include breakpoint(jumper) {
+		max-width: 80em;
+		padding: 0 3em;
+	}
+}
+
+.site-header {
+	position: relative;
+	width: 100%;
+	z-index: 8;
+}
+
+.main-nav {
+	display: block;
+	height: 100%;
+	max-height: none !important;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(16em);
+	width: 16em;
+	z-index: 9;
+
+	@include breakpoint(walker) {
+		height: auto;
+		pointer-events: none;
+		right: 0;
+		top: 1.5em;
+		transform: none;
+		width: 100%;
+	}
+
+	&.opened {
+		transform: translateX(0);
+
+		@include breakpoint(walker) {
+			transform: translateX(0);
+		}
+	}
+}
+
+.site-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	position: relative;
+	z-index: 3;
+
+	.page-content {
+		flex: 1 0 auto;
+		position: relative;
+
+		> .inner {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+}
+
+.main {
+	width: 100%;
+
+	@include breakpoint(walker) {
+		float: left;
+		width: 62.5%;
+		width: calc(100% - 14.5em);
+	}
+
+	@include breakpoint(runner) {
+		width: calc(100% - 19em);
+	}
+
+	&.fullscreen {
+		width: 100%;
+	}
+}
+
+.sidebar {
+	display: none;
+	width: 100%;
+
+	@include breakpoint(walker) {
+		display: block;
+		float: right;
+		width: 33.333333333%;
+		width: calc(12.5em);
+	}
+
+	@include breakpoint(runner) {
+		width: calc(16em);
+	}
+}
+
+.site-footer {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+}
