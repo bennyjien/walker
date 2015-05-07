@@ -1,8 +1,7 @@
 <?php
 
 /* LAUNCH WALKER */
-
-add_action('after_setup_theme','walker_walk', 15);
+add_action('after_setup_theme', 'walker_walk', 15);
 
 function walker_walk() {
 
@@ -34,9 +33,7 @@ function walker_walk() {
 
 }
 
-
 /* CLEAN WP_HEAD */
-
 function walker_head_cleanup() {
 
 	// EditURI link
@@ -90,9 +87,7 @@ function walker_gallery_style($css) {
 	return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
-
 /* SCRIPTS & ENQUEUEING */
-
 // loading modernizr and jquery, and reply script
 function walker_scripts_and_styles() {
 	if (!is_admin()) {
@@ -125,16 +120,11 @@ function walker_scripts_and_styles() {
 
 
 /* THEME SUPPORT */
-
 function walker_theme_support() {
 
-	// wp thumbnails
-	add_theme_support('post-thumbnails');
-
-	// rss thingy
 	add_theme_support('automatic-feed-links');
-
-	// wp menus
+	add_theme_support( 'title-tag' );
+	add_theme_support('post-thumbnails');
 	add_theme_support('menus');
 
 	// registering wp3+ menus
@@ -145,9 +135,7 @@ function walker_theme_support() {
 	);
 }
 
-
 /* NAVIGATION */
-
 function walker_main_nav() {
 	wp_nav_menu(array(
 		'theme_location' => 'main-nav',
@@ -156,9 +144,7 @@ function walker_main_nav() {
 	));
 }
 
-
 /* PAGINATION */
-
 function walker_pagination($before = '', $after = '') {
 	global $wpdb, $wp_query;
 	$request = $wp_query->request;
@@ -214,9 +200,7 @@ function walker_pagination($before = '', $after = '') {
 	echo '</ul></nav>'.$after."";
 }
 
-
 /* RANDOM CLEANUP ITEMS */
-
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function walker_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -226,21 +210,6 @@ function walker_filter_ptags_on_images($content){
 function walker_excerpt_more($more) {
 	global $post;
 	return '... <a class="read-link" href="'. get_permalink($post->ID) . '" title="Read '. get_the_title($post->ID) .'">Read more...</a>';
-}
-
-// This is a modified the_author_posts_link() which just returns the link
-// This is necessary to allow usage of the usual l10n process with printf()
-function walker_get_the_author_posts_link() {
-	global $authordata;
-	if (!is_object($authordata))
-		return false;
-	$link = sprintf(
-		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
-		get_author_posts_url($authordata->ID, $authordata->user_nicename),
-		esc_attr(sprintf(__('Posts by %s'), get_the_author())), // No further l10n needed, core will take care of this one
-		get_the_author()
-	);
-	return $link;
 }
 
 ?>

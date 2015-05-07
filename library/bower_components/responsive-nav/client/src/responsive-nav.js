@@ -6,6 +6,7 @@
  * Available under the MIT license
  */
 
+/* global Event */
 (function (document, window, index) {
   // Index is used to keep multiple navs on the same page namespaced
 
@@ -124,9 +125,6 @@
           } else {
             this.close();
           }
-
-          // Enable pointer events again
-          this._enablePointerEvents();
         }
       },
 
@@ -337,7 +335,7 @@
       },
 
       /**
-       * Closes the navigation when a link inside is clicked
+       * Closes the navigation when a link inside is clicked.
        */
       _closeOnNavClick: function () {
         if (opts.closeOnNavClick) {
@@ -354,7 +352,7 @@
       },
 
       /**
-       * Prevents the default tap functionality
+       * Prevents the default functionality.
        *
        * @param  {event} event
        */
@@ -374,42 +372,39 @@
       },
 
       /**
-       * On touch start get the location of the touch
-       * and disable pointer events on the body.
+       * On touch start we get the location of the touch.
        *
        * @param  {event} event
        */
       _onTouchStart: function (e) {
-        this._preventDefault(e);
-        addClass(document.body, "disable-pointer-events");
+        if (!Event.prototype.stopImmediatePropagation) {
+          this._preventDefault(e);
+        }
         this.startX = e.touches[0].clientX;
         this.startY = e.touches[0].clientY;
         this.touchHasMoved = false;
 
         /**
-         * We remove mouseup event completely here to avoid
-         * double triggering of events.
+         * Remove mouseup event completely here to avoid
+         * double triggering the event.
          */
         removeEvent(navToggle, "mouseup", this, false);
       },
 
       /**
-       * Check if the user is scrolling instead of tapping and
-       * re-enable pointer events if movement happed.
+       * Check if the user is scrolling instead of tapping.
        *
        * @param  {event} event
        */
       _onTouchMove: function (e) {
         if (Math.abs(e.touches[0].clientX - this.startX) > 10 ||
         Math.abs(e.touches[0].clientY - this.startY) > 10) {
-          this._enablePointerEvents();
           this.touchHasMoved = true;
         }
       },
 
       /**
-       * On touch end toggle either the whole navigation or
-       * a sub-navigation depending on which one was tapped.
+       * On touch end toggle the navigation.
        *
        * @param  {event} event
        */
@@ -425,11 +420,6 @@
           // If the event type is touch
           if (e.type === "touchend") {
             this.toggle();
-            if (opts.insert === "after") {
-              setTimeout(function () {
-                removeClass(document.body, "disable-pointer-events");
-              }, opts.transition + 300);
-            }
             return;
 
           // Event type was click, not touch
@@ -446,8 +436,7 @@
 
       /**
        * For keyboard accessibility, toggle the navigation on Enter
-       * keypress too (also sub-navigation is keyboard accessible
-       * which explains the complexity here)
+       * keypress too.
        *
        * @param  {event} event
        */
@@ -459,13 +448,6 @@
       },
 
       /**
-       * Enable pointer events
-       */
-      _enablePointerEvents: function () {
-        removeClass(document.body, "disable-pointer-events");
-      },
-
-      /**
        * Adds the needed CSS transitions if animations are enabled
        */
       _transitions: function () {
@@ -473,9 +455,9 @@
           var objStyle = nav.style,
             transition = "max-height " + opts.transition + "ms";
 
-          objStyle.WebkitTransition = transition;
-          objStyle.MozTransition = transition;
-          objStyle.OTransition = transition;
+          objStyle.WebkitTransition =
+          objStyle.MozTransition =
+          objStyle.OTransition =
           objStyle.transition = transition;
         }
       },
@@ -490,9 +472,7 @@
           savedHeight += nav.inner[i].offsetHeight;
         }
 
-        // Pointer event styles are also here since they might only be confusing inside the stylesheet
-        var innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " .disable-pointer-events{pointer-events:none !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
-
+        var innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
 
         if (styleElement.styleSheet) {
           styleElement.styleSheet.cssText = innerStyles;
@@ -512,6 +492,10 @@
 
   };
 
-  window.responsiveNav = responsiveNav;
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = responsiveNav;
+  } else {
+    window.responsiveNav = responsiveNav;
+  }
 
 }(document, window, 0));

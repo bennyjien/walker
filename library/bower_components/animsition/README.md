@@ -10,7 +10,7 @@ A simple and easy jQuery plugin for CSS animated page transitions.
 
 
 ## Demo & Installation
-http://blivesta.github.io/animsition
+http://git.blivesta.com/animsition/
 
 
 ## Development
@@ -33,7 +33,14 @@ Watch & Connect
 ```bash
 $ grunt
 ```
-And finally, open http://0.0.0.0:9999 in your browser.
+
+## CDN
+[cdnjs](https://cdnjs.com/libraries/animsition)
+
+- css/animsition.css
+- css/animsition.min.css
+- js/jquery.animsition.js
+- js/jquery.animsition.min.js
 
 ## Contributing
 
@@ -41,13 +48,15 @@ To contribute to animsition, clone this repo locally and commit your code.
 Please check that everything works before opening a pull-request.
 
 
-## Credit
+## Contributors
 - [@blivesta](https://github.com/blivesta)
-- [@munsonbh](https://github.com/munsonbh) (contributor)
-- [@triq6](https://github.com/triq6) (contributor)
-- [@shgtkshruch](https://github.com/shgtkshruch) (contributor)
+- [@munsonbh](https://github.com/munsonbh)
+- [@triq6](https://github.com/triq6)
+- [@shgtkshruch](https://github.com/shgtkshruch)
 - [@gauravpadia](https://github.com/gauravpadia)
-
+- [@ungki](https://github.com/ungki) (Maintainer)
+- [@vburlak](https://github.com/vburlak)
+- [@wpexplorer](https://github.com/wpexplorer)
 
 ## License
 Released under the [MIT](https://github.com/blivesta/animsition/blob/master/LICENSE.md) license.

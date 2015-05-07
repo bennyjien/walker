@@ -17,6 +17,11 @@
 		&:first-child {
 			margin-top: 0;
 		}
+
+		&.bypostauthor {
+			background-color: $shade-high;
+			color: $white;
+		}
 	}
 
 	.children {

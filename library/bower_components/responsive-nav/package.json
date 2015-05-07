@@ -1,8 +1,8 @@
 {
   "name": "responsive-nav",
-  "version": "1.0.34",
+  "version": "1.0.39",
   "description": "Responsive Nav JS plugin",
-  "main": "index.js",
+  "main": "client/dist/responsive-nav.js",
   "scripts": {
     "test": "grunt test --verbose"
   },
@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/viljamis/responsive-nav.js.git"
   },
+  "author": "Viljami Salminen",
+  "homepage": "http://responsive-nav.com",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/viljamis/responsive-nav/issues"
   },
