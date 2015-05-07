@@ -6,6 +6,12 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.14 (May 7, 2015)
+- Rename history.txt to readme.txt
+- Update JS libs
+- Add required CSS for WordPress
+- Add recommended PHP script for WordPress
+
 2.13 (Apr 15, 2015)
 - Rearrange style.scss
 - Many base css added and fixed
