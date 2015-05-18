@@ -92,11 +92,13 @@
 		}
 	}
 
-	.menu-item-has-children {
+	.menu-item-has-children,
+	.page_item_has_children {
 		position: relative;
 
 		&:hover {
 
+			.children,
 			.sub-menu {
 
 				@include breakpoint(walker) {
@@ -108,6 +110,7 @@
 		}
 	}
 
+	.children,
 	.sub-menu {
 
 		@include breakpoint(walker) {

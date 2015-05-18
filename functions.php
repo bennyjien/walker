@@ -11,21 +11,6 @@ if ( ! isset( $content_width ) ) {
 /* THUMBNAIL SIZE OPTIONS */
 add_image_size('walker-thumb-300', 300, 300, true);
 
-/* ACTIVE SIDEBARS */
-function walker_register_sidebars() {
-
-	register_sidebar(array(
-		'id' => 'sidebar',
-		'name' => __('Sidebar', 'walkertheme'),
-		'description' => __('The first (primary) sidebar.', 'walkertheme'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	));
-
-}
-
 /* COMMENT LAYOUT */
 function walker_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;

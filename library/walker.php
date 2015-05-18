@@ -1,7 +1,7 @@
 <?php
 
 /* LAUNCH WALKER */
-add_action('after_setup_theme', 'walker_walk', 15);
+add_action('after_setup_theme', 'walker_walk');
 
 function walker_walk() {
 
@@ -123,25 +123,43 @@ function walker_scripts_and_styles() {
 function walker_theme_support() {
 
 	add_theme_support('automatic-feed-links');
-	add_theme_support( 'title-tag' );
+	add_theme_support('title-tag');
 	add_theme_support('post-thumbnails');
-	add_theme_support('menus');
+	add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+	//add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 
-	// registering wp3+ menus
+	add_theme_support('custom-background', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	));
+
 	register_nav_menus(
 		array(
-			'main-nav' => __('The Main Menu', 'walkertheme')
+			'site-nav' => __('Site Navigation', 'walkertheme')
 		)
 	);
 }
 
 /* NAVIGATION */
-function walker_main_nav() {
+function walker_site_nav() {
 	wp_nav_menu(array(
-		'theme_location' => 'main-nav',
-		'menu' => __('The Main Navigation', 'walkertheme'),
-		'menu_class' => 'clearfix',
+		'theme_location' => 'site-nav'
 	));
+}
+
+/* SIDEBARS */
+function walker_register_sidebars() {
+
+	register_sidebar(array(
+		'name' => __('Sidebar', 'walkertheme'),
+		'id' => 'sidebar',
+		'description' => __('The first (primary) sidebar.', 'walkertheme'),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	));
+
 }
 
 /* PAGINATION */

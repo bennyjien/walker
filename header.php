@@ -37,7 +37,7 @@
 
 			<nav id="site-nav" class="site-nav" role="navigation">
 				<div class="inner wrap clearfix">
-					<?php walker_main_nav(); ?>
+					<?php walker_site_nav(); ?>
 				</div>
 			</nav>
 
