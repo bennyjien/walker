@@ -25,7 +25,7 @@
 	}
 }
 
-.main-nav {
+.site-nav {
 	background-color: $color-darker;
 
 	@include breakpoint(walker) {
@@ -135,7 +135,7 @@
 	}
 }
 
-.nav-toggle {
+.site-nav-toggle {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-touch-callout: none;
 	height: 24px;

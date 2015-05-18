@@ -101,7 +101,7 @@ img {
 	z-index: 8;
 }
 
-.main-nav {
+.site-nav {
 	display: block;
 	height: 100%;
 	max-height: none !important;
@@ -161,7 +161,7 @@ img {
 		width: calc(100% - 19em);
 	}
 
-	&.fullscreen {
+	&.main-fullscreen {
 		width: 100%;
 	}
 }

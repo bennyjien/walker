@@ -11,6 +11,10 @@
 	}
 }
 
+.sticky {
+	display: block;
+}
+
 .pagination,
 .woocommerce-pagination {
 	@include clearfix;

@@ -11,11 +11,11 @@ jQuery(document).ready(function($) {
 	});
 
 	// initialize responsive navigation
-	var mainNav = $('#main-nav');
-	var nav = responsiveNav('#main-nav', {
+	var mainNav = $('#site-nav');
+	var nav = responsiveNav('#site-nav', {
 		animate: false,
 		closeOnNavClick: true,
-		customToggle: "#nav-toggle",
+		customToggle: "#site-nav-toggle",
 		openPos: 'absolute',
 		open: function() {
 			$('html').on('click', function(e) {

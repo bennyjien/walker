@@ -3,13 +3,13 @@
 
 	<head>
 
-		<meta charset="utf-8">
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="author" href="humans.txt" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
 
@@ -26,16 +26,16 @@
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
-					<a class="logo" href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
+					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a>
 
-					<a href="#" id="nav-toggle" class="nav-toggle">
+					<a href="#" id="site-nav-toggle" class="site-nav-toggle">
 						<span class="icon">Menu</span>
 					</a>
 
 				</div>
 			</header>
 
-			<nav id="main-nav" class="main-nav" role="navigation">
+			<nav id="site-nav" class="site-nav" role="navigation">
 				<div class="inner wrap clearfix">
 					<?php walker_main_nav(); ?>
 				</div>

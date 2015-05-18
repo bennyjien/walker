@@ -1,5 +1,4 @@
 <div id="sidebar" class="sidebar" role="complementary">
-
 	<div class="inner clearfix">
 
 		<?php if (is_active_sidebar('sidebar')) : ?>
@@ -15,5 +14,4 @@
 		<?php endif; ?>
 
 	</div>
-
 </div>

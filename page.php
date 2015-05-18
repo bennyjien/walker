@@ -7,12 +7,12 @@
 
 							<?php while (have_posts()) : the_post(); ?>
 
-							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-								<div class="page-header entry-header">
-									<h1 class="page-title entry-title"><?php the_title(); ?></h1>
+								<header class="entry-header">
+									<h1 class="entry-title"><?php the_title(); ?></h1>
 									<p class="entry-meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'walkertheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID'))); ?></p>
-								</div>
+								</header>
 
 								<div class="entry-content clearfix">
 									<?php the_content(); ?>
@@ -24,7 +24,7 @@
 									?>
 								</div>
 
-							</div>
+							</article>
 
 							<?php comments_template(); ?>
 

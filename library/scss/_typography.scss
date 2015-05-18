@@ -31,33 +31,33 @@ h6 {
 }
 
 h1 {
-	font-size: 2.25em;
-	line-height: 1.111111111;
+	font-size: $font-size-h1;
+	line-height: $line-height-h1;
 }
 
 h2 {
-	font-size: 1.875em;
-	line-height: 1.2;
+	font-size: $font-size-h2;
+	line-height: $line-height-h2;
 }
 
 h3 {
-	font-size: 1.5em;
-	line-height: 1.333333333;
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
 }
 
 h4 {
-	font-size: 1.25em;
-	line-height: 1.2;
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
 }
 
 h5 {
-	font-size: 1.125em;
-	line-height: 1.333333333;
+	font-size: $font-size-h5;
+	line-height: $line-height-h5;
 }
 
 h6 {
-	font-size: 1em;
-	line-height: 1.5;
+	font-size: $font-size-h6;
+	line-height: $line-height-h6;
 }
 
 a {
@@ -110,12 +110,13 @@ blockquote {
 		margin-top: 0;
 	}
 
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	small {
+	footer,
+	small,
+	.small {
 		color: $color-text-light;
+		display: block;
+		font-size: $font-size-small;
+		line-height: $line-height-small;
 
 		&:before {
 			content: "— ";
@@ -137,7 +138,8 @@ samp {
 
 code {
 	background-color: $shade;
-	font-size: 0.875em;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 	padding: 0.125rem 0.25rem;
 }
 
@@ -145,7 +147,8 @@ kbd {
 	background-color: $color-dark;
 	border-radius: 3px;
 	color: $white;
-	font-size: 0.875em;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 	padding: 0.125rem 0.25rem;
 
 	kbd {
@@ -160,7 +163,8 @@ pre {
 	border: 1px solid $shade;
 	border-radius: 3px;
 	display: block;
-	font-size: 0.875em;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 	padding: 0.75rem;
 	word-break: break-all;
 	word-wrap: break-word;
@@ -176,7 +180,8 @@ pre {
 }
 
 small {
-	font-size: 0.875em;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 }
 
 hr {

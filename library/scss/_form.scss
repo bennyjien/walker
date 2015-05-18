@@ -19,7 +19,6 @@ legend {
 
 label {
 	display: inline-block;
-	font-weight: 700;
 	margin-bottom: 0.25em;
 	max-width: 100%;
 }
@@ -44,9 +43,12 @@ input[type="range"] {
 	width: 100%;
 }
 
+input[type="date"],
 input[type="email"],
+input[type="number"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
 input[type="text"],
 input[type="url"],
 textarea {
@@ -140,5 +142,18 @@ input[type="submit"] {
 		&:active {
 			background-color: $color-darker;
 		}
+	}
+}
+
+.form-group {
+	margin-bottom: 0.75rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.form-control {
+		display: block;
+		width: 100%;
 	}
 }
