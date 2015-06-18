@@ -26,7 +26,7 @@
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
-					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a>
+					<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a>
 
 					<a href="#" id="site-nav-toggle" class="site-nav-toggle">
 						<span class="icon">Menu</span>

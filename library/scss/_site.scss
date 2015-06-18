@@ -1,35 +1,61 @@
 .site-header {
 	background-color: $white;
 	border-bottom: 1px solid $shade;
+	position: relative;
+	width: 100%;
+	z-index: 8;
 
 	> .inner {
 		position: relative;
 	}
+}
 
-	.logo {
-		color: $shade;
-		display: block;
-		float: left;
-		font-size: 2em;
-		font-weight: 700;
-		letter-spacing: -0.04em;
-		line-height: 3;
-		text-transform: lowercase;
-		transition: all 0.3s $ease;
+.site-logo {
+	color: $shade;
+	display: block;
+	float: left;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	line-height: 3;
+	text-transform: lowercase;
+	transition: all 0.3s $ease;
 
-		&:hover,
-		&:focus {
-			color: $color-one;
-			text-decoration: none;
-		}
+	&:hover,
+	&:focus {
+		color: $color-one;
+		text-decoration: none;
 	}
 }
 
 .site-nav {
 	background-color: $color-darker;
+	display: block;
+	height: 100%;
+	max-height: none !important;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(16em);
+	width: 16em;
+	z-index: 9;
 
 	@include breakpoint(walker) {
 		background-color: transparent;
+		height: auto;
+		pointer-events: none;
+		right: 0;
+		top: 1.5em;
+		transform: none;
+		width: 100%;
+	}
+
+	&.opened {
+		transform: translateX(0);
+
+		@include breakpoint(walker) {
+			transform: translateX(0);
+		}
 	}
 
 	> .inner {
@@ -211,5 +237,46 @@
 				transform: rotate(-45deg) translateY(0);
 			}
 		}
+	}
+}
+
+.site-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	position: relative;
+	z-index: 3;
+
+	.page-content {
+		flex: 1 0 auto;
+		position: relative;
+
+		> .inner {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+}
+
+.site-footer {
+	background-color: $color-darker;
+	color: $white;
+	position: relative;
+	transition: all 0.3s $ease;
+	width: 100%;
+	z-index: 4;
+
+	> .inner {
+		padding-bottom: 1.5em;
+		padding-top: 1.5em;
+	}
+
+	.copyright {
+		font-size: 0.75em;
+		margin: 0;
+	}
+
+	a {
+		color: $white;
 	}
 }
