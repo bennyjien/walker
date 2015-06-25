@@ -24,12 +24,6 @@
 			*/
 		</script>
 
-		<!-- Takana for Development -->
-		<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
-		<script type="text/javascript">
-			takanaClient.run();
-		</script>
-
 	</body>
 
 </html> <!-- Built with Walker -->

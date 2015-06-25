@@ -6,6 +6,9 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.22 (Jun 25, 2015)
+- Rearrange SCSS structure
+
 2.21 (May 19, 2015)
 - Rearrange SCSS structure
 - Rename .logo to .site-logo

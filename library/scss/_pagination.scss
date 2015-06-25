@@ -1,0 +1,36 @@
+.pagination,
+.woocommerce-pagination {
+	@include clearfix;
+	margin-top: 1.5em;
+
+	li {
+		float: left;
+		margin-right: 0.25em;
+
+		a,
+		.current {
+			background-color: $color-one-dark;
+			color: $white;
+			display: block;
+			min-width: 2em;
+			padding: 0.25em 0.5em;
+			position: relative;
+			text-align: center;
+		}
+
+		a {
+			background-color: $color-one;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background-color: $color-one-light;
+				color: $white;
+			}
+		}
+
+		i {
+			display: inline-block;
+		}
+	}
+}
