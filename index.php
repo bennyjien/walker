@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-				<div class="home-content page-content">
+				<div class="page-content home-page-content">
 					<div class="inner wrap clearfix">
 
-						<div class="main" role="main">
+						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
@@ -36,7 +36,7 @@
 
 							<?php else : ?>
 
-							<section class="not-found">
+							<section class="page-not-found">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>

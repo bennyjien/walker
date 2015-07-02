@@ -92,7 +92,7 @@ add_action('woocommerce_walker_sidebar', 'woocommerce_get_sidebar', 10);
 function walker_wrapper_start() { ?>
 	<div class="woocommerce-content page-content">
 		<div class="inner wrap clearfix">
-			<div class="main" role="main">
+			<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 <?php
 }
 

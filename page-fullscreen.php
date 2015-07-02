@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-				<div class="fullscreen-content page-content">
+				<div class="page-content fullscreen-page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main main-fullscreen" role="main">

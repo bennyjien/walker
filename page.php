@@ -3,7 +3,7 @@
 				<div class="page-content">
 					<div class="inner wrap clearfix">
 
-						<div class="main" role="main">
+						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php while (have_posts()) : the_post(); ?>
 

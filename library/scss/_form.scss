@@ -72,6 +72,10 @@ textarea {
 	}
 }
 
+textarea {
+	height: 5em;
+}
+
 select {
 	-moz-appearance: none !important;
 	-webkit-appearance: none !important;
@@ -118,6 +122,8 @@ input[type="submit"] {
 	line-height: 1.5;
 	padding: 0.25em 1em;
 	position: relative;
+	text-align: center;
+	transition: all 0.2s $ease;
 	vertical-align: middle;
 
 	&:hover,
@@ -132,6 +138,20 @@ input[type="submit"] {
 	}
 
 	&.button-alt {
+		background-color: $color-two;
+		color: $color-darker;
+
+		&:hover,
+		&:focus {
+			background-color: $color-two-light;
+		}
+
+		&:active {
+			background-color: $color-two-dark;
+		}
+	}
+
+	&.button-gray {
 		background-color: $color-dark;
 
 		&:hover,

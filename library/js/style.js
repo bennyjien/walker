@@ -26,20 +26,4 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	// initialize animsition
-	$('.scene').animsition({
-		inClass: 'scene-in',
-		outClass: 'scene-out',
-		inDuration: 400,
-		outDuration: 400,
-		linkElement: 'a:not([target="_blank"]):not([href*=#]):not([class~="zoom"]):not([class~="needsclick"])',
-		loading: true,
-		loadingParentElement: '.container',
-		loadingClass: 'scene-loading',
-		unSupportCss: [ "animation-duration", "-webkit-animation-duration", "-o-animation-duration" ],
-		overlay: false, // set to "true" for overlay mode
-		overlayClass: "scene-overlay",
-		overlayParentElement: ".container"
-	});
-
 });

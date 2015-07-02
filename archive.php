@@ -1,35 +1,38 @@
 <?php get_header(); ?>
 
-				<div class="archive-content page-content">
+				<div class="page-content archive-page-content">
 					<div class="inner wrap clearfix">
 
-						<div class="main" role="main">
+						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<div class="main-header">
 								<h1 class="main-title">
 									<?php
 										if (is_category()) :
-											printf(__('Category Archives: %s', 'walkertheme'), '<span>' . single_cat_title('', false) . '</span>');
+											printf(__('Category: %s', 'walkertheme'), '<span>' . single_cat_title('', false) . '</span>');
 
 										elseif (is_tag()) :
-											printf(__('Tag Archives: %s', 'walkertheme'), '<span>' . single_tag_title('', false) . '</span>');
+											printf(__('Tag: %s', 'walkertheme'), '<span>' . single_tag_title('', false) . '</span>');
 
 										elseif (is_author()) :
 											the_post();
-											printf(__('Author Archives: %s', 'walkertheme'), '<span class="vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="' . esc_attr(get_the_author()) . '" rel="me">' . get_the_author() . '</a></span>');
+											printf(__('Author: %s', 'walkertheme'), '<span class="vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="' . esc_attr(get_the_author()) . '" rel="me">' . get_the_author() . '</a></span>');
 											rewind_posts();
 
 										elseif (is_day()) :
-											printf(__('Daily Archives: %s', 'walkertheme'), '<span>' . get_the_date() . '</span>');
+											printf(__('Day: %s', 'walkertheme'), '<span>' . get_the_date() . '</span>');
 
 										elseif (is_month()) :
-											printf(__('Monthly Archives: %s', 'walkertheme'), '<span>' . get_the_date('F Y') . '</span>');
+											printf(__('Month: %s', 'walkertheme'), '<span>' . get_the_date('F Y') . '</span>');
 
 										elseif (is_year()) :
-											printf(__('Yearly Archives: %s', 'walkertheme'), '<span>' . get_the_date('Y') . '</span>');
+											printf(__('Year: %s', 'walkertheme'), '<span>' . get_the_date('Y') . '</span>');
 
 										elseif (is_tax('post_format', 'post-format-aside')) :
 											_e('Asides', 'walkertheme');
+
+										elseif (is_tax('post_format', 'post-format-gallery')) :
+											_e('Galleries', 'walkertheme');
 
 										elseif (is_tax('post_format', 'post-format-image')) :
 											_e('Images', 'walkertheme');
@@ -42,6 +45,15 @@
 
 										elseif (is_tax('post_format', 'post-format-link')) :
 											_e('Links', 'walkertheme');
+
+										elseif (is_tax('post_format', 'post-format-status')) :
+											_e('Statuses', 'walkertheme');
+
+										elseif (is_tax('post_format', 'post-format-audio')) :
+											_e('Audio', 'walkertheme');
+
+										elseif (is_tax('post_format', 'post-format-chat')) :
+											_e('Chats', 'walkertheme');
 
 										else :
 											_e('Archives', 'walkertheme');
@@ -93,7 +105,7 @@
 
 							<?php else : ?>
 
-							<section class="not-found">
+							<section class="page-not-found">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>

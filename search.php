@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-				<div class="search-content page-content">
+				<div class="page-content search-page-content">
 					<div class="inner wrap clearfix">
 
-						<div class="main" role="main">
+						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<div class="entry-header">
 								<h1 class="entry-title"><span><?php _e('Search Results for:', 'walkertheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
@@ -31,7 +31,7 @@
 
 							<?php else : ?>
 
-							<section class="not-found">
+							<section class="page-not-found">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>

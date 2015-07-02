@@ -4,7 +4,7 @@ Theme URI: http://icubic.co.id/
 Author: Benny Jien
 Author URI: http://bennyjien.com/
 Description: This site is infected with Walker. Switching to another theme is not recommended since this theme is definitely more awesome.
-Version: 2.22
+Version: 2.23
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive-layout
@@ -17,6 +17,7 @@ Text Domain: walker
 @import "typography";
 @import "table";
 @import "form";
+@import "layout";
 
 @import "font-awesome";
 
@@ -26,9 +27,7 @@ Text Domain: walker
 @import "woocommerce";
 
 @import "global";
-@import "helper";
 @import "site";
-@import "page";
 @import "main";
 @import "sidebar";
 
@@ -36,6 +35,7 @@ Text Domain: walker
 @import "comment";
 @import "entry";
 @import "home";
+@import "page";
 @import "pagination";
 @import "search";
 @import "single";

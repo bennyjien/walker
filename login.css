@@ -2,9 +2,4 @@
 Stylesheet: Login
 http://codex.wordpress.org/Creating_Admin_Themes
 */
-.login h1 a {
-  background-image: url("library/images/login-logo.png");
-  background-size: contain;
-  height: 63px;
-  width: 274px;
-}
+.login h1 a { background-image: url("library/images/login-logo.png"); background-size: contain; height: 63px; width: 274px; }

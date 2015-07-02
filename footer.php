@@ -24,6 +24,9 @@
 			*/
 		</script>
 
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/library/js/libs/instantclick.min.js" data-no-instant></script>
+		<script data-no-instant>InstantClick.init();</script>
+
 	</body>
 
 </html> <!-- Built with Walker -->

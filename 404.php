@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-				<div class="missing-content page-content">
+				<div class="page-content missing-page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main main-fullscreen" role="main">
 
-							<section class="not-found">
+							<section class="page-not-found">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Epic 404 - Page Not Found", "walkertheme"); ?></h1>

@@ -41,4 +41,4 @@
 				</div>
 			</nav>
 
-			<div class="site-content scene">
+			<div class="site-content">

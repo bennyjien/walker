@@ -25,15 +25,15 @@
     "test",
     "tests"
   ],
-  "version": "0.6.29",
-  "_release": "0.6.29",
+  "version": "0.6.30",
+  "_release": "0.6.30",
   "_resolution": {
     "type": "version",
-    "tag": "0.6.29",
-    "commit": "1da1627e80ffb5c569880e4c77845e116905cf9f"
+    "tag": "0.6.30",
+    "commit": "fec63e8b67bc59a1b33c4b5dc234050fc4b530f4"
   },
   "_source": "git://github.com/Prinzhorn/skrollr.git",
-  "_target": "~0.6.29",
+  "_target": "~0.6.30",
   "_originalSource": "skrollr",
   "_direct": true
 }

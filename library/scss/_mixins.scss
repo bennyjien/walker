@@ -38,21 +38,21 @@
 
 // OPACITY
 
-$opacity: 					0.08;
+$opacity-lowest: 			0.08;
 $opacity-lower: 			0.16;
 $opacity-low: 				0.24;
 $opacity-medium: 			0.48;
 $opacity-high: 				0.64;
 $opacity-higher: 			0.88;
-$opacity-cover: 			0.96;
+$opacity-highest: 			0.96;
 
-$opacity-percent: 			$opacity*100%;
+$opacity-lowest-percent: 	$opacity-lowest*100%;
 $opacity-lower-percent: 	$opacity-lower*100%;
 $opacity-low-percent: 		$opacity-low*100%;
 $opacity-medium-percent: 	$opacity-medium*100%;
 $opacity-high-percent: 		$opacity-high*100%;
 $opacity-higher-percent: 	$opacity-higher*100%;
-$opacity-cover-percent: 	$opacity-cover*100%;
+$opacity-highest-percent: 	$opacity-highest*100%;
 
 
 // COLORS
@@ -61,9 +61,11 @@ $white: 				#ffffff;
 $black: 				#000000;
 
 $white-smoke: 			#f5f5f5;
+$solitude: 				#F0F2F5;
 $gainsboro: 			#e0e0e0;
 $dark-grey: 			#a3a3a3;
 $eclipse: 				#3d3d3d;
+$ebony-clay: 			#31363D;
 $nero: 					#1f1f1f;
 
 $forest-green: 			#259b24;
@@ -74,11 +76,13 @@ $torch-red: 			#e00032;
 $crimson: 				#f20e3c;
 $free-speech-red: 		#c00010;
 
-$color-lighter: 		$white-smoke;
+$color-lightest: 		$white-smoke;
+$color-lighter: 		$solitude;
 $color-light: 			$gainsboro;
 $color-medium: 			$dark-grey;
 $color-dark: 			$eclipse;
-$color-darker: 			$nero;
+$color-darker: 			$ebony-clay;
+$color-darkest: 		$nero;
 
 $color-one: 			$forest-green;
 $color-one-light: 		$lime-green;
@@ -93,21 +97,21 @@ $color-info: 			#5bc0de;
 $color-warning: 		#f0ad4e;
 $color-danger: 			#d9534f;
 
-$tint: 					rgba($white, $opacity);
+$tint: 					rgba($white, $opacity-lowest);
 $tint-lower: 			rgba($white, $opacity-lower);
 $tint-low: 				rgba($white, $opacity-low);
 $tint-medium: 			rgba($white, $opacity-medium);
 $tint-high: 			rgba($white, $opacity-high);
 $tint-higher: 			rgba($white, $opacity-higher);
-$tint-cover: 			rgba($white, $opacity-cover);
+$tint-cover: 			rgba($white, $opacity-highest);
 
-$shade: 				rgba($black, $opacity);
+$shade: 				rgba($black, $opacity-lowest);
 $shade-lower: 			rgba($black, $opacity-lower);
 $shade-low: 			rgba($black, $opacity-low);
 $shade-medium: 			rgba($black, $opacity-medium);
 $shade-high: 			rgba($black, $opacity-high);
 $shade-higher: 			rgba($black, $opacity-higher);
-$shade-cover: 			rgba($black, $opacity-cover);
+$shade-cover: 			rgba($black, $opacity-highest);
 
 $color-viewport: 		$color-darker;
 $color-background: 		$white;
@@ -129,33 +133,39 @@ $color-youtube: 		#cd201f;
 
 // TYPOGRAPHY
 
-$sans-serif: 		"Helvetica Neue", sans-serif;
-$serif: 			Georgia, serif;
-$monospace: 		Menlo, Monaco, Consolas, "Courier New", monospace;
+$sans-serif: 			"Helvetica Neue", sans-serif;
+$serif: 				Georgia, serif;
+$monospace: 			Menlo, Monaco, Consolas, "Courier New", monospace;
 
-$font-size: 		1em;
-$line-height: 		1.5;
+$font-size: 			1em;
+$line-height: 			1.5;
 
-$font-size-small: 	0.875em;
-$line-height-small: 1.285714286;
+$font-size-small: 		0.875em;
+$line-height-small: 	1.285714286;
 
-$font-size-h1: 		2.25em;
-$line-height-h1: 	1.111111111;
+$font-size-smaller: 	0.8125rem;
+$line-height-smaller: 	1.230769231;
 
-$font-size-h2: 		1.875em;
-$line-height-h2: 	1.2;
+$font-size-big: 		3em;
+$line-height-big: 		1.166666667;
 
-$font-size-h3: 		1.5em;
-$line-height-h3: 	1.333333333;
+$font-size-h1: 			2.25em;
+$line-height-h1: 		1.111111111;
 
-$font-size-h4: 		1.25em;
-$line-height-h4: 	1.2;
+$font-size-h2: 			1.875em;
+$line-height-h2: 		1.2;
 
-$font-size-h5: 		1.125em;
-$line-height-h5: 	1.333333333;
+$font-size-h3: 			1.5em;
+$line-height-h3: 		1.333333333;
 
-$font-size-h6: 		1em;
-$line-height-h6: 	1.5;
+$font-size-h4: 			1.25em;
+$line-height-h4: 		1.2;
+
+$font-size-h5: 			1.125em;
+$line-height-h5: 		1.333333333;
+
+$font-size-h6: 			1em;
+$line-height-h6: 		1.5;
 
 
 // TRANSITION
