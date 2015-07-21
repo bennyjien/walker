@@ -1,18 +1,18 @@
 .comments {
-	border-top: 1px solid $shade;
-	margin-top: 2em;
-	padding-top: 2em;
+	border-top: 1px solid $shade-lowest;
+	margin-top: 32px;
+	padding-top: 32px;
 }
 
 .comment-list {
 	list-style: none;
-	margin: 0 0 2em;
+	margin: 0 0 32px;
 	padding: 0;
 
 	.comment {
-		background-color: $shade;
+		background-color: $shade-lowest;
 		margin-top: 1px;
-		padding: 1em;
+		padding: 16px;
 
 		&:first-child {
 			margin-top: 0;
@@ -26,20 +26,20 @@
 
 	.children {
 		list-style: none;
-		margin: 1em 0 0;
+		margin: 16px 0 0;
 		padding: 0;
 	}
 
 	.depth-2 {
-		background-color: $shade;
+		background-color: $shade-lowest;
 	}
 
 	.depth-3 {
-		background-color: $shade;
+		background-color: $shade-lowest;
 	}
 
 	.depth-4 {
-		background-color: $shade;
+		background-color: $shade-lowest;
 	}
 }
 
@@ -53,11 +53,11 @@
 	}
 
 	.comment-reply-link {
+		@include font-size-small;
 		background-color: $shade-medium;
 		color: $white;
 		display: block;
-		font-size: 0.875em;
-		padding: 0.25em 1em;
+		padding: 4px 16px;
 		transition: all 0.2s $ease;
 
 		&:hover,
@@ -69,7 +69,7 @@
 }
 
 .comment-author {
-	margin-bottom: 0.5em;
+	margin-bottom: 8px;
 
 	> * {
 		vertical-align: middle;
@@ -77,7 +77,7 @@
 
 	.avatar {
 		height: 24px;
-		margin-right: 0.25em;
+		margin-right: 4px;
 		width: 24px;
 
 		@include breakpoint(crawler) {
@@ -89,24 +89,20 @@
 
 .comment-respond {
 	border-top: 1px solid $white;
-	margin-top: 1em;
-	padding-top: 1em;
+	margin-top: 16px;
+	padding-top: 16px;
 
 	.comment-reply-title {
-		margin-bottom: 0.166666667em;
-
-		small {
-			font-size: 0.875rem;
-		}
+		margin-bottom: 4px;
 	}
 
 	.comment-notes {
-		font-size: 0.875em;
-		margin-bottom: 1.5rem;
+		@include font-size-small;
+		margin-bottom: 24px;
 	}
 
 	p {
-		margin-bottom: 1em;
+		margin-bottom: 16px;
 		overflow: hidden;
 
 		&:last-child {
@@ -116,14 +112,13 @@
 		label {
 			display: block;
 			font-weight: 700;
-			padding: 0.25em 0;
-			padding: calc(0.25em + 1px) 0;
+			padding: 5px 0;
 			width: 100%;
 
 			@include breakpoint(crawler) {
 				float: left;
 				width: 25%;
-				width: calc(8em);
+				width: calc(128px);
 			}
 		}
 	}
@@ -136,7 +131,7 @@
 		@include breakpoint(crawler) {
 			float: left;
 			width: 75%;
-			width: calc(100% - 8em);
+			width: calc(100% - 128px);
 		}
 	}
 }

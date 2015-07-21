@@ -15,7 +15,7 @@ http://git.blivesta.com/animsition/
 
 ## Development
 
-Install : `nodejs` `npm` `grunt` `jekyll` `ruby` `bower`
+Install : `nodejs` `npm` `grunt`
 
 ```bash
 $ git clone https://github.com/blivesta/animsition.git
@@ -57,6 +57,7 @@ Please check that everything works before opening a pull-request.
 - [@ungki](https://github.com/ungki) (Maintainer)
 - [@vburlak](https://github.com/vburlak)
 - [@wpexplorer](https://github.com/wpexplorer)
+- [@armbull](https://github.com/armbull)
 
 ## License
 Released under the [MIT](https://github.com/blivesta/animsition/blob/master/LICENSE.md) license.

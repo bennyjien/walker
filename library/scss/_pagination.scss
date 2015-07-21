@@ -1,19 +1,19 @@
 .pagination,
 .woocommerce-pagination {
 	@include clearfix;
-	margin-top: 1.5em;
+	margin-top: 24px;
 
 	li {
 		float: left;
-		margin-right: 0.25em;
+		margin-right: 4px;
 
 		a,
 		.current {
 			background-color: $color-one-dark;
 			color: $white;
 			display: block;
-			min-width: 2em;
-			padding: 0.25em 0.5em;
+			min-width: 32px;
+			padding: 4px 8px;
 			position: relative;
 			text-align: center;
 		}

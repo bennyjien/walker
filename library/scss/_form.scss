@@ -6,20 +6,19 @@ fieldset {
 }
 
 legend {
+	@include font-size-h4;
 	border: 0;
 	border-bottom: 1px solid $color-border;
 	color: $color-medium;
 	display: block;
-	font-size: 1.25em;
-	line-height: 1.2;
-	margin-bottom: 1.5rem;
+	margin-bottom: 24px;
 	padding: 0;
 	width: 100%;
 }
 
 label {
 	display: inline-block;
-	margin-bottom: 0.25em;
+	margin-bottom: 4px;
 	max-width: 100%;
 }
 
@@ -54,10 +53,10 @@ input[type="url"],
 textarea {
 	border: 1px solid $shade-lower;
 	border-radius: 0;
-	box-shadow: inset 0 0 0.25em $shade;
+	box-shadow: inset 0 0 4px $shade-lowest;
 	line-height: 1.5;
 	max-width: 100%;
-	padding: 0.25em 0.5em;
+	padding: 4px 8px;
 	resize: none;
 	transition: all 0.2s $ease;
 
@@ -73,7 +72,7 @@ textarea {
 }
 
 textarea {
-	height: 5em;
+	height: 80px;
 }
 
 select {
@@ -86,13 +85,13 @@ select {
 	border-radius: 0;
 	border: 1px solid $shade-lower;
 	line-height: 1.5;
-	padding: 0.25em 1.5em 0.25em 0.5em;
+	padding: 4px 24px 4px 8px;
 
 	&[multiple],
 	&[size] {
 		background-image: none;
 		height: auto;
-		padding: 0.5em;
+		padding: 8px;
 	}
 
 	&:hover {
@@ -120,7 +119,7 @@ input[type="submit"] {
 	color: $white;
 	display: inline-block;
 	line-height: 1.5;
-	padding: 0.25em 1em;
+	padding: 4px 16px;
 	position: relative;
 	text-align: center;
 	transition: all 0.2s $ease;
@@ -156,17 +155,60 @@ input[type="submit"] {
 
 		&:hover,
 		&:focus {
-			background-color: $color-medium;
+			background-color: $color-darker;
 		}
 
 		&:active {
-			background-color: $color-darker;
+			background-color: $color-darkest;
 		}
+	}
+
+	&.button-success {
+		background-color: $color-success;
+
+		&:hover,
+		&:focus {
+			background-color: lighten($color-success, $opacity-lowest-percent);
+		}
+
+		&:active {
+			background-color: darken($color-success, $opacity-lowest-percent);
+		}
+	}
+
+	&.button-danger {
+		background-color: $color-danger;
+
+		&:hover,
+		&:focus {
+			background-color: lighten($color-danger, $opacity-lowest-percent);
+		}
+
+		&:active {
+			background-color: darken($color-danger, $opacity-lowest-percent);
+		}
+	}
+
+	&.button-link {
+		background-color: transparent;
+		color: $color-text;
+		padding-left: 0;
+		padding-right: 0;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	+ .button-link {
+		margin-left: 4px;
 	}
 }
 
+.form-groups,
 .form-group {
-	margin-bottom: 0.75rem;
+	margin-bottom: 12px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -175,5 +217,54 @@ input[type="submit"] {
 	.form-control {
 		display: block;
 		width: 100%;
+	}
+}
+
+.form-horizontal {
+
+	.form-group {
+
+		> label,
+		> .label {
+			color: $color-text-light;
+			display: inline-block;
+			font-weight: 700;
+			padding-right: 8px;
+			vertical-align: top;
+			width: 200px;
+		}
+
+		.help {
+			color: $color-text-light;
+			font-size: $font-size-small;
+			line-height: $line-height-small;
+			margin-left: 2px;
+		}
+
+		.form-control {
+			display: inline-block;
+			vertical-align: top;
+			width: calc(100% - 206px);
+		}
+
+		.checkbox,
+		.radio {
+
+			label {
+				display: block;
+			}
+		}
+
+		button,
+		.button {
+
+			&:first-child {
+				margin-left: 206px;
+			}
+		}
+
+		.button-link {
+			margin-left: 8px;
+		}
 	}
 }

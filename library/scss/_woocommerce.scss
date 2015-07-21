@@ -32,7 +32,7 @@ $red: #b81c23;
 	color: $white;
 	left: 0;
 	margin: 0;
-	padding: 0.75em;
+	padding: 12px;
 	position: fixed;
 	right: 0;
 	text-align: center;
@@ -51,10 +51,10 @@ $red: #b81c23;
 	a:before {
 		content: "\e02f";
 		font-family: WooCommerce;
-		font-size: 0.75em;
+		font-size: 12px;
 		font-weight: 400;
 		line-height: 1;
-		margin-right: 0.5rem;
+		margin-right: 8px;
 		text-transform: none;
 	}
 }
@@ -65,10 +65,10 @@ $red: #b81c23;
 	a:after {
 		content: "\e029";
 		font-family: WooCommerce;
-		font-size: 0.75em;
+		font-size: 12px;
 		font-weight: 400;
 		line-height: 1;
-		margin-left: 0.5rem;
+		margin-left: 8px;
 		text-transform: none;
 	}
 }
@@ -84,8 +84,8 @@ $red: #b81c23;
 		box-shadow: 0 1px 2px $shade-lower;
 		color: $shade-medium;
 		list-style: none;
-		margin: 0 0 1.5em;
-		padding: 1em 1em 1em 4em;
+		margin: 0 0 24px;
+		padding: 16px 16px 16px 64px;
 		position: relative;
 		width: 100%;
 
@@ -93,14 +93,14 @@ $red: #b81c23;
 			content: "";
 			color: $white;
 			display: block;
-			height: 2.5em;
-			left: 1em;
+			height: 40px;
+			left: 16px;
 			line-height: 1.5;
-			padding-top: 1em;
+			padding-top: 16px;
 			position: absolute;
 			text-align: center;
 			top: 0;
-			width: 2em;
+			width: 32px;
 		}
 
 		.button {
@@ -144,17 +144,17 @@ $red: #b81c23;
 	}
 
 	.note {
+		@include font-size-smallest;
 		color: $shade-medium;
 		display: block;
-		font-size: 0.75em;
-		margin-top: 1.5rem;
+		margin-top: 24px;
 	}
 
 	.woocommerce-breadcrumb {
 		@include clearfix;
+		@include font-size-smallest;
 		color: $shade-medium;
-		font-size: 0.875em;
-		margin: 0 0 0.1875rem;
+		margin: 0 0 3px;
 
 		a {
 			color: $shade-higher;
@@ -181,14 +181,14 @@ $red: #b81c23;
 			}
 
 			del {
+				@include font-size-smallest;
 				color: $shade-lower;
-				font-size: 0.875em;
 			}
 		}
 
 		.stock {
+			@include font-size-smallest;
 			color: $green;
-			font-size: 0.875em;
 		}
 
 		.out-of-stock {
@@ -196,10 +196,10 @@ $red: #b81c23;
 		}
 
 		.images {
-			margin-bottom: 3em;
+			margin-bottom: 48px;
 
 			img {
-				box-shadow: inset 0 0 0 1px $shade;
+				box-shadow: inset 0 0 0 1px $shade-lowest;
 				display: block;
 				padding: 1px;
 				transition: all 0.2s $ease;
@@ -208,11 +208,11 @@ $red: #b81c23;
 		}
 
 		.summary {
-			margin-bottom: 3em;
+			margin-bottom: 48px;
 		}
 
 		.social {
-			margin: 0 0 1.5em;
+			margin: 0 0 24px;
 			text-align: right;
 
 			span {
@@ -225,7 +225,7 @@ $red: #b81c23;
 				.stButton {
 
 					.chicklets {
-						padding-left: 1em;
+						padding-left: 16px;
 						width: 0;
 					}
 				}
@@ -241,14 +241,14 @@ $red: #b81c23;
 
 			.tabs {
 				list-style: none;
-				margin: 0 0 1.5em;
+				margin: 0 0 24px;
 				overflow: hidden;
-				padding: 0 0 0 0.75em;
+				padding: 0 0 0 12px;
 				position: relative;
 
 				&:before {
 					content: "";
-					border-bottom: 1px solid $shade;
+					border-bottom: 1px solid $shade-lowest;
 					bottom: 0;
 					left: 0;
 					position: absolute;
@@ -257,8 +257,8 @@ $red: #b81c23;
 				}
 
 				li {
-					background-color: $shade;
-					border: 1px solid $shade;
+					background-color: $shade-lowest;
+					border: 1px solid $shade-lowest;
 					border-bottom: 0;
 					border-top-left-radius: 4px;
 					border-top-right-radius: 4px;
@@ -281,12 +281,12 @@ $red: #b81c23;
 					}
 
 					a {
+						@include font-size-smallest;
 						color: $shade-higher;
 						display: inline-block;
-						font-size: 0.875em;
 						font-weight: 700;
 						outline: none;
-						padding: 0.5em 1em;
+						padding: 8px 16px;
 						text-decoration: none;
 						transition: all 0.2s $ease;
 
@@ -297,7 +297,7 @@ $red: #b81c23;
 				}
 
 				.panel {
-					margin: 0 0 1.5em;
+					margin: 0 0 24px;
 					padding: 0;
 				}
 			}
@@ -306,18 +306,18 @@ $red: #b81c23;
 
 	.cart {
 		@include clearfix;
-		margin-bottom: 1.5em;
+		margin-bottom: 24px;
 	}
 
 	form {
 
 		&.cart {
 			@include clearfix;
-			margin: 1.5em 0;
+			margin: 24px 0;
 
 			.quantity {
 				float: left;
-				margin: 0 0.25em 0 0;
+				margin: 0 4px 0 0;
 			}
 
 			table {
@@ -343,7 +343,7 @@ $red: #b81c23;
 			}
 
 			.variations {
-				margin-bottom: 1em;
+				margin-bottom: 16px;
 				width: 100%;
 
 				label {
@@ -360,7 +360,7 @@ $red: #b81c23;
 				}
 
 				.label {
-					padding-right: 1em;
+					padding-right: 16px;
 				}
 
 				.value {
@@ -368,12 +368,12 @@ $red: #b81c23;
 				}
 
 				.reset_variations {
-					font-size: 0.875em;
+					@include font-size-smallest;
 				}
 			}
 
 			.single_variation {
-				margin-bottom: 0.5em;
+				margin-bottom: 8px;
 			}
 
 			.button {
@@ -385,14 +385,14 @@ $red: #b81c23;
 		.group_table {
 
 			td {
-				padding-bottom: .5em;
+				padding-bottom: 8px;
 				vertical-align: top;
 
 			}
 
 			.label {
-				padding-left: 1em;
-				padding-right: 1em;
+				padding-left: 16px;
+				padding-right: 16px;
 			}
 		}
 	}
@@ -400,9 +400,9 @@ $red: #b81c23;
 	.product_meta {
 
 		> span {
+			@include font-size-smallest;
 			color: $shade-medium;
 			display: block;
-			font-size: 0.875em;
 
 			a,
 			span {
@@ -416,16 +416,16 @@ $red: #b81c23;
 		background-color: $color-one;
 		border-radius: 100%;
 		color: $white;
-		font-size: 0.75em;
+		font-size: 12px;
 		font-weight: 700;
-		height: 2.5rem;
-		left: 0.5rem;
-		line-height: 2.5rem;
+		height: 40px;
+		left: 8px;
+		line-height: 40px;
 		margin: 0;
 		position: absolute;
 		text-align: center;
-		top: 0.5rem;
-		width: 2.5rem;
+		top: 8px;
+		width: 40px;
 	}
 
 	.products,
@@ -440,14 +440,14 @@ $red: #b81c23;
 
 			.onsale {
 				left: auto;
-				right: -0.5em;
-				top: -0.5em;
+				right: -8px;
+				top: -8px;
 			}
 
 			h3 {
+				@include font-size;
 				color: $color-text;
-				font-size: 1em;
-				margin: 0 0 0.375em;
+				margin: 0 0 6px;
 
 				.count {
 					background-color: transparent;
@@ -462,14 +462,14 @@ $red: #b81c23;
 					text-decoration: none;
 
 					img {
-						box-shadow: inset 0 0 0 1px $shade, 0 2px 4px $shade;
+						box-shadow: inset 0 0 0 1px $shade-lowest, 0 2px 4px $shade-lowest;
 					}
 				}
 
 				img {
-					box-shadow: inset 0 0 0 1px $shade;
+					box-shadow: inset 0 0 0 1px $shade-lowest;
 					display: block;
-					margin: 0 0 0.75em;
+					margin: 0 0 12px;
 					padding: 1px;
 					transition: all 0.3s $ease;
 					width: 100%;
@@ -491,10 +491,10 @@ $red: #b81c23;
 				color: $color-one;
 				display: block;
 				font-weight: 400;
-				margin-bottom: .5em;
+				margin-bottom: 8px;
 
 				.from {
-					font-size: .75em;
+					@include font-size-smallest;
 					text-transform: uppercase;
 					color: $shade-medium;
 				}
@@ -503,16 +503,16 @@ $red: #b81c23;
 	}
 
 	.woocommerce-result-count {
-		margin-bottom: 0.75em;
+		margin-bottom: 12px;
 
 		@include breakpoint(creeper) {
 			float: left;
-			margin-bottom: 3em;
+			margin-bottom: 48px;
 		}
 	}
 
 	.woocommerce-ordering {
-		margin-bottom: 3em;
+		margin-bottom: 48px;
 
 		@include breakpoint(creeper) {
 			float: right;
@@ -580,9 +580,9 @@ $red: #b81c23;
 				color: $shade-medium;
 				font-family: WooCommerce;
 				position: absolute;
-				right: -1.5em;
+				right: -24px;
 				text-indent: 0;
-				top: 0.25em;
+				top: 4px;
 			}
 		}
 
@@ -602,10 +602,10 @@ $red: #b81c23;
 	}
 
 	.added_to_cart {
+		@include font-size-smallest;
 		display: block;
-		font-size: 0.875em;
 		font-weight: 700;
-		margin-top: 0.375rem;
+		margin-top: 6px;
 		white-space: nowrap;
 	}
 
@@ -613,34 +613,34 @@ $red: #b81c23;
 	.quantity {
 		overflow: hidden;
 		position: relative;
-		width: 4em;
+		width: 64px;
 
 		.qty {
 			-moz-appearance: textfield;
-			border: 1px solid $shade;
+			border: 1px solid $shade-lowest;
 			border-right: 0;
 			border-radius: 2px 0 0 2px;
-			box-shadow: inset 0 0 2px $shade;
+			box-shadow: inset 0 0 2px $shade-lowest;
 			float: left;
 			font-weight: 700;
-			height: 2em;
+			height: 32px;
 			padding: 0;
 			text-align: center;
-			width: 2.5em;
+			width: 40px;
 		}
 
 		.minus,
 		.plus {
 			background-color: $color-lighter;
-			border: 1px solid $shade;
+			border: 1px solid $shade-lowest;
 			border-radius: 0 2px 2px 0;
 			color: $shade-medium;
 			cursor: pointer;
 			display: block;
-			font-size: 0.875em;
+			font-size: 12px;
 			font-weight: 700;
-			height: 1rem;
-			line-height: 1em;
+			height: 16px;
+			line-height: 16px;
 			margin: 0;
 			overflow: visible;
 			padding: 0;
@@ -648,7 +648,7 @@ $red: #b81c23;
 			text-align: center;
 			text-decoration: none;
 			vertical-align: text-top;
-			width: 1.5rem;
+			width: 24px;
 
 			&:hover {
 				background: lighten($color-lighter, 4%);
@@ -674,10 +674,10 @@ $red: #b81c23;
 		h2 {
 
 			small {
+				@include font-size-smallest;
 				color: $shade-medium;
 				float: right;
-				font-size: 0.875em;
-				margin: 0.5rem 0 0;
+				margin: 8px 0 0;
 
 				a {
 					color: $shade-higher;
@@ -687,7 +687,7 @@ $red: #b81c23;
 		}
 
 		h3 {
-			margin-bottom: 1.5rem;
+			margin-bottom: 24px;
 		}
 
 		#respond {
@@ -697,7 +697,7 @@ $red: #b81c23;
 		}
 
 		#comment {
-			height: 5em;
+			height: 80px;
 		}
 
 		#comments {
@@ -714,13 +714,13 @@ $red: #b81c23;
 				width: 100%;
 
 				li {
-					margin: 0 0 1.5em;
+					margin: 0 0 24px;
 					padding: 0;
 					position: relative;
 
 					.meta {
+						@include font-size-smallest;
 						color: $shade-medium;
-						font-size: 0.75em;
 					}
 
 					.avatar {
@@ -731,24 +731,24 @@ $red: #b81c23;
 						left: 0;
 						position: absolute;
 						top: 0;
-						width: 2em;
+						width: 32px;
 					}
 
 					.comment-text {
 						@include clearfix;
-						border: 1px solid $shade;
-						margin: 0 0 0 3em;
-						padding: 1em;
+						border: 1px solid $shade-lowest;
+						margin: 0 0 0 48px;
+						padding: 16px;
 
 						.meta {
-							font-size: 0.875em
+							@include font-size-smallest;
 						}
 					}
 				}
 
 				.children {
 					list-style: none;
-					margin: 1em 0 0 3em;
+					margin: 16px 0 0 48px;
 
 					.star-rating {
 						display: none;
@@ -756,24 +756,24 @@ $red: #b81c23;
 				}
 
 				#respond {
-					border: 1px solid $shade;
-					margin: 1em 0 0 3em;
-					padding: 1em;
+					border: 1px solid $shade-lowest;
+					margin: 16px 0 0 48px;
+					padding: 16px;
 				}
 			}
 		}
 	}
 
 	#review_form_wrapper {
-		border-top: 1px solid $shade;
-		margin-top: 1.5em;
-		padding-top: 1.5em;
+		border-top: 1px solid $shade-lowest;
+		margin-top: 24px;
+		padding-top: 24px;
 	}
 
 	.star-rating {
 		float: right;
 		font-family: star;
-		height: 1em;
+		height: 16px;
 		line-height: 1;
 		overflow: hidden;
 		position: relative;
@@ -793,7 +793,7 @@ $red: #b81c23;
 			left: 0;
 			overflow: hidden;
 			position: absolute;
-			padding-top: 1.5em;
+			padding-top: 24px;
 			top: 0;
 
 			&:before {
@@ -811,7 +811,7 @@ $red: #b81c23;
 
 		.star-rating {
 			float: left;
-			margin: 0.5em 0.25em 0 0;
+			margin: 8px 4px 0 0;
 		}
 	}
 
@@ -819,7 +819,7 @@ $red: #b81c23;
 
 		.star-rating {
 			display: block;
-			margin: 0 0 0.375em;
+			margin: 0 0 6px;
 			float: none;
 		}
 	}
@@ -827,7 +827,7 @@ $red: #b81c23;
 	.hreview-aggregate {
 
 		.star-rating {
-			margin: 0.5em 0 0;
+			margin: 8px 0 0;
 		}
 	}
 
@@ -843,7 +843,7 @@ $red: #b81c23;
 			width: auto;
 
 			p {
-				margin: 0 0 0.75em;
+				margin: 0 0 12px;
 			}
 
 			.form-submit {
@@ -860,12 +860,12 @@ $red: #b81c23;
 	}
 
 	.stars {
+		@include font-size;
 		position: relative;
-		font-size: 1em;
 
 		a {
 			display: inline-block;
-			margin-right: 1em;
+			margin-right: 16px;
 			text-indent: -9999px;
 			position: relative;
 
@@ -878,7 +878,7 @@ $red: #b81c23;
 			&.star-3,
 			&.star-4,
 			&.star-5 {
-				border-right: 1px solid $shade;
+				border-right: 1px solid $shade-lowest;
 
 				&:after {
 					font-family: WooCommerce;
@@ -890,7 +890,7 @@ $red: #b81c23;
 			}
 
 			&.star-1 {
-				width: 2em;
+				width: 32px;
 
 				&.active,
 				&:hover {
@@ -906,7 +906,7 @@ $red: #b81c23;
 			}
 
 			&.star-2 {
-				width: 3em;
+				width: 48px;
 
 				&.active,
 				&:hover {
@@ -922,7 +922,7 @@ $red: #b81c23;
 			}
 
 			&.star-3 {
-				width: 4em;
+				width: 64px;
 
 				&.active,
 				&:hover {
@@ -938,7 +938,7 @@ $red: #b81c23;
 			}
 
 			&.star-4 {
-				width: 5em;
+				width: 80px;
 
 				&.active,
 				&:hover {
@@ -955,7 +955,7 @@ $red: #b81c23;
 
 			&.star-5 {
 				border: 0;
-				width: 6em;
+				width: 96px;
 
 				&.active,
 				&:hover {
@@ -974,29 +974,29 @@ $red: #b81c23;
 
 	.shop_attributes {
 		border: 0;
-		border-top: 1px dotted $shade;
-		margin-bottom: 1.5em;
+		border-top: 1px dotted $shade-lowest;
+		margin-bottom: 24px;
 		width: 100%;
 
 		th {
 			border-top: 0;
-			border-bottom: 1px dotted $shade;
+			border-bottom: 1px dotted $shade-lowest;
 			font-weight: 700;
 			margin: 0;
-			padding: 0.5em;
-			width: 10em;
+			padding: 8px;
+			width: 160px;
 		}
 
 		td {
 			border-top: 0;
-			border-bottom: 1px dotted $shade;
+			border-bottom: 1px dotted $shade-lowest;
 			font-style: italic;
 			margin: 0;
 			padding: 0;
 
 			p {
 				margin: 0;
-				padding: 0.5em 0;
+				padding: 8px 0;
 			}
 		}
 
@@ -1010,27 +1010,27 @@ $red: #b81c23;
 	}
 
 	.shop_table {
-		border: 1px solid $shade;
+		border: 1px solid $shade-lowest;
 		border-collapse: separate;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 24px 0;
 		text-align: left;
 		width: 100%;
 
 		th {
-			padding: 0.5em;
+			padding: 8px;
 
 			@include breakpoint(creeper) {
-				padding: 0.5em 1em;
+				padding: 8px 16px;
 			}
 		}
 
 		td {
-			border-top: 1px solid $shade;
-			padding: 0.5em;
+			border-top: 1px solid $shade-lowest;
+			padding: 8px;
 			vertical-align: middle;
 
 			@include breakpoint(creeper) {
-				padding: 0.5em 1em;
+				padding: 8px 16px;
 			}
 		}
 
@@ -1038,18 +1038,18 @@ $red: #b81c23;
 
 			td,
 			th {
-				border-top: 1px solid $shade;
+				border-top: 1px solid $shade-lowest;
 				font-weight: 700;
 			}
 		}
 	}
 
 	.my_account_orders {
-		font-size: 0.875em;
+		@include font-size-smallest;
 
 		td,
 		th {
-			padding: 0.25em 0.5em;
+			padding: 4px 8px;
 			vertical-align: middle;
 		}
 
@@ -1061,7 +1061,7 @@ $red: #b81c23;
 			text-align: right;
 
 			.button {
-				margin: 0.125em 0 0.125em 0.25em;
+				margin: 2px 0 2px 4px;
 			}
 		}
 	}
@@ -1070,24 +1070,24 @@ $red: #b81c23;
 
 		.variation {
 			@include clearfix;
-			margin: 0.25em 0;
+			margin: 4px 0;
 
 			dd,
 			dt {
 				display: inline-block;
 				float: left;
-				margin-bottom: 1em;
+				margin-bottom: 16px;
 			}
 
 			dt {
 				clear: left;
 				font-weight: 700;
-				margin: 0 0.25em 0 0;
-				padding: 0 0 0.25em;
+				margin: 0 4px 0 0;
+				padding: 0 0 4px;
 			}
 
 			dd {
-				padding: 0 0 0.25em;
+				padding: 0 0 4px;
 
 				p {
 
@@ -1099,12 +1099,12 @@ $red: #b81c23;
 		}
 
 		.backorder_notification {
-			font-size: 0.875em;
+			@include font-size-smallest;
 		}
 	}
 
 	.product-quantity {
-		min-width: 5em;
+		min-width: 80px;
 	}
 
 	#content .cart,
@@ -1112,7 +1112,7 @@ $red: #b81c23;
 
 		.product-thumbnail {
 			padding: 0;
-			width: 2em;
+			width: 32px;
 		}
 
 		img {
@@ -1134,12 +1134,12 @@ $red: #b81c23;
 			color: $red;
 			display: block;
 			font-family: Arial;
-			font-size: 1.125em;
-			height: 1em;
+			font-size: 18px;
+			height: 16px;
 			line-height: 1;
 			text-align: center;
 			text-decoration: none;
-			width: 1em;
+			width: 16px;
 
 			&:hover {
 				background-color: $red;
@@ -1153,7 +1153,7 @@ $red: #b81c23;
 
 				.input-text {
 					float: left;
-					margin-right: 0.25em;
+					margin-right: 4px;
 					width: auto;
 				}
 			}
@@ -1169,9 +1169,9 @@ $red: #b81c23;
 		li {
 
 			+ li {
-				border-top: 1px solid $shade;
-				margin-top: 0.75em;
-				padding-top: 0.75em;
+				border-top: 1px solid $shade-lowest;
+				margin-top: 12px;
+				padding-top: 12px;
 			}
 
 			a {
@@ -1180,12 +1180,12 @@ $red: #b81c23;
 			}
 
 			img {
-				box-shadow: inset 0 0 0 1px $shade;
+				box-shadow: inset 0 0 0 1px $shade-lowest;
 				display: none;
 				float: right;
-				margin-left: 0.5em;
+				margin-left: 8px;
 				padding: 1px;
-				width: 4.5em;
+				width: 72px;
 
 				@include breakpoint(runner) {
 					display: block;
@@ -1194,26 +1194,26 @@ $red: #b81c23;
 
 			dl {
 				@include clearfix;
-				border-left: 2px solid $shade;
+				border-left: 2px solid $shade-lowest;
 				margin: 0;
-				padding-left: 1em;
+				padding-left: 16px;
 
 				dd,
 				dt {
 					display: inline-block;
 					float: left;
-					margin-bottom: 1em;
+					margin-bottom: 16px;
 				}
 
 				dd {
-					padding: 0 0 0.25em;
+					padding: 0 0 4px;
 				}
 
 				dt {
 					clear: left;
 					font-weight: 700;
-					margin: 0 0.25em 0 0;
-					padding: 0 0 0.25em;
+					margin: 0 4px 0 0;
+					padding: 0 0 4px;
 				}
 			}
 
@@ -1228,12 +1228,12 @@ $red: #b81c23;
 
 		.total {
 			border-top: 3px double $shade-lower;
-			margin-top: 0.75em;
-			padding-top: 0.75em;
+			margin-top: 12px;
+			padding-top: 12px;
 
 			strong {
 				display: inline-block;
-				min-width: 3em;
+				min-width: 48px;
 			}
 		}
 
@@ -1248,7 +1248,7 @@ $red: #b81c23;
 				}
 
 				&.checkout {
-					margin-top: 0.375em;
+					margin-top: 6px;
 
 					@include breakpoint(runner) {
 						margin-top: 0;
@@ -1261,10 +1261,10 @@ $red: #b81c23;
 	.cart-collaterals {
 
 		.shipping_calculator {
-			margin-top: 1em;
+			margin-top: 16px;
 
 			h2 {
-				font-size: 1.5em;
+				@include font-size-h3;
 			}
 
 			.button {
@@ -1281,7 +1281,7 @@ $red: #b81c23;
 					font-weight: 400;
 					font-variant: normal;
 					line-height: 1;
-					margin-left: 0.5em;
+					margin-left: 8px;
 					text-transform: none;
 				}
 			}
@@ -1293,8 +1293,8 @@ $red: #b81c23;
 				margin: 0;
 
 				small {
+					@include font-size-smallest;
 					color: $shade-medium;
-					font-size: 0.875em;
 				}
 			}
 
@@ -1335,7 +1335,7 @@ $red: #b81c23;
 
 				td,
 				th {
-					border-top: 1px solid $shade;
+					border-top: 1px solid $shade-lowest;
 				}
 			}
 
@@ -1370,15 +1370,15 @@ $red: #b81c23;
 		&.checkout_coupon,
 		&.login,
 		&.register {
-			border: 1px solid $shade;
-			margin: 0 0 1.5em;
-			padding: 1.5em;
+			border: 1px solid $shade-lowest;
+			margin: 0 0 24px;
+			padding: 24px;
 			text-align: left;
 		}
 
 		.form-row {
-			margin: 0 0 0.5em;
-			padding: 0.25em;
+			margin: 0 0 8px;
+			padding: 4px;
 
 			&.validate-required.woocommerce-invalid {
 
@@ -1414,7 +1414,7 @@ $red: #b81c23;
 
 			.input-checkbox {
 				display: inline;
-				margin: -0.125em 0.5em 0 0;
+				margin: -2px 8px 0 0;
 				text-align: center;
 				vertical-align: middle;
 			}
@@ -1427,7 +1427,7 @@ $red: #b81c23;
 			}
 
 			textarea {
-				height: 5em;
+				height: 80px;
 				display: block;
 			}
 		}
@@ -1440,8 +1440,8 @@ $red: #b81c23;
 
 		li {
 			margin: 0;
-			padding: 0.25em 0 0.25em 1.5em;
-			text-indent: -1.5em;
+			padding: 4px 0 4px 24px;
+			text-indent: -24px;
 		}
 
 		.amount {
@@ -1475,7 +1475,7 @@ $red: #b81c23;
 		.create-account {
 
 			small {
-				font-size: 0.75em;
+				@include font-size-smallest;
 				color: $shade-medium;
 				font-weight: 400;
 			}
@@ -1489,25 +1489,25 @@ $red: #b81c23;
 	}
 
 	#payment {
-		background: $shade;
+		background: $shade-lowest;
 
 		.payment_methods {
 			@include clearfix;
-			border-bottom: 1px solid $shade;
+			border-bottom: 1px solid $shade-lowest;
 			list-style: none;
 			margin: 0;
-			padding: 1em;
+			padding: 16px;
 			text-align: left;
 
 			li {
 				margin: 0;
 
 				input {
-					margin: 0 1em 0 0;
+					margin: 0 16px 0 0;
 				}
 
 				img {
-					margin: -0.125em 0 0 0.5em;
+					margin: -2px 0 0 8px;
 					position: relative;
 					vertical-align: middle;
 				}
@@ -1515,15 +1515,15 @@ $red: #b81c23;
 		}
 
 		.form-row {
-			padding: 1em;
+			padding: 16px;
 		}
 
 		.payment_box {
+			@include font-size-smallest;
 			background-color: $tint-higher;
 			color: $shade-medium;
-			font-size: 0.875em;
-			margin: 1em 0;
-			padding: 1.5em;
+			margin: 16px 0;
+			padding: 24px;
 			position: relative;
 			width: 100%;
 
@@ -1543,8 +1543,8 @@ $red: #b81c23;
 			.wc-credit-card-form-card-number {
 				background-position: right;
 				background-repeat: no-repeat;
-				font-size: 1.5em;
-				padding: 0.5em;
+				font-size: 24px;
+				padding: 8px;
 
 				&.visa {
 					background-image: url("../../plugins/woocommerce/assets/images/icons/credit-cards/visa.png");
@@ -1580,13 +1580,12 @@ $red: #b81c23;
 			}
 
 			.help {
+				@include font-size-smallest;
 				color: $shade-medium;
-				font-size: 0.75em;
-				line-height: 13px;
 			}
 
 			.form-row {
-				margin: 0 0 1em;
+				margin: 0 0 16px;
 			}
 		}
 	}
@@ -1594,24 +1593,24 @@ $red: #b81c23;
 	.order_details {
 		@include clearfix;
 		list-style: none;
-		margin: 0 0 1.5em;
+		margin: 0 0 24px;
 		padding: 0;
 
 		li {
-			border-right: 1px dashed $shade;
+			@include font-size-smallest;
+			border-right: 1px dashed $shade-lowest;
 			float: left;
-			font-size: 0.75em;
-			margin-right: 1.5em;
+			margin-right: 24px;
 			text-transform: uppercase;
-			padding-right: 1.5em;
+			padding-right: 24px;
 
 			&:last-of-type {
 				border: 0;
 			}
 
 			strong {
+				@include font-size;
 				display: block;
-				font-size: 1rem;
 				text-transform: none;
 			}
 		}
@@ -1661,7 +1660,7 @@ $red: #b81c23;
 				font-weight: 400;
 				font-variant: normal;
 				line-height: 1;
-				margin-right: 0.5em;
+				margin-right: 8px;
 				text-transform: none;
 			}
 
@@ -1689,7 +1688,7 @@ $red: #b81c23;
 						background: $green;
 						border: 1px solid $shade-lower;
 						color: $white;
-						padding: 0 0.5em;
+						padding: 0 8px;
 						text-decoration: none;
 
 						&:before {
@@ -1698,7 +1697,7 @@ $red: #b81c23;
 							font-weight: 400;
 							font-variant: normal;
 							line-height: 1;
-							margin-right: 0.5em;
+							margin-right: 8px;
 							text-transform: none;
 						}
 					}
@@ -1712,10 +1711,10 @@ $red: #b81c23;
 			}
 
 			.count {
+				@include font-size;
 				color: $shade-medium;
 				float: right;
-				font-size: 1em;
-				margin-left: 0.5em;
+				margin-left: 8px;
 				padding: 1px 0;
 			}
 		}
@@ -1759,11 +1758,11 @@ $red: #b81c23;
 	.widget_price_filter {
 
 		.price_slider {
-			margin-bottom: 1em;
+			margin-bottom: 16px;
 		}
 
 		.price_slider_amount {
-			font-size: .875em;
+			@include font-size-smallest;
 			text-align: right;
 
 			.button {
@@ -1772,25 +1771,25 @@ $red: #b81c23;
 		}
 
 		.ui-slider {
-			background-color: $shade;
-			box-shadow: 0.875em 0 0 $shade;
-			height: 0.5em;
-			margin: 0.1875em 0 1.1875em;
+			background-color: $shade-lowest;
+			box-shadow: 12px 0 0 $shade-lowest;
+			height: 8px;
+			margin: 3px 0 19px;
 			position: relative;
 			text-align: left;
 			width: 94.53125%;
-			width: calc(100% - 0.875em);
+			width: calc(100% - 12px);
 
 			.ui-slider-handle {
 				background: $green;
 				border: 1px solid $shade-lower;
-				border-radius: 1em;
+				border-radius: 16px;
 				cursor: pointer;
-				height: 0.875em;
+				height: 12px;
 				outline: 0;
 				position: absolute;
-				top: -0.1875em;
-				width: 0.875em;
+				top: -3px;
+				width: 12px;
 				z-index: 2;
 			}
 		}
@@ -1821,7 +1820,7 @@ $red: #b81c23;
 
 	#content .product,
 	.product {
-		margin-top: 3em;
+		margin-top: 48px;
 
 		.images {
 
@@ -1831,7 +1830,7 @@ $red: #b81c23;
 			}
 
 			@include breakpoint(runner) {
-				width: calc(20em);
+				width: calc(320px);
 			}
 		}
 
@@ -1841,11 +1840,11 @@ $red: #b81c23;
 			a {
 				float: left;
 				margin-right: 4%;
-				margin-right: calc(0.75em);
+				margin-right: calc(12px);
 				margin-top: 4%;
-				margin-top: calc(0.75em);
+				margin-top: calc(12px);
 				width: 30.666666667%;
-				width: calc((100% - 1.5em) / 3);
+				width: calc((100% - 24px) / 3);
 
 				&.first {
 					clear: both;
@@ -1862,11 +1861,11 @@ $red: #b81c23;
 			@include breakpoint(crawler) {
 				float: right;
 				width: 52%;
-				width: calc(100% - 44% - 1.5em);
+				width: calc(100% - 44% - 24px);
 			}
 
 			@include breakpoint(runner) {
-				width: calc(100% - 21.5em);
+				width: calc(100% - 224px);
 			}
 		}
 
@@ -1905,9 +1904,9 @@ $red: #b81c23;
 
 	.related,
 	.upsells.products {
-		border-top: 1px solid $shade;
-		margin-top: 3em;
-		padding-top: 3em;
+		border-top: 1px solid $shade-lowest;
+		margin-top: 48px;
+		padding-top: 48px;
 	}
 
 	.products {
@@ -1916,26 +1915,26 @@ $red: #b81c23;
 
 		.product {
 			float: left;
-			margin: 3em 4% 0 0;
-			margin-right: calc(1em);
+			margin: 48px 4% 0 0;
+			margin-right: calc(16px);
 			padding: 0;
 			position: relative;
 			width: 48%;
-			width: calc((100% - 1em)/2);
+			width: calc((100% - 16px)/2);
 
 			@include breakpoint(creeper) {
-				margin-right: calc(1.5em);
-				width: calc((100% - 1.5em)/2);
+				margin-right: calc(24px);
+				width: calc((100% - 24px)/2);
 			}
 
 			@include breakpoint(crawler) {
 				width: 30.666666667%;
-				width: calc((100% - 3em)/3);
+				width: calc((100% - 48px)/3);
 			}
 
 			@include breakpoint(runner) {
 				width: 22%;
-				width: calc((100% - 4.5em)/4);
+				width: calc((100% - 72px)/4);
 			}
 
 			&:nth-child(-n+2) {
@@ -1961,7 +1960,7 @@ $red: #b81c23;
 
 				@include breakpoint(crawler) {
 					margin-right: 4%;
-					margin-right: calc(1.5em);
+					margin-right: calc(24px);
 				}
 			}
 
@@ -1981,7 +1980,7 @@ $red: #b81c23;
 
 				@include breakpoint(runner) {
 					margin-right: 4%;
-					margin-right: calc(1.5em);
+					margin-right: calc(24px);
 				}
 			}
 
@@ -2026,20 +2025,16 @@ $red: #b81c23;
 		}
 
 		.actions {
-			font-size: 0.75em;
+			@include font-size-smallest;
 			text-align: right;
 
-			@include breakpoint(creeper) {
-				font-size: 0.875em;
-			}
-
 			@include breakpoint(walker) {
-				font-size: 1em;
+				@include font-size;
 			}
 
 			.coupon {
 				@include clearfix;
-				margin-bottom: 0.5em;
+				margin-bottom: 8px;
 				text-align: left;
 
 				@include breakpoint(walker) {
@@ -2055,9 +2050,9 @@ $red: #b81c23;
 				.button {
 					float: left;
 					margin-right: 2%;
-					margin-right: calc(0.5em);
+					margin-right: calc(8px);
 					width: 49%;
-					width: calc(50% - 0.25em);
+					width: calc(50% - 4px);
 
 					@include breakpoint(walker) {
 						float: none;
@@ -2066,7 +2061,7 @@ $red: #b81c23;
 				}
 
 				.input-text {
-					height: 2em;
+					height: 32px;
 				}
 
 				.button {
@@ -2081,9 +2076,9 @@ $red: #b81c23;
 			.button {
 				float: left;
 				margin-right: 2%;
-				margin-right: calc(0.5em);
+				margin-right: calc(8px);
 				width: 49%;
-				width: calc(50% - 0.25em);
+				width: calc(50% - 4px);
 
 				@include breakpoint(walker) {
 					float: none;
@@ -2205,7 +2200,7 @@ $red: #b81c23;
 		}
 
 		.terms {
-			padding: 0 1em;
+			padding: 0 16px;
 			text-align: right;
 		}
 

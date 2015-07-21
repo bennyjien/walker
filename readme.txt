@@ -6,6 +6,9 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.24 (Jul 21, 2015)
+- Change all em/rem to px
+
 2.23 (Jul 2, 2015)
 - Add WP post formats
 - Add some useful color and typography mixins

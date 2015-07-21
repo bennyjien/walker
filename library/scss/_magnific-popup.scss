@@ -26,14 +26,14 @@
 .mfp-container {
 	height: 100%;
 	left: 0;
-	padding: 1em;
+	padding: 16px;
 	position: absolute;
 	text-align: center;
 	top: 0;
 	width: 100%;
 
 	@include breakpoint(creeper) {
-		padding: 1.5em;
+		padding: 24px;
 	}
 
 	&:before {
@@ -75,12 +75,12 @@
 .mfp-inline {
 	background-color: $white;
 	margin: 0 auto;
-	max-width: 48em;
-	padding: 1.5em;
+	max-width: 768px;
+	padding: 24px;
 	position: relative;
 
 	@include breakpoint(crawler) {
-		padding: 3em;
+		padding: 48px;
 	}
 }
 
@@ -234,7 +234,7 @@ button::-moz-focus-inner {
 	color: $color-one;
 	font-family: Arial;
 	font-style: normal;
-	font-size: 2.25em;
+	font-size: 36px;
 	height: 1em;
 	line-height: 1em;
 	opacity: $opacity-higher;
@@ -264,9 +264,8 @@ button::-moz-focus-inner {
 }
 
 .mfp-counter {
+	@include font-size-smallest;
 	color: $tint-medium;
-	font-size: 0.75em;
-	line-height: 1.5em;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -388,10 +387,9 @@ button::-moz-focus-inner {
 	}
 
 	small {
+		@include font-size-smallest;
 		color: $color-lighter;
 		display: block;
-		font-size: 0.75em;
-		line-height: 1.5;
 	}
 
 	figure {
@@ -410,8 +408,8 @@ button::-moz-focus-inner {
 
 .mfp-title {
 	color: $white;
-	line-height: 1.5rem;
-	padding-right: 2em;
+	line-height: 24px;
+	padding-right: 32px;
 	text-align: left;
 	word-wrap: break-word;
 }
@@ -462,7 +460,7 @@ button::-moz-focus-inner {
 }
 
 .mfp-social {
-	margin-top: 0.5em;
+	margin-top: 8px;
 
 	li {
 		width: 76px;

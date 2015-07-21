@@ -1,5 +1,5 @@
 /*!
- * animsition v3.5.1
+ * animsition v3.5.2
  * http://blivesta.github.io/animsition/
  * Licensed under MIT
  * Author : blivesta
@@ -202,9 +202,6 @@
       $(options.overlayParentElement).children("." + options.overlayClass).css({
         "animation-duration": outDuration / 1e3 + "s"
       }).removeClass(inClass).addClass(outClass).animateCallback(function() {
-        $this.css({
-          opacity: 0
-        });
         location.href = url;
       });
     },

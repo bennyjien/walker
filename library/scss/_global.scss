@@ -6,7 +6,7 @@
 	background: $color-lighter;
 	color: $color-dark;
 	margin: 0;
-	padding: 1em;
+	padding: 16px;
 	text-align: center;
 
 	a {
@@ -80,13 +80,13 @@
 		border-top: 4px solid $color-one;
 		border-radius: 100%;
 		display: block;
-		height: 2em;
+		height: 32px;
 		left: 50%;
-		margin: -1em 0 0 -1em;
+		margin: -16px 0 0 -16px;
 		outline: 1px solid transparent;
 		position: absolute;
 		top: 50%;
-		width: 2em;
+		width: 32px;
 		z-index: 2;
 	}
 

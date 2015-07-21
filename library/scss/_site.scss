@@ -1,6 +1,6 @@
 .site-header {
 	background-color: $white;
-	border-bottom: 1px solid $shade;
+	border-bottom: 1px solid $shade-lowest;
 	position: relative;
 	width: 100%;
 	z-index: 8;
@@ -11,10 +11,10 @@
 }
 
 .site-logo {
-	color: $shade;
+	color: $shade-lowest;
 	display: block;
 	float: left;
-	font-size: 2em;
+	font-size: $font-size-h2;
 	font-weight: 700;
 	letter-spacing: -0.04em;
 	line-height: 3;
@@ -36,8 +36,8 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	transform: translateX(16em);
-	width: 16em;
+	transform: translateX(256px);
+	width: 256px;
 	z-index: 9;
 
 	@include breakpoint(walker) {
@@ -45,7 +45,7 @@
 		height: auto;
 		pointer-events: none;
 		right: 0;
-		top: 1.5em;
+		top: 24px;
 		transform: none;
 		width: 100%;
 	}
@@ -63,11 +63,11 @@
 		position: relative;
 
 		@include breakpoint(walker) {
-			padding: 0 2em;
+			padding: 0 32px;
 		}
 
 		@include breakpoint(jumper) {
-			padding: 0 3em;
+			padding: 0 48px;
 		}
 	}
 
@@ -91,8 +91,8 @@
 		background-color: $color-one;
 		color: $white;
 		display: block;
-		line-height: 3em;
-		padding: 0 1em;
+		line-height: 48px;
+		padding: 0 16px;
 		transition: all 0.3s $ease;
 		white-space: nowrap;
 
@@ -170,13 +170,13 @@
 	height: 24px;
 	font-size: 0;
 	position: absolute;
-	right: 1rem;
-	top: 2.25rem;
+	right: 16px;
+	top: 36px;
 	user-select: none;
 	width: 24px;
 
 	@include breakpoint(creeper) {
-		right: 2rem;
+		right: 32px;
 	}
 
 	@include breakpoint(walker) {
@@ -252,8 +252,8 @@
 		position: relative;
 
 		> .inner {
-			padding-top: 2em;
-			padding-bottom: 2em;
+			padding-top: 32px;
+			padding-bottom: 32px;
 		}
 	}
 }
@@ -267,12 +267,12 @@
 	z-index: 4;
 
 	> .inner {
-		padding-bottom: 1.5em;
-		padding-top: 1.5em;
+		padding-bottom: 24px;
+		padding-top: 24px;
 	}
 
 	.copyright {
-		font-size: 0.75em;
+		@include font-size-smallest;
 		margin: 0;
 	}
 

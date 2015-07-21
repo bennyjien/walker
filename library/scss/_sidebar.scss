@@ -6,11 +6,11 @@
 		display: block;
 		float: right;
 		width: 33.333333333%;
-		width: calc(12.5em);
+		width: calc(200px);
 	}
 
 	@include breakpoint(runner) {
-		width: calc(16em);
+		width: calc(256px);
 	}
 
 	ol,
@@ -21,12 +21,12 @@
 	}
 
 	.widget {
-		border-bottom: 1px solid $shade;
-		margin-bottom: 1.5em;
-		padding-bottom: 1.5em;
+		border-bottom: 1px solid $shade-lowest;
+		margin-bottom: 24px;
+		padding-bottom: 24px;
 	}
 
 	.widget-title {
-		margin-bottom: 0.75em;
+		margin-bottom: 12px;
 	}
 }

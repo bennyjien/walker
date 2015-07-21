@@ -4,11 +4,11 @@
 	@include breakpoint(walker) {
 		float: left;
 		width: 62.5%;
-		width: calc(100% - 14.5em);
+		width: calc(100% - 232px);
 	}
 
 	@include breakpoint(runner) {
-		width: calc(100% - 19em);
+		width: calc(100% - 304px);
 	}
 
 	&.main-fullscreen {
