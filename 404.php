@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-				<div class="page-content missing-page-content">
+				<div class="missing-page-content page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main main-fullscreen" role="main">

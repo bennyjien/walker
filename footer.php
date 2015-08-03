@@ -1,7 +1,7 @@
 				<footer class="site-footer" role="contentinfo">
 					<div class="inner wrap">
 
-						<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php printf( __( 'Designed by %1$s.', 'walkertheme' ), '<a href="http://bennyjien.com/" rel="designer">Benny Jien</a>' ); ?></p>
+						<p class="site-copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php printf( __( 'Designed by %1$s.', 'walkertheme' ), '<a href="http://bennyjien.com/" rel="designer">Benny Jien</a>' ); ?></p>
 
 					</div>
 				</footer>

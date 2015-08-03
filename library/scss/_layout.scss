@@ -29,7 +29,6 @@ nav {
 audio,
 canvas,
 iframe,
-img,
 svg,
 video {
 	max-width: 100%;
@@ -39,6 +38,7 @@ video {
 img {
 	height: auto;
 	max-width: 100%;
+	vertical-align: middle;
 }
 
 .container {

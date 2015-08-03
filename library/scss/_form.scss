@@ -54,6 +54,7 @@ textarea {
 	border: 1px solid $shade-lower;
 	border-radius: 0;
 	box-shadow: inset 0 0 4px $shade-lowest;
+	height: calc(1.5em + 10px);
 	line-height: 1.5;
 	max-width: 100%;
 	padding: 4px 8px;
@@ -84,6 +85,7 @@ select {
 	background-repeat: no-repeat;
 	border-radius: 0;
 	border: 1px solid $shade-lower;
+	height: calc(1.5em + 10px);
 	line-height: 1.5;
 	padding: 4px 24px 4px 8px;
 
@@ -114,7 +116,7 @@ button,
 a.button,
 input[type="submit"] {
 	background-color: $color-one;
-	border: 0;
+	border: 1px solid transparent;
 	border-radius: 0;
 	color: $white;
 	display: inline-block;

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-				<div class="page-content single-page-content">
+				<div class="single-page-content page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">

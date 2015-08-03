@@ -1,11 +1,8 @@
-.archive-content {
+.archive-post {
 
-	.post {
-
-		+ .post {
-			border-top: 1px solid $shade-lowest;
-			margin-top: 24px;
-			padding-top: 24px;
-		}
+	+ .archive-post {
+		border-top: 1px solid $shade-lowest;
+		margin-top: 24px;
+		padding-top: 24px;
 	}
 }

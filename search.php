@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-				<div class="page-content search-page-content">
+				<div class="search-page-content page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -31,7 +31,7 @@
 
 							<?php else : ?>
 
-							<section class="page-not-found">
+							<section class="missing-entry entry">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>

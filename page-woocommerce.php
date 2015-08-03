@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-				<div class="page-content woocommerce-page-content">
+				<div class="woocommerce-page-content page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main main-fullscreen" role="main">

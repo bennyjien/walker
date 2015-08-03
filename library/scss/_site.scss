@@ -271,12 +271,12 @@
 		padding-top: 24px;
 	}
 
-	.copyright {
-		@include font-size-smallest;
-		margin: 0;
-	}
-
 	a {
 		color: $white;
 	}
+}
+
+.site-copyright {
+	@include font-size-smallest;
+	margin: 0;
 }

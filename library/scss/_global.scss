@@ -55,7 +55,7 @@
 	display: block;
 }
 
-.walking {
+.is-loading {
 	position: relative;
 
 	&:before {
@@ -96,26 +96,5 @@
 			content: none;
 			display: none;
 		}
-	}
-}
-
-.animation {
-	animation-duration: 0.4s;
-	animation-fill-mode: forwards;
-
-	&.delayed {
-		animation-delay: 0.4s;
-	}
-
-	&.infinite {
-		animation-iteration-count: infinite;
-	}
-
-	&.spin {
-		animation-name: walker-spin;
-	}
-
-	&.rubber {
-		animation-name: walker-rubber;
 	}
 }

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-				<div class="page-content archive-page-content">
+				<div class="archive-page-content page-content">
 					<div class="inner wrap clearfix">
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -83,14 +83,14 @@
 
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+								<article id="post-<?php the_ID(); ?>" <?php post_class("archive-post"); ?>>
 
 									<header class="entry-header">
 										<h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 										<p class="entry-meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'walkertheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID')), get_the_category_list(', ')); ?></p>
 									</header>
 
-									<div class="entry-excerpt">
+									<div class="entry-excerpt clearfix">
 										<?php the_post_thumbnail('walker-thumb-300'); ?>
 										<?php the_excerpt(); ?>
 									</div>
@@ -105,7 +105,7 @@
 
 							<?php else : ?>
 
-							<section class="page-not-found">
+							<section class="missing-entry entry">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>
