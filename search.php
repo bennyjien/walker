@@ -5,8 +5,8 @@
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<div class="entry-header">
-								<h1 class="entry-title"><span><?php _e('Search Results for:', 'walkertheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+							<div class="main-header">
+								<h1 class="main-title"><span><?php _e('Search Results for:', 'walkertheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 							</div>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

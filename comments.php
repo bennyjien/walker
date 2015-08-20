@@ -34,8 +34,6 @@
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'walkertheme' ); ?></p>
 	<?php endif; ?>
 
-	<div class="respond-form">
-		<?php comment_form(); ?>
-	</div>
+	<?php comment_form(); ?>
 
 </div>

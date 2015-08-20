@@ -28,6 +28,30 @@
 	@else if $zombie == god {
 		@media only screen and (min-width: 1920px) { @content; }
 	}
+	@if $zombie == creeper-crawler {
+		@media only screen and (min-width: 480px) and (max-width: 639px) { @content; }
+	}
+	@if $zombie == crawler-walker {
+		@media only screen and (min-width: 640px) and (max-width: 767px) { @content; }
+	}
+	@if $zombie == walker-runner {
+		@media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+	}
+	@if $zombie == runner-jumper {
+		@media only screen and (min-width: 1024px) and (max-width: 1151px) { @content; }
+	}
+	@if $zombie == jumper-flyer {
+		@media only screen and (min-width: 1152px) and (max-width: 1279px) { @content; }
+	}
+	@if $zombie == flyer-teleporter {
+		@media only screen and (min-width: 1280px) and (max-width: 1339px) { @content; }
+	}
+	@if $zombie == teleporter-demigod {
+		@media only screen and (min-width: 1440px) and (max-width: 1599px) { @content; }
+	}
+	@if $zombie == demigod-god {
+		@media only screen and (min-width: 1600px) and (max-width: 1919px) { @content; }
+	}
 	@else if $zombie == watcher {
 		@media only screen and (-o-min-device-pixel-ratio: 1.5),
 			   only screen and (-webkit-min-device-pixel-ratio: 1.5),

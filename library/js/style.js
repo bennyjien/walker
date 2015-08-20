@@ -18,8 +18,8 @@ jQuery(document).ready(function($) {
 		customToggle: "#site-nav-toggle",
 		openPos: 'absolute',
 		open: function() {
-			$('html').on('click', function(e) {
-				if (!$(e.target).is(mainNav)) {
+			$('body').on('click', function(e) {
+				if (!mainNav.is(e.target) && mainNav.has(e.target).length === 0) {
 					nav.close();
 				}
 			});

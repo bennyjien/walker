@@ -6,6 +6,12 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.26 (Aug 20, 2015)
+- Remove .respond-form HTML markup
+- Merge layout.scss to global.scss
+- Add range breakpoint
+- Kaizen
+
 2.25 (Aug 3, 2015)
 - Add form fixes for IE11
 - New class naming convention!

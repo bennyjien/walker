@@ -50,14 +50,6 @@
 		width: 100%;
 	}
 
-	&.opened {
-		transform: translateX(0);
-
-		@include breakpoint(walker) {
-			transform: translateX(0);
-		}
-	}
-
 	> .inner {
 		padding: 0;
 		position: relative;
