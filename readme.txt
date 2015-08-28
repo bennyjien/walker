@@ -6,6 +6,9 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.27 (Aug 26, 2015)
+- Remove page-fullscreen.php
+
 2.26 (Aug 20, 2015)
 - Remove .respond-form HTML markup
 - Merge layout.scss to global.scss

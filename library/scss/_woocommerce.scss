@@ -1,8 +1,5 @@
 // WooCommerce 2.1.12
 
-$green: #259b24;
-$red: #b81c23;
-
 @font-face {
 	font-family: star;
 	src: url(../../plugins/woocommerce/assets/fonts/star.eot);
@@ -114,11 +111,11 @@ $red: #b81c23;
 	}
 
 	.woocommerce-message {
-		border-top: 2px solid $green;
+		border-top: 2px solid $color-success;
 
 		&:before {
 			content: "\2713";
-			background-color: $green;
+			background-color: $color-success;
 		}
 	}
 
@@ -134,11 +131,11 @@ $red: #b81c23;
 	}
 
 	.woocommerce-error {
-		border-top: 2px solid $red;
+		border-top: 2px solid $color-danger;
 
 		&:before {
 			content: "\00d7";
-			background-color: $red;
+			background-color: $color-danger;
 			font-weight: 700;
 		}
 	}
@@ -188,11 +185,11 @@ $red: #b81c23;
 
 		.stock {
 			@include font-size-smallest;
-			color: $green;
+			color: $color-success;
 		}
 
 		.out-of-stock {
-			color: $red;
+			color: $color-danger;
 		}
 
 		.images {
@@ -1131,7 +1128,7 @@ $red: #b81c23;
 
 		.remove {
 			border-radius: 100%;
-			color: $red;
+			color: $color-danger;
 			display: block;
 			font-family: Arial;
 			font-size: 18px;
@@ -1142,7 +1139,7 @@ $red: #b81c23;
 			width: 16px;
 
 			&:hover {
-				background-color: $red;
+				background-color: $color-danger;
 				color: $white;
 			}
 		}
@@ -1349,7 +1346,7 @@ $red: #b81c23;
 			.discount {
 
 				td {
-					color: $green;
+					color: $color-success;
 				}
 			}
 		}
@@ -1386,7 +1383,7 @@ $red: #b81c23;
 				.chosen-single,
 				.input-text,
 				select {
-					border-color: $red;
+					border-color: $color-danger;
 				}
 			}
 
@@ -1408,7 +1405,7 @@ $red: #b81c23;
 
 			.required {
 				border: 0;
-				color: $red;
+				color: $color-danger;
 				font-weight: 700;
 			}
 
@@ -1685,7 +1682,7 @@ $red: #b81c23;
 				&.chosen {
 
 					a {
-						background: $green;
+						background: $color-success;
 						border: 1px solid $shade-lower;
 						color: $white;
 						padding: 0 8px;
@@ -1734,7 +1731,7 @@ $red: #b81c23;
 				padding: 0 1px 1px 0;
 
 				a {
-					background: $green;
+					background: $color-success;
 					border: 1px solid $shade-lower;
 					color: $white;
 					float: left;
@@ -1781,7 +1778,7 @@ $red: #b81c23;
 			width: calc(100% - 12px);
 
 			.ui-slider-handle {
-				background: $green;
+				background: $color-success;
 				border: 1px solid $shade-lower;
 				border-radius: 16px;
 				cursor: pointer;
