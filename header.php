@@ -17,7 +17,7 @@
 
 	<body <?php body_class(); ?>>
 
-		<div id="container" class="container">
+		<div id="site" class="site">
 
 			<!--[if lte IE 8]>
 				<p class="browse-happy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

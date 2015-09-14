@@ -8,7 +8,7 @@
 
 			</div> <!-- .site-content -->
 
-		</div> <!-- .container -->
+		</div> <!-- .site -->
 
 		<?php wp_footer(); ?>
 

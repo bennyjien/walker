@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('hover');
 	});
 
-	// initialize responsive navigation
+	// initialize responsiveNav
 	var mainNav = $('#site-nav');
 	var nav = responsiveNav('#site-nav', {
 		animate: false,
@@ -24,6 +24,13 @@ jQuery(document).ready(function($) {
 				}
 			});
 		}
+	});
+
+	// initialize magnificPopup
+	$('.mfp-inline-link').magnificPopup({
+		type: 'inline',
+		mainClass: 'mfp-animation',
+		removalDelay: 200
 	});
 
 });

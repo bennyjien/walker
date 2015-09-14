@@ -5,7 +5,7 @@
 
 						<div class="main main-fullscreen" role="main">
 
-							<section class="page-not-found">
+							<section class="missing-entry entry">
 
 								<header class="entry-header">
 									<h1 class="entry-title"><?php _e("Epic 404 - Page Not Found", "walkertheme"); ?></h1>

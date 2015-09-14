@@ -3,7 +3,7 @@
 				<div class="search-page-content page-content">
 					<div class="inner wrap clearfix">
 
-						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<div class="main" role="main">
 
 							<div class="main-header">
 								<h1 class="main-title"><span><?php _e('Search Results for:', 'walkertheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>

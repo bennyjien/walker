@@ -1,3 +1,16 @@
+.site {
+	background-color: $color-background;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	> * {
+		transition: transform 0.3s $ease;
+	}
+}
+
 .site-header {
 	background-color: $white;
 	border-bottom: 1px solid $shade-lowest;

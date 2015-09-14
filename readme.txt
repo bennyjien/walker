@@ -6,6 +6,12 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.29
+- Change .container to .site
+
+2.28
+- Add opacity-none and opacity-full mixins
+
 2.27 (Aug 26, 2015)
 - Remove page-fullscreen.php
 

@@ -28,28 +28,28 @@
 	@else if $zombie == god {
 		@media only screen and (min-width: 1920px) { @content; }
 	}
-	@if $zombie == creeper-crawler {
+	@else if $zombie == creeper-crawler {
 		@media only screen and (min-width: 480px) and (max-width: 639px) { @content; }
 	}
-	@if $zombie == crawler-walker {
+	@else if $zombie == crawler-walker {
 		@media only screen and (min-width: 640px) and (max-width: 767px) { @content; }
 	}
-	@if $zombie == walker-runner {
+	@else if $zombie == walker-runner {
 		@media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
 	}
-	@if $zombie == runner-jumper {
+	@else if $zombie == runner-jumper {
 		@media only screen and (min-width: 1024px) and (max-width: 1151px) { @content; }
 	}
-	@if $zombie == jumper-flyer {
+	@else if $zombie == jumper-flyer {
 		@media only screen and (min-width: 1152px) and (max-width: 1279px) { @content; }
 	}
-	@if $zombie == flyer-teleporter {
+	@else if $zombie == flyer-teleporter {
 		@media only screen and (min-width: 1280px) and (max-width: 1339px) { @content; }
 	}
-	@if $zombie == teleporter-demigod {
+	@else if $zombie == teleporter-demigod {
 		@media only screen and (min-width: 1440px) and (max-width: 1599px) { @content; }
 	}
-	@if $zombie == demigod-god {
+	@else if $zombie == demigod-god {
 		@media only screen and (min-width: 1600px) and (max-width: 1919px) { @content; }
 	}
 	@else if $zombie == watcher {
@@ -62,6 +62,7 @@
 
 // OPACITY
 
+$opacity-none: 				0;
 $opacity-lowest: 			0.08;
 $opacity-lower: 			0.16;
 $opacity-low: 				0.24;
@@ -69,7 +70,9 @@ $opacity-medium: 			0.48;
 $opacity-high: 				0.64;
 $opacity-higher: 			0.88;
 $opacity-highest: 			0.96;
+$opacity-full: 				1;
 
+$opacity-none-percent: 		$opacity-none*100%;
 $opacity-lowest-percent: 	$opacity-lowest*100%;
 $opacity-lower-percent: 	$opacity-lower*100%;
 $opacity-low-percent: 		$opacity-low*100%;
@@ -77,6 +80,7 @@ $opacity-medium-percent: 	$opacity-medium*100%;
 $opacity-high-percent: 		$opacity-high*100%;
 $opacity-higher-percent: 	$opacity-higher*100%;
 $opacity-highest-percent: 	$opacity-highest*100%;
+$opacity-full-percent: 		$opacity-full*100%;
 
 
 // COLORS
@@ -85,11 +89,11 @@ $white: 				#ffffff;
 $black: 				#000000;
 
 $white-smoke: 			#f5f5f5;
-$solitude: 				#F0F2F5;
+$solitude: 				#f0f2f5;
 $gainsboro: 			#e0e0e0;
 $dark-grey: 			#a3a3a3;
 $eclipse: 				#3d3d3d;
-$ebony-clay: 			#31363D;
+$ebony-clay: 			#31363d;
 $nero: 					#1f1f1f;
 
 $forest-green: 			#259b24;
@@ -100,9 +104,9 @@ $torch-red: 			#e00032;
 $crimson: 				#f20e3c;
 $free-speech-red: 		#c00010;
 
-$denim: 				#116AAD;
-$kelly-green: 			#27AA0B;
-$amber: 				#FFC000;
+$denim: 				#116aad;
+$kelly-green: 			#27aa0b;
+$amber: 				#ffc000;
 
 $color-lightest: 		$white-smoke;
 $color-lighter: 		$solitude;
@@ -125,6 +129,7 @@ $color-success: 		$kelly-green;
 $color-warning: 		$amber;
 $color-danger: 			$crimson;
 
+$tint-none: 			rgba($white, $opacity-none);
 $tint-lowest: 			rgba($white, $opacity-lowest);
 $tint-lower: 			rgba($white, $opacity-lower);
 $tint-low: 				rgba($white, $opacity-low);
@@ -132,7 +137,9 @@ $tint-medium: 			rgba($white, $opacity-medium);
 $tint-high: 			rgba($white, $opacity-high);
 $tint-higher: 			rgba($white, $opacity-higher);
 $tint-highest: 			rgba($white, $opacity-highest);
+$tint-full: 			rgba($white, $opacity-full);
 
+$shade-none: 			rgba($black, $opacity-none);
 $shade-lowest: 			rgba($black, $opacity-lowest);
 $shade-lower: 			rgba($black, $opacity-lower);
 $shade-low: 			rgba($black, $opacity-low);
@@ -140,6 +147,7 @@ $shade-medium: 			rgba($black, $opacity-medium);
 $shade-high: 			rgba($black, $opacity-high);
 $shade-higher: 			rgba($black, $opacity-higher);
 $shade-highest: 		rgba($black, $opacity-highest);
+$shade-full: 			rgba($black, $opacity-full);
 
 $color-viewport: 		$color-darker;
 $color-background: 		$white;
@@ -148,6 +156,7 @@ $color-text: 			$color-darker;
 $color-text-light: 		$color-dark;
 
 $color-border: 			$color-light;
+$color-border-light: 	$color-lighter;
 
 $color-dribbble: 		#ea4c89;
 $color-facebook: 		#3b5998;
@@ -168,6 +177,12 @@ $monospace: 			Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-size: 			16px;
 $line-height: 			1.5;
 
+$font-size-lead: 		18px;
+$line-height-lead: 		1.333333333;
+
+$font-size-jumbo: 		48px;
+$line-height-jumbo: 	1.166666667;
+
 $font-size-small: 		14px;
 $line-height-small: 	1.428571429;
 
@@ -179,9 +194,6 @@ $line-height-smallest: 	1.333333333;
 
 $font-size-micro: 		11px;
 $line-height-micro: 	1.454545455;
-
-$font-size-big: 		48px;
-$line-height-big: 		1.166666667;
 
 $font-size-h1: 			36px;
 $line-height-h1: 		1.111111111;
@@ -199,7 +211,7 @@ $font-size-h5: 			18px;
 $line-height-h5: 		1.333333333;
 
 $font-size-h6: 			16px;
-$line-height-h6: 		1.5;
+$line-height-h6: 		1.25;
 
 
 // TRANSITION
@@ -234,6 +246,16 @@ $bounce: 	cubic-bezier(0.8, 0.2, 0.3, 1.2);
 	line-height: $line-height;
 }
 
+@mixin font-size-lead {
+	font-size: $font-size-lead;
+	line-height: $line-height-lead;
+}
+
+@mixin font-size-jumbo {
+	font-size: $font-size-jumbo;
+	line-height: $line-height-jumbo;
+}
+
 @mixin font-size-small {
 	font-size: $font-size-small;
 	line-height: $line-height-small;
@@ -254,19 +276,34 @@ $bounce: 	cubic-bezier(0.8, 0.2, 0.3, 1.2);
 	line-height: $line-height-micro;
 }
 
-@mixin font-size-big {
-	font-size: $font-size-big;
-	line-height: $line-height-big;
-}
-
 @mixin font-size-h1 {
-	font-size: $font-size-h1;
-	line-height: $line-height-h1;
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
+
+	@include breakpoint(creeper) {
+		font-size: $font-size-h2;
+		line-height: $line-height-h2;
+	}
+
+	@include breakpoint(crawler) {
+		font-size: $font-size-h1;
+		line-height: $line-height-h1;
+	}
 }
 
 @mixin font-size-h2 {
-	font-size: $font-size-h2;
-	line-height: $line-height-h2;
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
+
+	@include breakpoint(creeper) {
+		font-size: $font-size-h3;
+		line-height: $line-height-h3;
+	}
+
+	@include breakpoint(crawler) {
+		font-size: $font-size-h2;
+		line-height: $line-height-h2;
+	}
 }
 
 @mixin font-size-h3 {

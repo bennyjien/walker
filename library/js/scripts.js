@@ -30,13 +30,6 @@ jQuery(document).ready(function($) {
 	// initialize FastClick (use .needsclick if click is required)
 	FastClick.attach(document.body);
 
-	// initialize Magnific Popup
-	$('.mfp-inline-link').magnificPopup({
-		type: 'inline',
-		mainClass: 'mfp-animation',
-		removalDelay: 200
-	});
-
 	// initialize PhotoSwipe
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
 

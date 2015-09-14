@@ -34,33 +34,27 @@ h6 {
 	}
 }
 
-h1,
-.h1 {
+h1 {
 	@include font-size-h1;
 }
 
-h2,
-.h2 {
+h2 {
 	@include font-size-h2;
 }
 
-h3,
-.h3 {
+h3 {
 	@include font-size-h3;
 }
 
-h4,
-.h4 {
+h4 {
 	@include font-size-h4;
 }
 
-h5,
-.h5 {
+h5 {
 	@include font-size-h5;
 }
 
-h6,
-.h6 {
+h6 {
 	@include font-size-h6;
 }
 
@@ -75,13 +69,8 @@ a {
 	&:hover,
 	&:focus {
 		color: $color-one-light;
+		outline: 0;
 		text-decoration: underline;
-	}
-
-	&:focus {
-		outline: thin dotted;
-		outline: 5px auto -webkit-focus-ring-color;
-		outline-offset: -2px;
 	}
 }
 
@@ -109,6 +98,7 @@ dd {
 }
 
 blockquote {
+	@include font-size-lead;
 	border-left: 4px solid $shade-lowest;
 	margin-left: 0;
 	padding: 12px 24px;

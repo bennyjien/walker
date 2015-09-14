@@ -1,0 +1,66 @@
+.only-mobile {
+
+	@include breakpoint(walker) {
+		display: none;
+	}
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-invisible,
+.sr-only {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.is-loading {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		background-color: $black;
+		bottom: 0;
+		left: 0;
+		opacity: 0.8;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&:after {
+		content: "";
+		animation: walker-spin 1.5s infinite linear;
+		border-left: 4px solid $shade-lower;
+		border-bottom: 4px solid $shade-lower;
+		border-right: 4px solid $shade-lower;
+		border-top: 4px solid $color-one;
+		border-radius: 100%;
+		display: block;
+		height: 32px;
+		left: 50%;
+		margin: -16px 0 0 -16px;
+		outline: 1px solid transparent;
+		position: absolute;
+		top: 50%;
+		width: 32px;
+		z-index: 2;
+	}
+
+	&.no-overlay {
+
+		&:before {
+			content: none;
+			display: none;
+		}
+	}
+}
