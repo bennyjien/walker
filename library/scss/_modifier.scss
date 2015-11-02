@@ -9,7 +9,11 @@
 	display: none;
 }
 
-.is-invisible,
+.is-invisible {
+	opacity: 0;
+	visibility: hidden;
+}
+
 .sr-only {
 	border: 0;
 	clip: rect(0, 0, 0, 0);

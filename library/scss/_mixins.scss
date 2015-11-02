@@ -60,6 +60,71 @@
 }
 
 
+// COLORS
+
+$white: 				#ffffff;
+$black: 				#000000;
+
+$white-smoke: 			#f5f5f5;
+$solitude: 				#f0f2f5;
+$gainsboro: 			#e0e0e0;
+$dark-grey: 			#a3a3a3;
+$eclipse: 				#3d3d3d;
+$ebony-clay: 			#31363d;
+$nero: 					#1f1f1f;
+
+$lime-green: 			#2bad29;
+$forest-green: 			#259b24;
+$green: 				#056f00;
+
+$crimson: 				#f20e3c;
+$torch-red: 			#e00032;
+$free-speech-red: 		#c00010;
+
+$denim: 				#116aad;
+$kelly-green: 			#27aa0b;
+$amber: 				#ffc000;
+
+$color-lightest: 		$white-smoke;
+$color-lighter: 		$solitude;
+$color-light: 			$gainsboro;
+$color-medium: 			$dark-grey;
+$color-dark: 			$eclipse;
+$color-darker: 			$ebony-clay;
+$color-darkest: 		$nero;
+
+$color-one-light: 		$lime-green;
+$color-one: 			$forest-green;
+$color-one-dark: 		$green;
+
+$color-two-light: 		$crimson;
+$color-two: 			$torch-red;
+$color-two-dark: 		$free-speech-red;
+
+$color-info: 			$denim;
+$color-success: 		$kelly-green;
+$color-warning: 		$amber;
+$color-danger: 			$crimson;
+
+$color-viewport: 		$color-darker;
+$color-background: 		$white;
+
+$color-text: 			$color-darker;
+$color-text-light: 		$color-dark;
+
+$color-border: 			$color-light;
+$color-border-light: 	$color-lighter;
+
+$color-dribbble: 		#ea4c89;
+$color-facebook: 		#3b5998;
+$color-google: 			#cc3732;
+$color-instagram: 		#3f729b;
+$color-linkedin: 		#0077b5;
+$color-pinterest: 		#cc2127;
+$color-twitter: 		#00aced;
+$color-youtube: 		#cd201f;
+
+
 // OPACITY
 
 $opacity-none: 				0;
@@ -82,53 +147,6 @@ $opacity-higher-percent: 	$opacity-higher*100%;
 $opacity-highest-percent: 	$opacity-highest*100%;
 $opacity-full-percent: 		$opacity-full*100%;
 
-
-// COLORS
-
-$white: 				#ffffff;
-$black: 				#000000;
-
-$white-smoke: 			#f5f5f5;
-$solitude: 				#f0f2f5;
-$gainsboro: 			#e0e0e0;
-$dark-grey: 			#a3a3a3;
-$eclipse: 				#3d3d3d;
-$ebony-clay: 			#31363d;
-$nero: 					#1f1f1f;
-
-$forest-green: 			#259b24;
-$lime-green: 			#2bad29;
-$green: 				#056f00;
-
-$torch-red: 			#e00032;
-$crimson: 				#f20e3c;
-$free-speech-red: 		#c00010;
-
-$denim: 				#116aad;
-$kelly-green: 			#27aa0b;
-$amber: 				#ffc000;
-
-$color-lightest: 		$white-smoke;
-$color-lighter: 		$solitude;
-$color-light: 			$gainsboro;
-$color-medium: 			$dark-grey;
-$color-dark: 			$eclipse;
-$color-darker: 			$ebony-clay;
-$color-darkest: 		$nero;
-
-$color-one: 			$forest-green;
-$color-one-light: 		$lime-green;
-$color-one-dark: 		$green;
-
-$color-two: 			$torch-red;
-$color-two-light: 		$crimson;
-$color-two-dark: 		$free-speech-red;
-
-$color-info: 			$denim;
-$color-success: 		$kelly-green;
-$color-warning: 		$amber;
-$color-danger: 			$crimson;
-
 $tint-none: 			rgba($white, $opacity-none);
 $tint-lowest: 			rgba($white, $opacity-lowest);
 $tint-lower: 			rgba($white, $opacity-lower);
@@ -148,24 +166,6 @@ $shade-high: 			rgba($black, $opacity-high);
 $shade-higher: 			rgba($black, $opacity-higher);
 $shade-highest: 		rgba($black, $opacity-highest);
 $shade-full: 			rgba($black, $opacity-full);
-
-$color-viewport: 		$color-darker;
-$color-background: 		$white;
-
-$color-text: 			$color-darker;
-$color-text-light: 		$color-dark;
-
-$color-border: 			$color-light;
-$color-border-light: 	$color-lighter;
-
-$color-dribbble: 		#ea4c89;
-$color-facebook: 		#3b5998;
-$color-google: 			#cc3732;
-$color-instagram: 		#3f729b;
-$color-linkedin: 		#0077b5;
-$color-pinterest: 		#cc2127;
-$color-twitter: 		#00aced;
-$color-youtube: 		#cd201f;
 
 
 // TYPOGRAPHY
@@ -217,7 +217,7 @@ $line-height-h6: 		1.25;
 // TRANSITION
 
 $ease: 		ease-in-out;
-$bounce: 	cubic-bezier(0.8, 0.2, 0.3, 1.2);
+$bounce: 	cubic-bezier(0.5, 0.15, 0.25, 1.25);
 
 
 // MIXINS
@@ -239,6 +239,12 @@ $bounce: 	cubic-bezier(0.8, 0.2, 0.3, 1.2);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+@mixin hyphenate {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 @mixin font-size {

@@ -143,7 +143,10 @@ function walker_theme_support() {
 /* NAVIGATION */
 function walker_site_nav() {
 	wp_nav_menu(array(
-		'theme_location' => 'site-nav'
+		'theme_location' 	=> 'site-nav',
+		'container'			=> '',
+		'menu_class' 		=> 'menu menu-primary',
+		'menu_id' 			=> 'menu-primary'
 	));
 }
 

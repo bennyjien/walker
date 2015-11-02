@@ -6,8 +6,17 @@
 	overflow: hidden;
 	position: relative;
 
-	> * {
-		transition: transform 0.3s $ease;
+	&:before {
+		content: "";
+		background-color: $black;
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.2s $ease;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
 	}
 }
 
@@ -19,18 +28,20 @@
 	z-index: 8;
 
 	> .inner {
-		position: relative;
+		align-items: center;
+		display: flex;
 	}
 }
 
 .site-logo {
 	color: $shade-lowest;
 	display: block;
-	float: left;
+	flex: 0 0 auto;
 	font-size: $font-size-h2;
 	font-weight: 700;
 	letter-spacing: -0.04em;
 	line-height: 3;
+	margin-right: 24px;
 	text-transform: lowercase;
 	transition: all 0.3s $ease;
 
@@ -42,53 +53,20 @@
 }
 
 .site-nav {
-	background-color: $color-darker;
-	display: block;
-	height: 100%;
-	max-height: none !important;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transform: translateX(256px);
-	width: 256px;
-	z-index: 9;
+	display: none;
+	flex: 1 1 auto;
+	position: relative;
+	text-align: right;
 
 	@include breakpoint(walker) {
-		background-color: transparent;
-		height: auto;
-		pointer-events: none;
-		right: 0;
-		top: 24px;
-		transform: none;
-		width: 100%;
+		display: block;
 	}
 
-	> .inner {
-		padding: 0;
-		position: relative;
+	&.is-collapsed {
 
-		@include breakpoint(walker) {
-			padding: 0 32px;
-		}
-
-		@include breakpoint(jumper) {
-			padding: 0 48px;
-		}
-	}
-
-	ul {
-
-		@include breakpoint(walker) {
-			float: right;
-			pointer-events: auto;
-		}
-	}
-
-	li {
-
-		@include breakpoint(walker) {
-			float: left;
-			width: auto;
+		.children,
+		.sub-menu {
+			display: none;
 		}
 	}
 
@@ -97,7 +75,7 @@
 		color: $white;
 		display: block;
 		line-height: 48px;
-		padding: 0 16px;
+		padding: 0 24px;
 		transition: all 0.3s $ease;
 		white-space: nowrap;
 
@@ -110,6 +88,72 @@
 
 		&:active {
 			background-color: $color-one-dark;
+		}
+	}
+
+	.site-nav-toggle {
+		background-color: $color-two;
+		color: $white;
+		height: 100%;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: all 0.2s $ease;
+		width: 48px;
+		z-index: 2;
+
+		&:after {
+			content: attr(count);
+			background-color: $color-two-dark;
+			border: 2px solid $white;
+			border-radius: 50%;
+			font-size: $font-size-smaller;
+			font-weight: 700;
+			height: 24px;
+			line-height: 20px;
+			margin-top: -12px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: 50%;
+			width: 24px;
+		}
+
+		&:hover {
+			background-color: $color-two-dark;
+		}
+
+		.icon {
+			margin-left: -10px;
+			width: 20px;
+		}
+	}
+
+	.menu {
+		font-size: 0;
+		text-align: left;
+
+		&.menu-primary {
+			display: inline-block;
+			white-space: nowrap;
+		}
+
+		&.menu-secondary {
+			position: absolute;
+			right: 0;
+			top: 100%;
+			transition: all 0.2s $ease;
+
+			li {
+				display: block;
+			}
+		}
+
+		li {
+			border-left: 1px solid $color-one;
+			display: inline-block;
+			font-size: $font-size;
 		}
 	}
 
@@ -132,28 +176,22 @@
 			.children,
 			.sub-menu {
 
-				@include breakpoint(walker) {
 					opacity: 1;
 					transform: translateY(0);
 					visibility: visible;
-				}
 			}
 		}
 	}
 
 	.children,
 	.sub-menu {
-
-		@include breakpoint(walker) {
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 100%;
-			transition: all 0.2s $ease;
-			transform: translateY(-1em);
-			visibility: hidden;
-			z-index: -1;
-		}
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		transition: all 0.2s $ease;
+		transform: translateY(-1em);
+		visibility: hidden;
 
 		li {
 			float: none;
@@ -191,16 +229,17 @@
 	.icon {
 		display: block;
 		height: 4px;
-		margin-top: -2px;
+		left: 50%;
+		margin: -2px 0 0 -12px;
 		position: absolute;
 		top: 50%;
 		transition: all 0.3s $ease;
-		width: 100%;
+		width: 24px;
 
 		&:before,
 		&:after {
 			content: "";
-			background-color: $color-one;
+			background-color: $white;
 			height: 4px;
 			left: 0;
 			position: absolute;
@@ -220,17 +259,9 @@
 	&:hover,
 	&:focus {
 		outline: 0;
-
-		.icon {
-
-			&:before,
-			&:after {
-				background-color: $color-one-light;
-			}
-		}
 	}
 
-	&.active {
+	&.is-active {
 
 		.icon {
 

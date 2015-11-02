@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19051",
+"creatorBuild": "19076",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -171,6 +171,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/admin.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/library\/bower_components\/animsition\/animsition.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/bower_components\/animsition\/animsition.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3312,6 +3321,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/library\/bower_components\/magnific-popup\/main.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/bower_components\/magnific-popup\/main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/library\/bower_components\/magnific-popup\/package.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -3671,6 +3689,15 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/library\/bower_components\/photo.swipe\/src\/default-skin.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/bower_components\/photo.swipe\/src\/default-skin.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/library\/bower_components\/photo.swipe\/src\/js\/core.js": {
 		"fileType": 64,
@@ -4749,17 +4776,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/library\/js\/libs\/responsive-nav.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/js\/libs\/responsive-nav.js",
-		"outputAbbreviatedPath": "\/library\/js\/libs\/responsive-nav.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/library\/js\/libs\/velocity.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -5011,6 +5027,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/scss\/_mixins.scss",
 		"outputAbbreviatedPath": "\/_mixins.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/library\/scss\/_mobile.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 8,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/_mobile.scss",
+		"outputAbbreviatedPath": "\/_mobile.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -5463,26 +5495,20 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/responsive-nav.js",
+			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.min.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.min.js",
+			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.ui.min.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.ui.min.js",
-			"position": 6,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/jquery.magnific-popup.min.js",
-			"position": 7,
+			"position": 6,
 			"type": 0
 			}
 		],
@@ -6073,7 +6099,7 @@
 	"markdownProcessHTML": 0,
 	"markdownRandomFootnoteNumbers": 0,
 	"markdownUseCompatibilityMode": 0,
-	"reloadFileURLs": 1,
+	"reloadFileURLs": 0,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
 	"sassAutoOutputPathRelativePath": "..\/..",
@@ -6118,7 +6144,9 @@
 	"typescriptAutoOutputPathStyle": 2,
 	"typescriptCreateDeclarationFile": 0,
 	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
 	"typescriptPreserveConstEnums": 0,

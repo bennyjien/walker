@@ -17,6 +17,12 @@
 
 	<body <?php body_class(); ?>>
 
+		<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
+			<div class="inner">
+				<?php walker_site_nav(); ?>
+			</div>
+		</nav>
+
 		<div id="site" class="site">
 
 			<!--[if lte IE 8]>
@@ -26,19 +32,19 @@
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
+					<a id="mobile-site-nav-toggle" class="mobile-site-nav-toggle site-nav-toggle" href="#">
+						<div class="icon"></div>
+					</a>
+
 					<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a>
 
-					<a href="#" id="site-nav-toggle" class="site-nav-toggle">
-						<span class="icon">Menu</span>
-					</a>
+					<nav id="site-nav" class="site-nav" role="navigation">
+						<button id="site-nav-toggle" class="site-nav-toggle is-invisible"><div class="icon"></div></button>
+						<?php walker_site_nav(); ?>
+						<ul class='menu menu-secondary is-invisible'></ul>
+					</nav>
 
 				</div>
 			</header>
-
-			<nav id="site-nav" class="site-nav" role="navigation">
-				<div class="inner wrap clearfix">
-					<?php walker_site_nav(); ?>
-				</div>
-			</nav>
 
 			<div class="site-content">
