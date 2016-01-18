@@ -20,15 +20,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_html\/page.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_html\/page.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_kit\/_footer.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -44,15 +35,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_kit\/_header.kit",
 		"outputAbbreviatedPath": "\/_html\/_header.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_kit\/_popup.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_kit\/_popup.kit",
-		"outputAbbreviatedPath": "\/_html\/_popup.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -89,15 +71,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_kit\/index.kit",
 		"outputAbbreviatedPath": "\/_html\/index.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_kit\/page.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_kit\/page.kit",
-		"outputAbbreviatedPath": "\/_html\/page.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -4754,28 +4727,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/library\/js\/libs\/photoswipe.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/js\/libs\/photoswipe.min.js",
-		"outputAbbreviatedPath": "\/library\/js\/libs\/photoswipe.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/library\/js\/libs\/photoswipe.ui.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/js\/libs\/photoswipe.ui.min.js",
-		"outputAbbreviatedPath": "\/library\/js\/libs\/photoswipe.ui.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/library\/js\/libs\/velocity.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -4793,6 +4744,17 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/library\/js\/libs\/velocity.ui.js",
 		"outputAbbreviatedPath": "\/library\/js\/libs\/velocity.ui.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/library\/js\/libs\/walker.tabs.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/js\/libs\/walker.tabs.js",
+		"outputAbbreviatedPath": "\/library\/js\/libs\/walker.tabs.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -5194,6 +5156,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/library\/scss\/_tab.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 8,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/_tab.scss",
+		"outputAbbreviatedPath": "\/_tab.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/library\/scss\/_table.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -5495,20 +5473,14 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.min.js",
+			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/walker.tabs.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/photoswipe.ui.min.js",
-			"position": 5,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/library\/js\/libs\/jquery.magnific-popup.min.js",
-			"position": 6,
+			"position": 5,
 			"type": 0
 			}
 		],

@@ -1,15 +1,51 @@
-/* Magnific Popup CSS */
-
 .mfp-bg {
 	background: $black;
 	height: 100%;
 	left: 0;
-	opacity: $opacity-highest;
+	opacity: $opacity-higher;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 1042;
+
+	&.mfp-animation {
+		opacity: 0;
+		transition: all 0.2s $ease;
+
+		&.mfp-ready {
+			opacity: $opacity-higher;
+		}
+
+		&.mfp-removing {
+			opacity: 0;
+		}
+	}
+}
+
+.mfp-animation {
+
+	.mfp-content {
+		opacity: 0;
+		transition: all 0.2s $ease;
+		transform: scale(0.8);
+	}
+
+	&.mfp-ready {
+
+		.mfp-content {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	&.mfp-removing {
+
+		.mfp-content {
+			opacity: 0;
+			transform: scale(0.8);
+		}
+	}
 }
 
 .mfp-wrap {
@@ -81,44 +117,6 @@
 
 	@include breakpoint(crawler) {
 		padding: 48px;
-	}
-}
-
-.mfp-animation {
-
-	&.mfp-bg {
-		opacity: 0;
-		transition: all 0.2s $ease;
-	}
-
-	.mfp-content {
-		opacity: 0;
-		transition: all 0.2s $ease;
-		transform: scale(0.8);
-	}
-
-	&.mfp-ready {
-
-		&.mfp-bg {
-			opacity: $opacity-highest;
-		}
-
-		.mfp-content {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-
-	&.mfp-removing {
-
-		&.mfp-bg {
-			opacity: 0;
-		}
-
-		.mfp-content {
-			opacity: 0;
-			transform: scale(0.8);
-		}
 	}
 }
 

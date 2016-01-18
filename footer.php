@@ -23,7 +23,6 @@
 			ga('send', 'pageview');
 			*/
 		</script>
-
 	</body>
 
 </html> <!-- Built with Walker -->

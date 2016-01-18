@@ -2,21 +2,20 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 	<head>
-
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+
 		<link rel="author" href="humans.txt" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
-
 	</head>
 
 	<body <?php body_class(); ?>>
-
 		<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
 			<div class="inner">
 				<?php walker_site_nav(); ?>

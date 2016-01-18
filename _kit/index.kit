@@ -1,6 +1,6 @@
 <!-- @import "variables"; -->
 <!-- $body: home -->
-<!-- $home-nav: current-menu-item menu-item -->
+<!-- $home-nav: is-selected-menu-item menu-item -->
 <!-- @import "header"; -->
 
 				<div class="home-page-content page-content">
@@ -8,44 +8,35 @@
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<p>Walker ready! <a class="mfp-inline-link" href="#popup">Pop Up!</a></p>
+							<p>Walker ready! <a class="mfp-link" href="#mfp-popup">Pop Up!</a></p>
 
-							<div class="pswp-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+							<div id="mfp-popup" class="mfp-inline mfp-hide">
+								<h2>Testing Pop Up</h2>
+								<p>Are you pop when you supposed to pip? Me too. Let's pop together and we shall get the greatest pop in the world.</p>
+							</div>
 
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
-										<img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image Description" />
-									</a>
-									<figcaption itemprop="caption description">
-										Image Caption
-										<span itemprop="copyrightHolder">(Photo: Ben)</span>
-									</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-										<img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image Description" />
-									</a>
-									<figcaption itemprop="caption description">
-										Image Caption
-										<span itemprop="copyrightHolder">(Photo: Ben)</span>
-									</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-								<a class="needsclick" href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-										<img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-									</a>
-									<figcaption itemprop="caption description">Image caption 3</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-										<img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-									</a>
-									<figcaption itemprop="caption description">Image caption 4</figcaption>
-								</figure>
-
+							<div class="tabs">
+								<nav class="tabs-nav">
+									<ul>
+										<li><a class="is-selected" href="#1">1</a></li>
+										<li><a href="#2">2</a></li>
+										<li><a href="#3">3</a></li>
+									</ul>
+								</nav>
+								<div class="tabs-content">
+									<div id="1" class="tab">
+										<h1>Tab #1</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet.</p>
+									</div>
+									<div id="2" class="tab is-hidden">
+										<h1>Tab #2</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad.</p>
+									</div>
+									<div id="3" class="tab is-hidden">
+										<h1>Tab #3</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem ipsa commodi quo ex excepturi. Mollitia a aliquid, eum, voluptates minima natus eligendi voluptatibus consequatur et nisi quasi alias sint.</p>
+									</div>
+								</div>
 							</div>
 
 						</div>

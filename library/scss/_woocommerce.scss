@@ -131,11 +131,11 @@
 	}
 
 	.woocommerce-error {
-		border-top: 2px solid $color-danger;
+		border-top: 2px solid $color-alert;
 
 		&:before {
 			content: "\00d7";
-			background-color: $color-danger;
+			background-color: $color-alert;
 			font-weight: 700;
 		}
 	}
@@ -189,7 +189,7 @@
 		}
 
 		.out-of-stock {
-			color: $color-danger;
+			color: $color-alert;
 		}
 
 		.images {
@@ -1128,7 +1128,7 @@
 
 		.remove {
 			border-radius: 100%;
-			color: $color-danger;
+			color: $color-alert;
 			display: block;
 			font-family: Arial;
 			font-size: 18px;
@@ -1139,7 +1139,7 @@
 			width: 16px;
 
 			&:hover {
-				background-color: $color-danger;
+				background-color: $color-alert;
 				color: $white;
 			}
 		}
@@ -1383,7 +1383,7 @@
 				.chosen-single,
 				.input-text,
 				select {
-					border-color: $color-danger;
+					border-color: $color-alert;
 				}
 			}
 
@@ -1405,7 +1405,7 @@
 
 			.required {
 				border: 0;
-				color: $color-danger;
+				color: $color-alert;
 				font-weight: 700;
 			}
 

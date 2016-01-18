@@ -1,0 +1,41 @@
+.tabs-nav {
+	box-shadow: inset 0 -1px 0 $color-light;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		background-color: $color-light;
+		border: 1px solid $color-light;
+		border-bottom: 0;
+		color: $white;
+		display: block;
+		padding: 8px 24px;
+		transition: all 0.2s $ease;
+
+		&:hover,
+		&:focus {
+			background-color: $color-medium;
+			border-color: $color-medium;
+			text-decoration: none;
+		}
+
+		&.is-selected {
+			background-color: $white;
+			border-color: $color-light;
+			color: $color-darker;
+		}
+	}
+}
+
+.tabs-content {
+	border: 1px solid $color-light;
+	border-top: 0;
+	overflow: hidden;
+	padding: 0 !important;
+}
+
+.tab {
+	padding: 24px;
+}

@@ -53,11 +53,7 @@
 	position: absolute;
 	user-select: none;
 
-	@include breakpoint(creeper) {
-		margin-right: 32px;
-	}
-
-	@include breakpoint(runner) {
+	@include breakpoint(walker) {
 		display: none;
 	}
 }
@@ -69,6 +65,11 @@
 		&:before {
 			opacity: $opacity-high;
 			z-index: 9;
+
+			@include breakpoint(walker) {
+				opacity: 0;
+				z-index: -1;
+			}
 		}
 	}
 

@@ -183,15 +183,15 @@ input[type="submit"] {
 	}
 
 	&.button-danger {
-		background-color: $color-danger;
+		background-color: $color-alert;
 
 		&:hover,
 		&:focus {
-			background-color: lighten($color-danger, $opacity-lowest-percent);
+			background-color: lighten($color-alert, $opacity-lowest-percent);
 		}
 
 		&:active {
-			background-color: darken($color-danger, $opacity-lowest-percent);
+			background-color: darken($color-alert, $opacity-lowest-percent);
 		}
 	}
 

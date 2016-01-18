@@ -6,6 +6,13 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.31 (Jan 18, 2016)
+- Add walker.tabs.js (based on organictabs.js)
+- Remove photoswipe.js
+- Remove instantclick on _footer.kit
+- Rename $color-danger to $color-alert
+- Kaizen: many bug fixes
+
 2.30 (Oct 29, 2015)
 - Add priority navigation
 - Add mobile navigation

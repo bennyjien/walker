@@ -2,23 +2,20 @@
 <html class="no-js" lang="en">
 
 	<head>
-
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Handcrafted by Benny Jien</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-		<link rel="author" href="humans.txt" />
+		<title>Walker | Handcrafted by Benny Jien</title>
 
+		<link rel="author" href="humans.txt" />
 		<link rel="stylesheet" href="../style.css">
 
 		<script src="../library/js/libs/modernizr.min.js"></script>
 		<script src="../library/js/libs/jquery.min.js"></script>
-
 	</head>
 
 	<body class="home">
-
 		<div id="site" class="site">
 
 			<!--[if lte IE 8]>
@@ -28,12 +25,16 @@
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
+					<a id="mobile-site-nav-toggle" class="mobile-site-nav-toggle site-nav-toggle" href="#">
+						<div class="icon"></div>
+					</a>
+
 					<a class="site-logo" href="index.html" rel="nofollow">Walker</a>
 
 					<nav id="site-nav" class="site-nav" role="navigation">
-						<button class="site-nav-toggle is-invisible"><div class="icon"></div></button>
+						<button id="site-nav-toggle" class="site-nav-toggle is-invisible"><div class="icon"></div></button>
 						<ul class="menu menu-primary">
-							<li class="current-menu-item menu-item"><a href="index.html">Home</a></li>
+							<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item"><a href="#">About Us</a></li>
 							<li class="menu-item"><a href="#">Contact Us</a></li>
 						</ul>
@@ -43,6 +44,16 @@
 				</div>
 			</header>
 
+			<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
+				<div class="inner">
+					<ul>
+						<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
+						<li class="menu-item"><a href="#">About Us</a></li>
+						<li class="menu-item"><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+
 			<div class="site-content">
 
 				<div class="home-page-content page-content">
@@ -50,44 +61,35 @@
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<p>Walker ready! <a class="mfp-inline-link" href="#popup">Pop Up!</a></p>
+							<p>Walker ready! <a class="mfp-link" href="#mfp-popup">Pop Up!</a></p>
 
-							<div class="pswp-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+							<div id="mfp-popup" class="mfp-inline mfp-hide">
+								<h2>Testing Pop Up</h2>
+								<p>Are you pop when you supposed to pip? Me too. Let's pop together and we shall get the greatest pop in the world.</p>
+							</div>
 
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
-										<img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image Description" />
-									</a>
-									<figcaption itemprop="caption description">
-										Image Caption
-										<span itemprop="copyrightHolder">(Photo: Ben)</span>
-									</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-										<img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image Description" />
-									</a>
-									<figcaption itemprop="caption description">
-										Image Caption
-										<span itemprop="copyrightHolder">(Photo: Ben)</span>
-									</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-								<a class="needsclick" href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-										<img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-									</a>
-									<figcaption itemprop="caption description">Image caption 3</figcaption>
-								</figure>
-
-								<figure itemscope itemtype="http://schema.org/ImageObject">
-									<a class="needsclick" href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-										<img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-									</a>
-									<figcaption itemprop="caption description">Image caption 4</figcaption>
-								</figure>
-
+							<div class="tabs">
+								<nav class="tabs-nav">
+									<ul>
+										<li><a class="is-selected" href="#1">1</a></li>
+										<li><a href="#2">2</a></li>
+										<li><a href="#3">3</a></li>
+									</ul>
+								</nav>
+								<div class="tabs-content">
+									<div id="1" class="tab">
+										<h1>Tab #1</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet.</p>
+									</div>
+									<div id="2" class="tab is-hidden">
+										<h1>Tab #2</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad.</p>
+									</div>
+									<div id="3" class="tab is-hidden">
+										<h1>Tab #3</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem ipsa commodi quo ex excepturi. Mollitia a aliquid, eum, voluptates minima natus eligendi voluptatibus consequatur et nisi quasi alias sint.</p>
+									</div>
+								</div>
 							</div>
 
 						</div>
@@ -115,57 +117,6 @@
 
 		</div> <!-- .site -->
 
-		<div id="popup" class="mfp-inline mfp-hide">
-			<h2>Testing Pop Up</h2>
-			<p>Are you pop when you supposed to pip? Me too. Let's pop together and we shall get the greatest pop in the world.</p>
-		</div>
-
-		<div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-			<div class="pswp__bg"></div>
-
-			<div class="pswp__scroll-wrap">
-				<div class="pswp__container">
-					<div class="pswp__item"></div>
-					<div class="pswp__item"></div>
-					<div class="pswp__item"></div>
-				</div>
-
-				<div class="pswp__ui pswp__ui--hidden">
-					<div class="pswp__top-bar">
-
-						<div class="pswp__counter"></div>
-
-						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-						<button class="pswp__button pswp__button--share" title="Share"></button>
-						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-						<div class="pswp__preloader">
-							<div class="pswp__preloader__icn">
-								<div class="pswp__preloader__cut">
-									<div class="pswp__preloader__donut"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-						<div class="pswp__share-tooltip"></div>
-					</div>
-
-					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-					<div class="pswp__caption">
-						<div class="pswp__caption__center">
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
 		<script src="../library/js/libs/library.min.js"></script>
 		<script src="../library/js/style.js"></script>
 		<script src="../library/js/scripts.js"></script>
@@ -181,9 +132,6 @@
 			ga('send', 'pageview');
 			*/
 		</script>
-
-		<script src="../library/js/libs/instantclick.min.js" data-no-instant></script>
-		<script data-no-instant>InstantClick.init();</script>
 
 	</body>
 
