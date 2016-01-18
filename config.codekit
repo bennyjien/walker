@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19076",
+"creatorBuild": "19102",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -4734,7 +4734,7 @@
 		},
 	"\/library\/js\/libs\/library.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/js\/libs\/library.min.js",
 		"outputAbbreviatedPath": "\/library\/js\/libs\/library.min.min.js",
@@ -4811,7 +4811,7 @@
 		},
 	"\/library\/js\/scripts.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/js\/scripts.min.js",
 		"outputAbbreviatedPath": "\/library\/js\/scripts.min.min.js",
@@ -5523,8 +5523,8 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "library",
-	"displayValue": "walker",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "walker.theme",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "\/_root\/apple-touch-icon-precomposed.png"
 	},
 "projectSettings": {
@@ -5618,8 +5618,16 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"no_plusplus": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"no_stand_alone_at": {
@@ -5628,6 +5636,10 @@
 			},
 		"no_tabs": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_throwing_strings": {
@@ -5670,8 +5682,8 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/walker.local",
-	"externalServerPreviewPathAddition": "",
+	"externalServerAddress": "http:\/\/walker.theme",
+	"externalServerPreviewPathAddition": "\/_html\/",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,
 	"hamlAutoOutputPathFilenamePattern": "*.html",
@@ -6159,6 +6171,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"bare-returns": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"booleans": {
 			"active": 1,
 			"flagValue": -1
@@ -6188,6 +6204,10 @@
 			"flagValue": -1
 			},
 		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6231,6 +6251,14 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -6243,8 +6271,16 @@
 			"active": 1,
 			"flagValue": 32000
 			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"properties": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"quote-keys": {

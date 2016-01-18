@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 	});
 
-	$body.on('click', function(e) {
+	$body.on('click touchstart', function(e) {
 		if(!$mobileSiteNav.is(e.target) && !$mobileSiteNavToggle.is(e.target) && $mobileSiteNav.has(e.target).length === 0 && $mobileSiteNavToggle.has(e.target).length === 0) {
 			$mobileSiteNavToggle.removeClass('is-active');
 			$mobileSiteNav.removeClass('is-active');
