@@ -16,35 +16,38 @@
 	</head>
 
 	<body class="<!-- $body -->">
-		<div id="site" class="site">
 
-			<!--[if lte IE 8]>
-				<p class="browse-happy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<![endif]-->
+		<div id="site" class="site">
 
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
-					<a id="mobile-site-nav-toggle" class="mobile-site-nav-toggle site-nav-toggle" href="#">
+					<a class="mobile-nav-toggle site-nav-toggle toggle toggle-soft" data-untoggle-duration="200" href="#mobile-nav" aria-label="menu" aria-controls="nagivation">
 						<div class="icon"></div>
 					</a>
 
 					<a class="site-logo" href="index.html" rel="nofollow">Walker</a>
 
 					<nav id="site-nav" class="site-nav" role="navigation">
-						<button id="site-nav-toggle" class="site-nav-toggle is-invisible"><div class="icon"></div></button>
+						<button id="site-nav-toggle" class="site-nav-toggle is-hidden" aria-label="menu" aria-controls="nagivation"><span class="icon"></span></button>
 						<ul class="menu menu-primary">
+							<li class="<!-- $home-nav -->"><a href="index.html">Home</a></li>
 							<li class="<!-- $home-nav -->"><a href="index.html">Home</a></li>
 							<li class="<!-- $about-nav -->"><a href="#">About Us</a></li>
 							<li class="<!-- $contact-nav -->"><a href="#">Contact Us</a></li>
+							<li class="<!-- $home-nav -->"><a href="index.html">Home</a></li>
+							<li class="<!-- $about-nav -->"><a href="#">About Us</a></li>
+							<li class="<!-- $contact-nav -->"><a href="#">Contact Us</a></li>
+							<li class="<!-- $home-nav -->"><a href="index.html">Home</a></li>
+							<li class="<!-- $about-nav -->"><a href="#">About Us</a></li>
 						</ul>
-						<ul class='menu menu-secondary is-invisible'></ul>
+						<ul class='menu menu-secondary is-hidden'></ul>
 					</nav>
 
 				</div>
 			</header>
 
-			<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
+			<nav id="mobile-nav" class="mobile-nav" role="navigation">
 				<div class="inner">
 					<ul>
 						<li class="<!-- $home-nav -->"><a href="index.html">Home</a></li>

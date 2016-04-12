@@ -10,8 +10,8 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class("home-post"); ?> role="article">
 
 								<header class="entry-header">
-									<h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-									<p class="entry-meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'walkertheme'), get_the_time('Y-m-d'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID')), get_the_category_list(', ')); ?></p>
+									<h1 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<p class="meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'walkertheme'), get_the_time('Y-m-d'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID')), get_the_category_list(', ')); ?></p>
 								</header>
 
 								<div class="entry-content clearfix">
@@ -25,7 +25,7 @@
 								</div>
 
 								<footer class="entry-footer">
-									<p class="entry-tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'walkertheme') . '</span> ', ', ', ''); ?></p>
+									<?php the_tags('<p class="tags"><span class="tags-title">' . __('Tags:', 'walkertheme') . '</span> ', ', ', '</p>'); ?>
 								</footer>
 
 							</article>
@@ -36,10 +36,10 @@
 
 							<?php else : ?>
 
-							<section class="missing-entry entry">
+							<section class="entry entry-missing">
 
 								<header class="entry-header">
-									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>
+									<h1 class="title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>
 								</header>
 
 								<div class="entry-content">

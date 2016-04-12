@@ -6,6 +6,43 @@ This starter theme is inspired by Mr. White's meth-cooking process — chemistry
 WALKER HISTORY
 ==============
 
+2.39 (Apr 2, 2016)
+- Remove .browse-happy
+- Rearrange some CSS
+
+2.38 (Mar 29, 2016)
+- Add .tooltip (with data-tooltip)
+
+2.37 (Mar 17, 2016)
+- Rewrite HTML structure
+- Rewrite style.js
+- walker.tabs.js: fix some bugs
+- style.css: fix nav bugs
+
+2.36 (Mar 10, 2016)
+- Realign style.css
+
+2.35 (Feb 23, 2016)
+- Fix variables and mixins weight
+
+2.34 (Feb 11, 2016)
+- Update normalize.css to 3.0.3
+- Update Font Awesome to 4.5.0
+- mixins.scss: Add font-size-big, font-size-bigger, and font-size-biggest
+- form.scss: Update
+- style.js: Add select function
+- style.js: Update toggle function (replace touchstart with touchend)
+- walker.tabs.js: Update & bug fixes
+- Kaizen
+
+2.33 (Feb 1, 2016)
+- Add mixin hidden
+- Rename .sr-only to .only-sr
+- Kaizen
+
+2.32 (Jan 22, 2016)
+- style.js: Add toggle function
+
 2.31 (Jan 18, 2016)
 - Add walker.tabs.js (based on organictabs.js)
 - Remove photoswipe.js

@@ -16,35 +16,38 @@
 	</head>
 
 	<body class="home">
-		<div id="site" class="site">
 
-			<!--[if lte IE 8]>
-				<p class="browse-happy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<![endif]-->
+		<div id="site" class="site">
 
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
-					<a id="mobile-site-nav-toggle" class="mobile-site-nav-toggle site-nav-toggle" href="#">
+					<a class="mobile-nav-toggle site-nav-toggle toggle toggle-soft" data-untoggle-duration="200" href="#mobile-nav" aria-label="menu" aria-controls="nagivation">
 						<div class="icon"></div>
 					</a>
 
 					<a class="site-logo" href="index.html" rel="nofollow">Walker</a>
 
 					<nav id="site-nav" class="site-nav" role="navigation">
-						<button id="site-nav-toggle" class="site-nav-toggle is-invisible"><div class="icon"></div></button>
+						<button id="site-nav-toggle" class="site-nav-toggle is-hidden" aria-label="menu" aria-controls="nagivation"><span class="icon"></span></button>
 						<ul class="menu menu-primary">
+							<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
 							<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item"><a href="#">About Us</a></li>
 							<li class="menu-item"><a href="#">Contact Us</a></li>
+							<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="#">About Us</a></li>
+							<li class="menu-item"><a href="#">Contact Us</a></li>
+							<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="#">About Us</a></li>
 						</ul>
-						<ul class='menu menu-secondary is-invisible'></ul>
+						<ul class='menu menu-secondary is-hidden'></ul>
 					</nav>
 
 				</div>
 			</header>
 
-			<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
+			<nav id="mobile-nav" class="mobile-nav" role="navigation">
 				<div class="inner">
 					<ul>
 						<li class="is-selected-menu-item menu-item"><a href="index.html">Home</a></li>
@@ -61,7 +64,9 @@
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<p>Walker ready! <a class="mfp-link" href="#mfp-popup">Pop Up!</a></p>
+							<p>Walker ready! <a href="#mfp-popup" class="mfp-link">Pop Up!</a></p>
+
+							<p><span data-tooltip="tooltipping" class="tooltip tooltip-right">Testing Tooltip</span> in the house.</p>
 
 							<div id="mfp-popup" class="mfp-inline mfp-hide">
 								<h2>Testing Pop Up</h2>
@@ -77,15 +82,15 @@
 									</ul>
 								</nav>
 								<div class="tabs-content">
-									<div id="1" class="tab">
+									<div id="1" class="tab is-selected">
 										<h1>Tab #1</h1>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet.</p>
+										<p><span class="tooltip" data-tooltip="You know Lorem already, don't you? Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, et.">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Dicta, amet.</p>
 									</div>
-									<div id="2" class="tab is-hidden">
+									<div id="2" class="tab">
 										<h1>Tab #2</h1>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad.</p>
 									</div>
-									<div id="3" class="tab is-hidden">
+									<div id="3" class="tab">
 										<h1>Tab #3</h1>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem ipsa commodi quo ex excepturi. Mollitia a aliquid, eum, voluptates minima natus eligendi voluptatibus consequatur et nisi quasi alias sint.</p>
 									</div>
@@ -94,7 +99,7 @@
 
 						</div>
 
-					<div id="sidebar" class="sidebar" role="complementary">
+					<div id="main-sidebar" class="main-sidebar" role="complementary">
 						<div class="inner clearfix">
 
 							<p>Sidebar ready, too!</p>
@@ -105,33 +110,21 @@
 					</div>
 				</div>
 
-				<footer class="site-footer" role="contentinfo">
-					<div class="inner wrap">
-
-						<p class="site-copyright">&copy; 2012–<script>document.write(new Date().getFullYear());</script>. Handcrafted by <a href="http://bennyjien.com/" rel="designer">Benny Jien</a>.</p>
-
-					</div>
-				</footer>
-
 			</div> <!-- .site-content -->
+
+			<footer class="site-footer" role="contentinfo">
+				<div class="inner wrap">
+
+					<p class="site-copyright">&copy; 2012–<script>document.write(new Date().getFullYear());</script>. Handcrafted by <a href="http://bennyjien.com/" rel="designer">Benny Jien</a>.</p>
+
+				</div>
+			</footer>
 
 		</div> <!-- .site -->
 
 		<script src="../library/js/libs/library.min.js"></script>
 		<script src="../library/js/style.js"></script>
 		<script src="../library/js/scripts.js"></script>
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-			/*
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-XXXXX-X');
-			ga('send', 'pageview');
-			*/
-		</script>
 
 	</body>
 

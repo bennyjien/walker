@@ -1,5 +1,5 @@
 .comments {
-	border-top: 1px solid $shade-lowest;
+	border-top: 1px solid $shade-10;
 	margin-top: 32px;
 	padding-top: 32px;
 }
@@ -10,7 +10,7 @@
 	padding: 0;
 
 	.comment {
-		background-color: $shade-lowest;
+		background-color: $shade-10;
 		margin-top: 1px;
 		padding: 16px;
 
@@ -19,7 +19,7 @@
 		}
 
 		&.bypostauthor {
-			background-color: $shade-high;
+			background-color: $shade-60;
 			color: $white;
 		}
 	}
@@ -31,15 +31,15 @@
 	}
 
 	.depth-2 {
-		background-color: $shade-lowest;
+		background-color: $shade-10;
 	}
 
 	.depth-3 {
-		background-color: $shade-lowest;
+		background-color: $shade-10;
 	}
 
 	.depth-4 {
-		background-color: $shade-lowest;
+		background-color: $shade-10;
 	}
 }
 
@@ -53,8 +53,8 @@
 	}
 
 	.comment-reply-link {
-		@include font-size-small;
-		background-color: $shade-medium;
+		@include font-size-400;
+		background-color: $shade-50;
 		color: $white;
 		display: block;
 		padding: 4px 16px;
@@ -62,7 +62,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: $shade-higher;
+			background-color: $shade-60;
 			text-decoration: none;
 		}
 	}
@@ -97,7 +97,7 @@
 	}
 
 	.comment-notes {
-		@include font-size-small;
+		@include font-size-400;
 		margin-bottom: 24px;
 	}
 

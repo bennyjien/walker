@@ -1,9 +1,9 @@
-<div id="sidebar" class="sidebar" role="complementary">
+<div id="main-sidebar" class="main-sidebar" role="complementary">
 	<div class="inner clearfix">
 
-		<?php if (is_active_sidebar('sidebar')) : ?>
+		<?php if (is_active_sidebar('main-sidebar')) : ?>
 
-			<?php dynamic_sidebar('sidebar'); ?>
+			<?php dynamic_sidebar('main-sidebar'); ?>
 
 		<?php else : ?>
 

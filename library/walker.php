@@ -154,8 +154,8 @@ function walker_site_nav() {
 function walker_register_sidebars() {
 
 	register_sidebar(array(
-		'name' => __('Sidebar', 'walkertheme'),
-		'id' => 'sidebar',
+		'name' => __('Main Sidebar', 'walkertheme'),
+		'id' => 'main-sidebar',
 		'description' => __('The first (primary) sidebar.', 'walkertheme'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
@@ -206,7 +206,7 @@ function walker_pagination($before = '', $after = '') {
 	echo '</li>';
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
-			echo '<li><span class="current">'.$i.'<span class="sr-only">(current)</span></span></li>';
+			echo '<li><span class="current">'.$i.'<span class="only-sr">(current)</span></span></li>';
 		} else {
 			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
 		}

@@ -60,10 +60,61 @@
 }
 
 
-// COLORS
+// OPACITY
 
-$white: 				#ffffff;
+$white: 				#FFFFFF;
 $black: 				#000000;
+
+$opacity-0: 			0;
+$opacity-10: 			0.08;
+$opacity-20: 			0.16;
+$opacity-30: 			0.24;
+$opacity-40: 			0.32;
+$opacity-50: 			0.48;
+$opacity-60: 			0.64;
+$opacity-70: 			0.72;
+$opacity-80: 			0.88;
+$opacity-90: 			0.96;
+$opacity-100: 			1;
+
+$opacity-0-percent: 	$opacity-0*100%;
+$opacity-10-percent: 	$opacity-10*100%;
+$opacity-20-percent: 	$opacity-20*100%;
+$opacity-30-percent: 	$opacity-30*100%;
+$opacity-40-percent: 	$opacity-40*100%;
+$opacity-50-percent: 	$opacity-50*100%;
+$opacity-60-percent: 	$opacity-60*100%;
+$opacity-70-percent: 	$opacity-70*100%;
+$opacity-80-percent: 	$opacity-80*100%;
+$opacity-90-percent: 	$opacity-90*100%;
+$opacity-100-percent: 	$opacity-100*100%;
+
+$tint-0: 				rgba($white, $opacity-0);
+$tint-10: 				rgba($white, $opacity-10);
+$tint-20: 				rgba($white, $opacity-20);
+$tint-30: 				rgba($white, $opacity-30);
+$tint-40: 				rgba($white, $opacity-40);
+$tint-50: 				rgba($white, $opacity-50);
+$tint-70: 				rgba($white, $opacity-70);
+$tint-60: 				rgba($white, $opacity-60);
+$tint-80: 				rgba($white, $opacity-80);
+$tint-90: 				rgba($white, $opacity-90);
+$tint-100: 				rgba($white, $opacity-100);
+
+$shade-0: 				rgba($black, $opacity-0);
+$shade-10: 				rgba($black, $opacity-10);
+$shade-20: 				rgba($black, $opacity-20);
+$shade-30: 				rgba($black, $opacity-30);
+$shade-40: 				rgba($black, $opacity-40);
+$shade-50: 				rgba($black, $opacity-50);
+$shade-60: 				rgba($black, $opacity-60);
+$shade-70: 				rgba($black, $opacity-70);
+$shade-80: 				rgba($black, $opacity-80);
+$shade-90: 				rgba($black, $opacity-90);
+$shade-100: 			rgba($black, $opacity-100);
+
+
+// COLORS
 
 $white-smoke: 			#f5f5f5;
 $solitude: 				#f0f2f5;
@@ -85,35 +136,41 @@ $denim: 				#116aad;
 $kelly-green: 			#27aa0b;
 $amber: 				#ffc000;
 
-$color-lightest: 		$white-smoke;
-$color-lighter: 		$solitude;
-$color-light: 			$gainsboro;
-$color-medium: 			$dark-grey;
-$color-dark: 			$eclipse;
-$color-darker: 			$ebony-clay;
-$color-darkest: 		$nero;
+$color-100: 			$white;
+$color-200: 			$white-smoke;
+$color-300: 			$solitude;
+$color-400: 			$gainsboro;
+$color-500: 			$dark-grey;
+$color-600: 			$eclipse;
+$color-700: 			$ebony-clay;
+$color-800: 			$nero;
+$color-900: 			$black;
 
-$color-one-light: 		$lime-green;
-$color-one: 			$forest-green;
-$color-one-dark: 		$green;
+$color-one-400: 		$lime-green;
+$color-one-500: 		$forest-green;
+$color-one-600: 		$green;
 
-$color-two-light: 		$crimson;
-$color-two: 			$torch-red;
-$color-two-dark: 		$free-speech-red;
+$color-two-400: 		$crimson;
+$color-two-500: 		$torch-red;
+$color-two-600: 		$free-speech-red;
 
-$color-info: 			$denim;
-$color-success: 		$kelly-green;
-$color-warning: 		$amber;
-$color-alert: 			$crimson;
+$color-info-500: 		$denim;
+$color-success-500: 	$kelly-green;
+$color-warning-500: 	$amber;
+$color-alert-500: 		$crimson;
 
-$color-viewport: 		$color-darker;
+$color-viewport: 		$color-700;
 $color-background: 		$white;
 
-$color-text: 			$color-darker;
-$color-text-light: 		$color-dark;
+$color-text: 			$color-700;
+$color-text-light: 		$color-600;
+$color-text-tint: 		$tint-50;
+$color-text-shade: 		$shade-50;
 
-$color-border: 			$color-light;
-$color-border-light: 	$color-lighter;
+$color-border: 			$color-400;
+$color-border-light: 	$color-300;
+$color-border-tint: 	$tint-10;
+$color-border-shade: 	$shade-10;
 
 $color-dribbble: 		#ea4c89;
 $color-facebook: 		#3b5998;
@@ -125,75 +182,38 @@ $color-twitter: 		#00aced;
 $color-youtube: 		#cd201f;
 
 
-// OPACITY
-
-$opacity-none: 				0;
-$opacity-lowest: 			0.08;
-$opacity-lower: 			0.16;
-$opacity-low: 				0.24;
-$opacity-medium: 			0.48;
-$opacity-high: 				0.64;
-$opacity-higher: 			0.88;
-$opacity-highest: 			0.96;
-$opacity-full: 				1;
-
-$opacity-none-percent: 		$opacity-none*100%;
-$opacity-lowest-percent: 	$opacity-lowest*100%;
-$opacity-lower-percent: 	$opacity-lower*100%;
-$opacity-low-percent: 		$opacity-low*100%;
-$opacity-medium-percent: 	$opacity-medium*100%;
-$opacity-high-percent: 		$opacity-high*100%;
-$opacity-higher-percent: 	$opacity-higher*100%;
-$opacity-highest-percent: 	$opacity-highest*100%;
-$opacity-full-percent: 		$opacity-full*100%;
-
-$tint-none: 			rgba($white, $opacity-none);
-$tint-lowest: 			rgba($white, $opacity-lowest);
-$tint-lower: 			rgba($white, $opacity-lower);
-$tint-low: 				rgba($white, $opacity-low);
-$tint-medium: 			rgba($white, $opacity-medium);
-$tint-high: 			rgba($white, $opacity-high);
-$tint-higher: 			rgba($white, $opacity-higher);
-$tint-highest: 			rgba($white, $opacity-highest);
-$tint-full: 			rgba($white, $opacity-full);
-
-$shade-none: 			rgba($black, $opacity-none);
-$shade-lowest: 			rgba($black, $opacity-lowest);
-$shade-lower: 			rgba($black, $opacity-lower);
-$shade-low: 			rgba($black, $opacity-low);
-$shade-medium: 			rgba($black, $opacity-medium);
-$shade-high: 			rgba($black, $opacity-high);
-$shade-higher: 			rgba($black, $opacity-higher);
-$shade-highest: 		rgba($black, $opacity-highest);
-$shade-full: 			rgba($black, $opacity-full);
-
-
 // TYPOGRAPHY
 
 $sans-serif: 			"Helvetica Neue", sans-serif;
 $serif: 				Georgia, serif;
 $monospace: 			Menlo, Monaco, Consolas, "Courier New", monospace;
 
-$font-size: 			16px;
-$line-height: 			1.5;
+$font-size-100: 		11px;
+$line-height-100: 		1.454545455;
 
-$font-size-lead: 		18px;
-$line-height-lead: 		1.333333333;
+$font-size-200: 		12px;
+$line-height-200: 		1.333333333;
 
-$font-size-jumbo: 		48px;
-$line-height-jumbo: 	1.166666667;
+$font-size-300: 		13px;
+$line-height-300: 		1.384615385;
 
-$font-size-small: 		14px;
-$line-height-small: 	1.428571429;
+$font-size-400: 		14px;
+$line-height-400: 		1.428571429;
 
-$font-size-smaller: 	13px;
-$line-height-smaller: 	1.384615385;
+$font-size-500: 		16px;
+$line-height-500: 		1.5;
 
-$font-size-smallest: 	12px;
-$line-height-smallest: 	1.333333333;
+$font-size-600: 		18px;
+$line-height-600: 		1.333333333;
 
-$font-size-micro: 		11px;
-$line-height-micro: 	1.454545455;
+$font-size-700: 		20px;
+$line-height-700: 		1.2;
+
+$font-size-800: 		24px;
+$line-height-800: 		1.166666667;
+
+$font-size-900: 		48px;
+$line-height-900: 		1.166666667;
 
 $font-size-h1: 			36px;
 $line-height-h1: 		1.111111111;
@@ -202,7 +222,7 @@ $font-size-h2: 			30px;
 $line-height-h2: 		1.2;
 
 $font-size-h3: 			24px;
-$line-height-h3: 		1.333333333;
+$line-height-h3: 		1.166666667;
 
 $font-size-h4: 			20px;
 $line-height-h4: 		1.2;
@@ -235,6 +255,17 @@ $bounce: 	cubic-bezier(0.5, 0.15, 0.25, 1.25);
 	}
 }
 
+@mixin hidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
 @mixin ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -244,42 +275,68 @@ $bounce: 	cubic-bezier(0.5, 0.15, 0.25, 1.25);
 @mixin hyphenate {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
-	hyphens: auto;
+	//hyphens: auto;
 }
 
-@mixin font-size {
-	font-size: $font-size;
-	line-height: $line-height;
+@mixin sticky {
+	position: sticky;
+	top: 0;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
 }
 
-@mixin font-size-lead {
-	font-size: $font-size-lead;
-	line-height: $line-height-lead;
+@mixin font-size-100 {
+	font-size: $font-size-100;
+	line-height: $line-height-100;
 }
 
-@mixin font-size-jumbo {
-	font-size: $font-size-jumbo;
-	line-height: $line-height-jumbo;
+@mixin font-size-200 {
+	font-size: $font-size-200;
+	line-height: $line-height-200;
 }
 
-@mixin font-size-small {
-	font-size: $font-size-small;
-	line-height: $line-height-small;
+@mixin font-size-300 {
+	font-size: $font-size-300;
+	line-height: $line-height-300;
 }
 
-@mixin font-size-smaller {
-	font-size: $font-size-smaller;
-	line-height: $line-height-smaller;
+@mixin font-size-400 {
+	font-size: $font-size-400;
+	line-height: $line-height-400;
 }
 
-@mixin font-size-smallest {
-	font-size: $font-size-smallest;
-	line-height: $line-height-smallest;
+@mixin font-size-500 {
+	font-size: $font-size-500;
+	line-height: $line-height-500;
 }
 
-@mixin font-size-micro {
-	font-size: $font-size-micro;
-	line-height: $line-height-micro;
+@mixin font-size-600 {
+	font-size: $font-size-600;
+	line-height: $line-height-600;
+}
+
+@mixin font-size-700 {
+	font-size: $font-size-700;
+	line-height: $line-height-700;
+}
+
+@mixin font-size-800 {
+	font-size: $font-size-800;
+	line-height: $line-height-800;
+}
+
+@mixin font-size-900 {
+	font-size: $font-size-h1;
+	line-height: $line-height-h1;
+
+	@include breakpoint(crawler) {
+		font-size: $font-size-900;
+		line-height: $line-height-900;
+	}
 }
 
 @mixin font-size-h1 {
@@ -313,8 +370,13 @@ $bounce: 	cubic-bezier(0.5, 0.15, 0.25, 1.25);
 }
 
 @mixin font-size-h3 {
-	font-size: $font-size-h3;
-	line-height: $line-height-h3;
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
+
+	@include breakpoint(creeper) {
+		font-size: $font-size-h3;
+		line-height: $line-height-h3;
+	}
 }
 
 @mixin font-size-h4 {

@@ -1,3 +1,5 @@
+// element selector
+
 * {
 	box-sizing: inherit;
 
@@ -44,71 +46,4 @@ img {
 	height: auto;
 	max-width: 100%;
 	vertical-align: middle;
-}
-
-.image {
-	background-color: $color-lightest;
-	overflow: hidden;
-	padding-bottom: 100%;
-	position: relative;
-
-	img {
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-}
-
-.wrap {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 448px;
-	padding: 0 16px;
-
-	@include breakpoint(creeper) {
-		max-width: 1120px;
-		padding: 0 32px;
-	}
-
-	@include breakpoint(jumper) {
-		max-width: 1280px;
-		padding: 0 48px;
-	}
-}
-
-.browse-happy {
-	background: $color-lighter;
-	color: $color-dark;
-	margin: 0;
-	padding: 16px;
-	text-align: center;
-
-	a {
-		color: $color-darker;
-		font-weight: 700;
-	}
-}
-
-.clearfix {
-
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
-
-	&:after {
-		clear: both;
-	}
-}
-
-.hyphenate {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	hyphens: auto;
-}
-
-.sticky {
-	display: block;
 }

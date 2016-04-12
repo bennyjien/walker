@@ -1,15 +1,16 @@
 .entry-header {
 	margin-bottom: 24px;
-}
 
-.entry-title {
-	margin-bottom: 4px;
-}
+	.title {
+		margin-bottom: 4px;
+	}
 
-.entry-meta {
-	@include font-size-small;
-	color: $shade-medium;
-	margin: 0;
+	.meta {
+		@include font-size-400;
+		color: $shade-50;
+		margin: 0;
+	}
+
 }
 
 .entry-content {
@@ -68,14 +69,14 @@
 	}
 
 	.wp-caption {
-		background-color: $color-lighter;
+		background-color: $color-300;
 		margin-bottom: 24px;
 		padding: 5px;
 		text-align: center;
 	}
 
 	.wp-caption-text {
-		background-color: $color-lighter;
+		background-color: $color-300;
 		margin: 0;
 		padding: 8px 12px;
 	}
@@ -163,7 +164,7 @@
 	}
 
 	.gallery-caption {
-		background-color: $shade-lowest;
+		background-color: $shade-10;
 		bottom: 1px;
 		left: 1px;
 		position: absolute;

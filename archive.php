@@ -5,8 +5,8 @@
 
 						<div class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<div class="main-header">
-								<h1 class="main-title">
+							<header class="main-header">
+								<h1 class="title">
 									<?php
 										if (is_category()) :
 											printf(__('Category: %s', 'walkertheme'), '<span>' . single_cat_title('', false) . '</span>');
@@ -77,7 +77,7 @@
 
 									endif;
 								?>
-							</div>
+							</header>
 
 							<div class="main-content">
 
@@ -86,8 +86,8 @@
 								<article id="post-<?php the_ID(); ?>" <?php post_class("archive-post"); ?>>
 
 									<header class="entry-header">
-										<h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-										<p class="entry-meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'walkertheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID')), get_the_category_list(', ')); ?></p>
+										<h1 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+										<p class="meta"><?php printf(__('Posted on <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'walkertheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID')), get_the_category_list(', ')); ?></p>
 									</header>
 
 									<div class="entry-excerpt clearfix">
@@ -105,10 +105,10 @@
 
 							<?php else : ?>
 
-							<section class="missing-entry entry">
+							<section class="entry entry-missing">
 
 								<header class="entry-header">
-									<h1 class="entry-title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>
+									<h1 class="title"><?php _e("Oops, Post Not Found!", "walkertheme"); ?></h1>
 								</header>
 
 								<div class="entry-content">

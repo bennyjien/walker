@@ -16,22 +16,13 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<nav id="mobile-site-nav" class="mobile-site-nav" role="navigation">
-			<div class="inner">
-				<?php walker_site_nav(); ?>
-			</div>
-		</nav>
 
 		<div id="site" class="site">
-
-			<!--[if lte IE 8]>
-				<p class="browse-happy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<![endif]-->
 
 			<header class="site-header" role="banner">
 				<div class="inner wrap clearfix">
 
-					<a id="mobile-site-nav-toggle" class="mobile-site-nav-toggle site-nav-toggle" href="#">
+					<a class="mobile-nav-toggle site-nav-toggle toggle toggle-soft" data-untoggle-duration="200" href="#mobile-nav" aria-label="menu" aria-controls="nagivation">
 						<div class="icon"></div>
 					</a>
 
@@ -45,5 +36,11 @@
 
 				</div>
 			</header>
+
+			<nav id="mobile-nav" class="mobile-nav" role="navigation">
+				<div class="inner">
+					<?php walker_site_nav(); ?>
+				</div>
+			</nav>
 
 			<div class="site-content">

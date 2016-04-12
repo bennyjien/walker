@@ -1,9 +1,9 @@
 html {
-	font-size: $font-size;
+	font-size: $font-size-500;
 }
 
 body {
-	@include font-size;
+	@include font-size-500;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	color: $color-text;
@@ -11,7 +11,7 @@ body {
 }
 
 ol, ul, dl,
-p, address, blockquote, figure, pre, table, hr {
+p, address, blockquote, figure, pre, table {
 	margin: 0 0 24px;
 
 	&:last-child {
@@ -59,16 +59,16 @@ h6 {
 }
 
 a {
-	color: $color-one;
+	color: $color-one-500;
 	text-decoration: none;
 
 	&:visited {
-		color: $color-one;
+		color: $color-one-500;
 	}
 
 	&:hover,
 	&:focus {
-		color: $color-one-light;
+		color: $color-one-400;
 		outline: 0;
 		text-decoration: underline;
 	}
@@ -98,8 +98,8 @@ dd {
 }
 
 blockquote {
-	@include font-size-lead;
-	border-left: 4px solid $shade-lowest;
+	@include font-size-600;
+	border-left: 4px solid $shade-10;
 	margin-left: 0;
 	padding: 12px 24px;
 
@@ -110,7 +110,7 @@ blockquote {
 	footer,
 	small,
 	.small {
-		@include font-size-small;
+		@include font-size-400;
 		color: $color-text-light;
 		display: block;
 
@@ -137,29 +137,29 @@ samp {
 }
 
 code {
-	@include font-size-small;
-	background-color: $shade-lowest;
+	@include font-size-400;
+	background-color: $shade-10;
 	padding: 2px 4px;
 }
 
 kbd {
-	@include font-size-small;
-	background-color: $color-dark;
+	@include font-size-400;
+	background-color: $color-600;
 	border-radius: 3px;
 	color: $white;
 	padding: 2px 4px;
 
 	kbd {
-		@include font-size;
+		@include font-size-500;
 		font-weight: 700;
 		padding: 0;
 	}
 }
 
 pre {
-	@include font-size-small;
-	background-color: $shade-lowest;
-	border: 1px solid $shade-lowest;
+	@include font-size-400;
+	background-color: $shade-10;
+	border: 1px solid $shade-10;
 	border-radius: 3px;
 	display: block;
 	padding: 12px;
@@ -177,12 +177,13 @@ pre {
 }
 
 small {
-	@include font-size-small;
+	@include font-size-400;
 }
 
 hr {
-	background-color: $shade-lowest;
+	background-color: $shade-10;
 	border: 0;
 	height: 2px;
+	margin: 24px 0;
 	width: 100%;
 }

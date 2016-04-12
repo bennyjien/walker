@@ -5,7 +5,7 @@ table {
 	width: 100%;
 
 	caption {
-		color: $color-dark;
+		color: $color-600;
 		padding-top: 4px;
 		padding-bottom: 4px;
 		text-align: left;
@@ -35,19 +35,6 @@ table {
 	> thead > tr > th {
 		vertical-align: bottom;
 		border-bottom: 2px solid $color-border;
-	}
-
-	> caption + thead,
-	> colgroup + thead,
-	> thead:first-child {
-
-		> tr:first-child {
-
-			> th,
-			> td {
-				border-top: 0;
-			}
-		}
 	}
 
 	> tbody + tbody {

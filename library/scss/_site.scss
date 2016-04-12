@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	overflow: hidden;
 	position: relative;
 
 	&:before {
@@ -22,7 +21,7 @@
 
 .site-header {
 	background-color: $white;
-	border-bottom: 1px solid $shade-lowest;
+	border-bottom: 1px solid $shade-10;
 	flex: 0 0 auto;
 	position: relative;
 	width: 100%;
@@ -35,7 +34,7 @@
 }
 
 .site-logo {
-	color: $shade-lowest;
+	color: $shade-10;
 	display: block;
 	flex: 0 0 auto;
 	font-size: $font-size-h2;
@@ -48,7 +47,7 @@
 
 	&:hover,
 	&:focus {
-		color: $color-one;
+		color: $color-one-500;
 		text-decoration: none;
 	}
 }
@@ -58,6 +57,7 @@
 	flex: 1 1 auto;
 	position: relative;
 	text-align: right;
+	width: calc(100% - 160px);
 
 	@include breakpoint(walker) {
 		display: block;
@@ -72,7 +72,7 @@
 	}
 
 	a {
-		background-color: $color-one;
+		background-color: $color-one-500;
 		color: $white;
 		display: block;
 		line-height: 48px;
@@ -82,18 +82,18 @@
 
 		&:hover,
 		&:focus {
-			background-color: $color-one-light;
+			background-color: $color-one-400;
 			color: $white;
 			text-decoration: none;
 		}
 
 		&:active {
-			background-color: $color-one-dark;
+			background-color: $color-one-600;
 		}
 	}
 
 	.site-nav-toggle {
-		background-color: $color-two;
+		background-color: $color-two-500;
 		color: $white;
 		display: none;
 		height: 100%;
@@ -111,10 +111,10 @@
 
 		&:after {
 			content: attr(count);
-			background-color: $color-two-dark;
+			background-color: $color-two-600;
 			border: 2px solid $white;
 			border-radius: 50%;
-			font-size: $font-size-smaller;
+			font-size: $font-size-300;
 			font-weight: 700;
 			height: 24px;
 			line-height: 20px;
@@ -127,7 +127,7 @@
 		}
 
 		&:hover {
-			background-color: $color-two-dark;
+			background-color: $color-two-600;
 		}
 
 		.icon {
@@ -149,7 +149,6 @@
 			position: absolute;
 			right: 0;
 			top: 100%;
-			transition: all 0.2s $ease;
 
 			li {
 				display: block;
@@ -157,9 +156,9 @@
 		}
 
 		li {
-			border-left: 1px solid $color-one;
+			border-left: 1px solid $color-one-500;
 			display: inline-block;
-			font-size: $font-size;
+			font-size: $font-size-500;
 		}
 	}
 
@@ -169,7 +168,7 @@
 	.current_page_item {
 
 		> a {
-			background-color: $color-one-dark;
+			background-color: $color-one-600;
 		}
 	}
 
@@ -279,16 +278,15 @@
 }
 
 .site-content {
-	display: flex;
-	flex-direction: column;
 	flex: 1 0 auto;
 	position: relative;
 	z-index: 3;
 }
 
 .site-footer {
-	background-color: $color-darker;
+	background-color: $color-700;
 	color: $white;
+	flex: 0 0 auto;
 	position: relative;
 	transition: all 0.3s $ease;
 	width: 100%;
@@ -305,6 +303,6 @@
 }
 
 .site-copyright {
-	@include font-size-smallest;
+	@include font-size-200;
 	margin: 0;
 }

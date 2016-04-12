@@ -1,13 +1,13 @@
 .tabs-nav {
-	box-shadow: inset 0 -1px 0 $color-light;
+	box-shadow: inset 0 -1px 0 $color-400;
 
 	li {
 		display: inline-block;
 	}
 
 	a {
-		background-color: $color-light;
-		border: 1px solid $color-light;
+		background-color: $color-400;
+		border: 1px solid $color-400;
 		border-bottom: 0;
 		color: $white;
 		display: block;
@@ -16,26 +16,31 @@
 
 		&:hover,
 		&:focus {
-			background-color: $color-medium;
-			border-color: $color-medium;
+			background-color: $color-500;
+			border-color: $color-500;
 			text-decoration: none;
 		}
 
 		&.is-selected {
 			background-color: $white;
-			border-color: $color-light;
-			color: $color-darker;
+			border-color: $color-400;
+			color: $color-700;
 		}
 	}
 }
 
 .tabs-content {
-	border: 1px solid $color-light;
+	border: 1px solid $color-400;
 	border-top: 0;
 	overflow: hidden;
 	padding: 0 !important;
 }
 
 .tab {
+	display: none;
 	padding: 24px;
+
+	&.is-selected {
+		display: block;
+	}
 }

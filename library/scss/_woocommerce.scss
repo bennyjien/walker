@@ -25,7 +25,7 @@
 }
 
 .demo_store {
-	background-color: $color-one;
+	background-color: $color-one-500;
 	color: $white;
 	left: 0;
 	margin: 0;
@@ -78,8 +78,8 @@
 	.woocommerce-message {
 		@include clearfix;
 		background: $white;
-		box-shadow: 0 1px 2px $shade-lower;
-		color: $shade-medium;
+		box-shadow: 0 1px 2px $shade-20;
+		color: $shade-50;
 		list-style: none;
 		margin: 0 0 24px;
 		padding: 16px 16px 16px 64px;
@@ -111,50 +111,50 @@
 	}
 
 	.woocommerce-message {
-		border-top: 2px solid $color-success;
+		border-top: 2px solid $color-success-500;
 
 		&:before {
 			content: "\2713";
-			background-color: $color-success;
+			background-color: $color-success-500;
 		}
 	}
 
 	.woocommerce-info {
-		border-top: 2px solid $color-dark;
+		border-top: 2px solid $color-600;
 
 		&:before {
 			content: "i";
-			background-color: $color-dark;
+			background-color: $color-600;
 			font-family: $serif;
 			font-style: italic;
 		}
 	}
 
 	.woocommerce-error {
-		border-top: 2px solid $color-alert;
+		border-top: 2px solid $color-alert-500;
 
 		&:before {
 			content: "\00d7";
-			background-color: $color-alert;
+			background-color: $color-alert-500;
 			font-weight: 700;
 		}
 	}
 
 	.note {
-		@include font-size-smallest;
-		color: $shade-medium;
+		@include font-size-200;
+		color: $shade-50;
 		display: block;
 		margin-top: 24px;
 	}
 
 	.woocommerce-breadcrumb {
 		@include clearfix;
-		@include font-size-smallest;
-		color: $shade-medium;
+		@include font-size-200;
+		color: $shade-50;
 		margin: 0 0 3px;
 
 		a {
-			color: $shade-higher;
+			color: $shade-60;
 		}
 	}
 
@@ -170,7 +170,7 @@
 		}
 
 		.price {
-			color: $color-one;
+			color: $color-one-500;
 
 			ins {
 				background: inherit;
@@ -178,25 +178,25 @@
 			}
 
 			del {
-				@include font-size-smallest;
-				color: $shade-lower;
+				@include font-size-200;
+				color: $shade-20;
 			}
 		}
 
 		.stock {
-			@include font-size-smallest;
-			color: $color-success;
+			@include font-size-200;
+			color: $color-success-500;
 		}
 
 		.out-of-stock {
-			color: $color-alert;
+			color: $color-alert-500;
 		}
 
 		.images {
 			margin-bottom: 48px;
 
 			img {
-				box-shadow: inset 0 0 0 1px $shade-lowest;
+				box-shadow: inset 0 0 0 1px $shade-10;
 				display: block;
 				padding: 1px;
 				transition: all 0.2s $ease;
@@ -245,7 +245,7 @@
 
 				&:before {
 					content: "";
-					border-bottom: 1px solid $shade-lowest;
+					border-bottom: 1px solid $shade-10;
 					bottom: 0;
 					left: 0;
 					position: absolute;
@@ -254,8 +254,8 @@
 				}
 
 				li {
-					background-color: $shade-lowest;
-					border: 1px solid $shade-lowest;
+					background-color: $shade-10;
+					border: 1px solid $shade-10;
 					border-bottom: 0;
 					border-top-left-radius: 4px;
 					border-top-right-radius: 4px;
@@ -269,17 +269,17 @@
 						z-index: 2;
 
 						a {
-							color: $shade-higher;
+							color: $shade-60;
 
 							&:hover {
-								color: $shade-higher;
+								color: $shade-60;
 							}
 						}
 					}
 
 					a {
-						@include font-size-smallest;
-						color: $shade-higher;
+						@include font-size-200;
+						color: $shade-60;
 						display: inline-block;
 						font-weight: 700;
 						outline: none;
@@ -288,7 +288,7 @@
 						transition: all 0.2s $ease;
 
 						&:hover {
-							color: $shade-medium;
+							color: $shade-50;
 						}
 					}
 				}
@@ -365,7 +365,7 @@
 				}
 
 				.reset_variations {
-					@include font-size-smallest;
+					@include font-size-200;
 				}
 			}
 
@@ -397,20 +397,20 @@
 	.product_meta {
 
 		> span {
-			@include font-size-smallest;
-			color: $shade-medium;
+			@include font-size-200;
+			color: $shade-50;
 			display: block;
 
 			a,
 			span {
-				color: $shade-higher;
+				color: $shade-60;
 				font-weight: 700;
 			}
 		}
 	}
 
 	.onsale {
-		background-color: $color-one;
+		background-color: $color-one-500;
 		border-radius: 100%;
 		color: $white;
 		font-size: 12px;
@@ -442,13 +442,13 @@
 			}
 
 			h3 {
-				@include font-size;
+				@include font-size-500;
 				color: $color-text;
 				margin: 0 0 6px;
 
 				.count {
 					background-color: transparent;
-					color: $shade-medium;
+					color: $shade-50;
 				}
 			}
 
@@ -459,12 +459,12 @@
 					text-decoration: none;
 
 					img {
-						box-shadow: inset 0 0 0 1px $shade-lowest, 0 2px 4px $shade-lowest;
+						box-shadow: inset 0 0 0 1px $shade-10, 0 2px 4px $shade-10;
 					}
 				}
 
 				img {
-					box-shadow: inset 0 0 0 1px $shade-lowest;
+					box-shadow: inset 0 0 0 1px $shade-10;
 					display: block;
 					margin: 0 0 12px;
 					padding: 1px;
@@ -475,7 +475,7 @@
 				.star-rating {
 
 					span {
-						color: $color-one;
+						color: $color-one-500;
 					}
 				}
 			}
@@ -485,15 +485,15 @@
 			}
 
 			.price {
-				color: $color-one;
+				color: $color-one-500;
 				display: block;
 				font-weight: 400;
 				margin-bottom: 8px;
 
 				.from {
-					@include font-size-smallest;
+					@include font-size-200;
 					text-transform: uppercase;
-					color: $shade-medium;
+					color: $shade-50;
 				}
 			}
 		}
@@ -519,41 +519,41 @@
 	#content .button,
 	#respond #submit,
 	.button {
-		background-color: $color-dark;
+		background-color: $color-600;
 
 		&:hover,
 		&:focus {
-			background-color: $color-medium;
+			background-color: $color-500;
 		}
 
 		&:active {
-			background-color: $color-darker;
+			background-color: $color-700;
 		}
 
 		&.add_to_cart_button {
-			background-color: $color-one;
+			background-color: $color-one-500;
 
 			&:hover,
 			&:focus {
-				background-color: $color-one-light;
+				background-color: $color-one-400;
 			}
 
 			&:active {
-				background-color: $color-one-dark;
+				background-color: $color-one-600;
 			}
 		}
 
 		&.alt,
 		&.checkout {
-			background-color: $color-dark;
+			background-color: $color-600;
 
 			&:hover,
 			&:focus {
-				background-color: $color-medium;
+				background-color: $color-500;
 			}
 
 			&:active {
-				background-color: $color-darker;
+				background-color: $color-700;
 			}
 		}
 
@@ -562,7 +562,7 @@
 			&:before {
 				content: "";
 				bottom: 0;
-				background: url("../../plugins/woocommerce/assets/images/ajax-loader.gif") center no-repeat $tint-higher;
+				background: url("../../plugins/woocommerce/assets/images/ajax-loader.gif") center no-repeat $tint-60;
 				left: 0;
 				position: absolute;
 				right: 0;
@@ -574,7 +574,7 @@
 
 			&:before {
 				content: "\e017";
-				color: $shade-medium;
+				color: $shade-50;
 				font-family: WooCommerce;
 				position: absolute;
 				right: -24px;
@@ -585,8 +585,8 @@
 
 		&.disabled,
 		&:disabled {
-			background-color: $color-lighter;
-			color: $color-dark;
+			background-color: $color-300;
+			color: $color-600;
 			cursor: not-allowed;
 		}
 	}
@@ -599,7 +599,7 @@
 	}
 
 	.added_to_cart {
-		@include font-size-smallest;
+		@include font-size-200;
 		display: block;
 		font-weight: 700;
 		margin-top: 6px;
@@ -614,10 +614,10 @@
 
 		.qty {
 			-moz-appearance: textfield;
-			border: 1px solid $shade-lowest;
+			border: 1px solid $shade-10;
 			border-right: 0;
 			border-radius: 2px 0 0 2px;
-			box-shadow: inset 0 0 2px $shade-lowest;
+			box-shadow: inset 0 0 2px $shade-10;
 			float: left;
 			font-weight: 700;
 			height: 32px;
@@ -628,10 +628,10 @@
 
 		.minus,
 		.plus {
-			background-color: $color-lighter;
-			border: 1px solid $shade-lowest;
+			background-color: $color-300;
+			border: 1px solid $shade-10;
 			border-radius: 0 2px 2px 0;
-			color: $shade-medium;
+			color: $shade-50;
 			cursor: pointer;
 			display: block;
 			font-size: 12px;
@@ -648,7 +648,7 @@
 			width: 24px;
 
 			&:hover {
-				background: lighten($color-lighter, 4%);
+				background: lighten($color-300, 4%);
 			}
 		}
 
@@ -671,13 +671,13 @@
 		h2 {
 
 			small {
-				@include font-size-smallest;
-				color: $shade-medium;
+				@include font-size-200;
+				color: $shade-50;
 				float: right;
 				margin: 8px 0 0;
 
 				a {
-					color: $shade-higher;
+					color: $shade-60;
 					text-decoration: none;
 				}
 			}
@@ -716,13 +716,13 @@
 					position: relative;
 
 					.meta {
-						@include font-size-smallest;
-						color: $shade-medium;
+						@include font-size-200;
+						color: $shade-50;
 					}
 
 					.avatar {
-						background-color: $color-lighter;
-						border: 1px solid $shade-medium;
+						background-color: $color-300;
+						border: 1px solid $shade-50;
 						height: auto;
 						float: left;
 						left: 0;
@@ -733,12 +733,12 @@
 
 					.comment-text {
 						@include clearfix;
-						border: 1px solid $shade-lowest;
+						border: 1px solid $shade-10;
 						margin: 0 0 0 48px;
 						padding: 16px;
 
 						.meta {
-							@include font-size-smallest;
+							@include font-size-200;
 						}
 					}
 				}
@@ -753,7 +753,7 @@
 				}
 
 				#respond {
-					border: 1px solid $shade-lowest;
+					border: 1px solid $shade-10;
 					margin: 16px 0 0 48px;
 					padding: 16px;
 				}
@@ -762,7 +762,7 @@
 	}
 
 	#review_form_wrapper {
-		border-top: 1px solid $shade-lowest;
+		border-top: 1px solid $shade-10;
 		margin-top: 24px;
 		padding-top: 24px;
 	}
@@ -778,7 +778,7 @@
 
 		&:before {
 			content: "\73\73\73\73\73";
-			color: $shade-lower;
+			color: $shade-20;
 			float: left;
 			left: 0;
 			position: absolute;
@@ -857,7 +857,7 @@
 	}
 
 	.stars {
-		@include font-size;
+		@include font-size-500;
 		position: relative;
 
 		a {
@@ -875,7 +875,7 @@
 			&.star-3,
 			&.star-4,
 			&.star-5 {
-				border-right: 1px solid $shade-lowest;
+				border-right: 1px solid $shade-10;
 
 				&:after {
 					font-family: WooCommerce;
@@ -971,13 +971,13 @@
 
 	.shop_attributes {
 		border: 0;
-		border-top: 1px dotted $shade-lowest;
+		border-top: 1px dotted $shade-10;
 		margin-bottom: 24px;
 		width: 100%;
 
 		th {
 			border-top: 0;
-			border-bottom: 1px dotted $shade-lowest;
+			border-bottom: 1px dotted $shade-10;
 			font-weight: 700;
 			margin: 0;
 			padding: 8px;
@@ -986,7 +986,7 @@
 
 		td {
 			border-top: 0;
-			border-bottom: 1px dotted $shade-lowest;
+			border-bottom: 1px dotted $shade-10;
 			font-style: italic;
 			margin: 0;
 			padding: 0;
@@ -1001,13 +1001,13 @@
 
 			td,
 			th {
-				background-color: $shade-lower;
+				background-color: $shade-20;
 			}
 		}
 	}
 
 	.shop_table {
-		border: 1px solid $shade-lowest;
+		border: 1px solid $shade-10;
 		border-collapse: separate;
 		margin: 0 0 24px 0;
 		text-align: left;
@@ -1022,7 +1022,7 @@
 		}
 
 		td {
-			border-top: 1px solid $shade-lowest;
+			border-top: 1px solid $shade-10;
 			padding: 8px;
 			vertical-align: middle;
 
@@ -1035,14 +1035,14 @@
 
 			td,
 			th {
-				border-top: 1px solid $shade-lowest;
+				border-top: 1px solid $shade-10;
 				font-weight: 700;
 			}
 		}
 	}
 
 	.my_account_orders {
-		@include font-size-smallest;
+		@include font-size-200;
 
 		td,
 		th {
@@ -1096,7 +1096,7 @@
 		}
 
 		.backorder_notification {
-			@include font-size-smallest;
+			@include font-size-200;
 		}
 	}
 
@@ -1128,7 +1128,7 @@
 
 		.remove {
 			border-radius: 100%;
-			color: $color-alert;
+			color: $color-alert-500;
 			display: block;
 			font-family: Arial;
 			font-size: 18px;
@@ -1139,7 +1139,7 @@
 			width: 16px;
 
 			&:hover {
-				background-color: $color-alert;
+				background-color: $color-alert-500;
 				color: $white;
 			}
 		}
@@ -1166,7 +1166,7 @@
 		li {
 
 			+ li {
-				border-top: 1px solid $shade-lowest;
+				border-top: 1px solid $shade-10;
 				margin-top: 12px;
 				padding-top: 12px;
 			}
@@ -1177,7 +1177,7 @@
 			}
 
 			img {
-				box-shadow: inset 0 0 0 1px $shade-lowest;
+				box-shadow: inset 0 0 0 1px $shade-10;
 				display: none;
 				float: right;
 				margin-left: 8px;
@@ -1191,7 +1191,7 @@
 
 			dl {
 				@include clearfix;
-				border-left: 2px solid $shade-lowest;
+				border-left: 2px solid $shade-10;
 				margin: 0;
 				padding-left: 16px;
 
@@ -1224,7 +1224,7 @@
 	&.widget_shopping_cart {
 
 		.total {
-			border-top: 3px double $shade-lower;
+			border-top: 3px double $shade-20;
 			margin-top: 12px;
 			padding-top: 12px;
 
@@ -1290,8 +1290,8 @@
 				margin: 0;
 
 				small {
-					@include font-size-smallest;
-					color: $shade-medium;
+					@include font-size-200;
+					color: $shade-50;
 				}
 			}
 
@@ -1319,7 +1319,7 @@
 				}
 
 				small {
-					color: $shade-medium;
+					color: $shade-50;
 					display: block;
 				}
 
@@ -1332,7 +1332,7 @@
 
 				td,
 				th {
-					border-top: 1px solid $shade-lowest;
+					border-top: 1px solid $shade-10;
 				}
 			}
 
@@ -1346,7 +1346,7 @@
 			.discount {
 
 				td {
-					color: $color-success;
+					color: $color-success-500;
 				}
 			}
 		}
@@ -1367,7 +1367,7 @@
 		&.checkout_coupon,
 		&.login,
 		&.register {
-			border: 1px solid $shade-lowest;
+			border: 1px solid $shade-10;
 			margin: 0 0 24px;
 			padding: 24px;
 			text-align: left;
@@ -1383,7 +1383,7 @@
 				.chosen-single,
 				.input-text,
 				select {
-					border-color: $color-alert;
+					border-color: $color-alert-500;
 				}
 			}
 
@@ -1405,7 +1405,7 @@
 
 			.required {
 				border: 0;
-				color: $color-alert;
+				color: $color-alert-500;
 				font-weight: 700;
 			}
 
@@ -1472,8 +1472,8 @@
 		.create-account {
 
 			small {
-				@include font-size-smallest;
-				color: $shade-medium;
+				@include font-size-200;
+				color: $shade-50;
 				font-weight: 400;
 			}
 		}
@@ -1486,11 +1486,11 @@
 	}
 
 	#payment {
-		background: $shade-lowest;
+		background: $shade-10;
 
 		.payment_methods {
 			@include clearfix;
-			border-bottom: 1px solid $shade-lowest;
+			border-bottom: 1px solid $shade-10;
 			list-style: none;
 			margin: 0;
 			padding: 16px;
@@ -1516,9 +1516,9 @@
 		}
 
 		.payment_box {
-			@include font-size-smallest;
-			background-color: $tint-higher;
-			color: $shade-medium;
+			@include font-size-200;
+			background-color: $tint-60;
+			color: $shade-50;
 			margin: 16px 0;
 			padding: 24px;
 			position: relative;
@@ -1526,7 +1526,7 @@
 
 			&:after {
 				content: "";
-				border: 8px solid $tint-higher;
+				border: 8px solid $tint-60;
 				border-right-color: transparent;
 				border-left-color: transparent;
 				border-top-color: transparent;
@@ -1577,8 +1577,8 @@
 			}
 
 			.help {
-				@include font-size-smallest;
-				color: $shade-medium;
+				@include font-size-200;
+				color: $shade-50;
 			}
 
 			.form-row {
@@ -1594,8 +1594,8 @@
 		padding: 0;
 
 		li {
-			@include font-size-smallest;
-			border-right: 1px dashed $shade-lowest;
+			@include font-size-200;
+			border-right: 1px dashed $shade-10;
 			float: left;
 			margin-right: 24px;
 			text-transform: uppercase;
@@ -1606,7 +1606,7 @@
 			}
 
 			strong {
-				@include font-size;
+				@include font-size-500;
 				display: block;
 				text-transform: none;
 			}
@@ -1682,8 +1682,8 @@
 				&.chosen {
 
 					a {
-						background: $color-success;
-						border: 1px solid $shade-lower;
+						background: $color-success-500;
+						border: 1px solid $shade-20;
 						color: $white;
 						padding: 0 8px;
 						text-decoration: none;
@@ -1708,8 +1708,8 @@
 			}
 
 			.count {
-				@include font-size;
-				color: $shade-medium;
+				@include font-size-500;
+				color: $shade-50;
 				float: right;
 				margin-left: 8px;
 				padding: 1px 0;
@@ -1731,8 +1731,8 @@
 				padding: 0 1px 1px 0;
 
 				a {
-					background: $color-success;
-					border: 1px solid $shade-lower;
+					background: $color-success-500;
+					border: 1px solid $shade-20;
 					color: $white;
 					float: left;
 					padding: 0 6px;
@@ -1759,7 +1759,7 @@
 		}
 
 		.price_slider_amount {
-			@include font-size-smallest;
+			@include font-size-200;
 			text-align: right;
 
 			.button {
@@ -1768,8 +1768,8 @@
 		}
 
 		.ui-slider {
-			background-color: $shade-lowest;
-			box-shadow: 12px 0 0 $shade-lowest;
+			background-color: $shade-10;
+			box-shadow: 12px 0 0 $shade-10;
 			height: 8px;
 			margin: 3px 0 19px;
 			position: relative;
@@ -1778,8 +1778,8 @@
 			width: calc(100% - 12px);
 
 			.ui-slider-handle {
-				background: $color-success;
-				border: 1px solid $shade-lower;
+				background: $color-success-500;
+				border: 1px solid $shade-20;
 				border-radius: 16px;
 				cursor: pointer;
 				height: 12px;
@@ -1901,7 +1901,7 @@
 
 	.related,
 	.upsells.products {
-		border-top: 1px solid $shade-lowest;
+		border-top: 1px solid $shade-10;
 		margin-top: 48px;
 		padding-top: 48px;
 	}
@@ -2022,11 +2022,11 @@
 		}
 
 		.actions {
-			@include font-size-smallest;
+			@include font-size-200;
 			text-align: right;
 
 			@include breakpoint(walker) {
-				@include font-size;
+				@include font-size-500;
 			}
 
 			.coupon {

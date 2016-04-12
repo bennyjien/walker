@@ -15,7 +15,9 @@
 			var $tabsContent = base.$e.find('.tabs-content'),
 				currentTabHeight = $tabsContent.outerHeight();
 
-			if(base.options.animateHeight === true) {
+			$tabsContent.find('.tab:not(.is-selected)').hide();
+
+			if (base.options.animateHeight === true) {
 				$tabsContent.css('min-height', currentTabHeight);
 			}
 
@@ -25,21 +27,22 @@
 					$newTab = $(this),
 					tabID = $newTab.attr('href').substring(1);
 
-				if((tabID !== currentTab) && (base.$e.find(':animated').length === 0)) {
+				if ((tabID !== currentTab) && (base.$e.find(':animated').length === 0)) {
 					base.$e.find('#'+currentTab).velocity('fadeOut', base.options.speed, function() {
 						base.$e.find('.tabs-nav li a').removeClass('is-selected');
+						base.$e.find('.tabs-content .tab').removeClass('is-selected');
 						$newTab.addClass('is-selected');
-						base.$e.find('#'+tabID).velocity('fadeIn', {
+						base.$e.find('#'+tabID).addClass('is-selected').velocity('fadeIn', {
 							duration: base.options.speed,
 							complete: function() {
-								if(base.options.animateHeight === true) {
+								if (base.options.animateHeight === true) {
 									var newHeight = base.$e.find('#'+tabID).outerHeight();
 									$tabsContent.velocity({minHeight: newHeight}, base.options.speed, 'linear');
 								}
 							}
 						});
 
-						if(window.history && history.pushState) {
+						if (window.history && history.pushState) {
 							history.replaceState('', '', '?' + base.options.urlParameter + '=' + tabID);
 						}
 					});
@@ -54,14 +57,14 @@
 				function($0, $1, $2, $3) { queryString[$1] = $3; }
 			);
 
-			if(queryString[base.options.urlParameter]) {
+			if (queryString[base.options.urlParameter]) {
 				var currentTab = $("a[href='#" + queryString[base.options.urlParameter] + "']");
-				currentTab.closest('.tabs-nav').find('a').removeClass('is-selected').end().next('.tabs-content').find('.tab').hide();
+				currentTab.closest('.tabs-nav').find('a').removeClass('is-selected').end().next('.tabs-content').find('.tab').removeClass('is-selected').hide();
 				currentTab.addClass('is-selected');
-				$('#' + queryString[base.options.urlParameter]).velocity('fadeIn', {
+				$('#' + queryString[base.options.urlParameter]).addClass('is-selected').velocity('fadeIn', {
 					duration: base.options.speed,
 					complete: function() {
-						if(base.options.animateHeight === true) {
+						if (base.options.animateHeight === true) {
 							var newHeight = $(this).outerHeight();
 							$tabsContent.velocity({minHeight: newHeight}, base.options.speed, 'linear');
 						}

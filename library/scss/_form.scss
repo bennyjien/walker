@@ -1,25 +1,19 @@
 fieldset {
-	border: 0;
-	margin: 0;
+	border: 1px solid $color-border;
+	margin: 0 0 24px;
 	min-width: 0;
-	padding: 0;
+	padding: 16px 24px 24px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 legend {
 	@include font-size-h5;
-	border: 0;
-	border-bottom: 1px solid $color-border;
-	color: $color-medium;
-	display: block;
-	margin-bottom: 24px;
-	padding: 0;
-	width: 100%;
-}
-
-label {
-	display: inline-block;
-	margin-bottom: 4px;
-	max-width: 100%;
+	color: $color-text-light;
+	margin-left: -8px;
+	padding: 0 8px;
 }
 
 input[type="search"] {
@@ -28,13 +22,23 @@ input[type="search"] {
 
 input[type="radio"],
 input[type="checkbox"] {
+	cursor: pointer;
 	margin: 4px 0 0;
 	margin-top: 1px \9;
 	line-height: normal;
-}
+	vertical-align: baseline;
 
-input[type="file"] {
-	display: block;
+	+ label {
+		cursor: pointer;
+	}
+
+	+ .label-control {
+		display: inline-block;
+		font-weight: 400;
+		padding-left: 2px;
+		vertical-align: top;
+		width: calc(100% - 24px);
+	}
 }
 
 input[type="range"] {
@@ -54,16 +58,16 @@ select,
 textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	border: 1px solid $shade-lower;
+	border: 1px solid $shade-20;
 	border-radius: 0;
-	box-shadow: inset 0 0 4px $shade-lowest;
+	box-shadow: inset 0 0 4px $shade-10;
 	line-height: inherit;
 	max-width: 100%;
 	padding: 4px 8px;
 	transition: all 0.2s $ease;
 
 	&:focus {
-		border-color: $shade-lower;
+		border-color: $shade-20;
 		box-shadow: none;
 		outline: 0;
 	}
@@ -76,6 +80,7 @@ textarea {
 textarea {
 	height: 80px;
 	resize: vertical;
+	transition: none;
 }
 
 select {
@@ -93,12 +98,12 @@ select {
 	}
 
 	&:hover {
-		border-color: $shade-lower;
+		border-color: $shade-20;
 		outline: 0;
 	}
 
 	&:disabled {
-		background-color: #DDDDDD;
+		background-color: $color-300;
 		cursor: default;
 	}
 
@@ -110,7 +115,7 @@ select {
 button,
 .button,
 input[type="submit"] {
-	background-color: $color-one;
+	background-color: $color-one-500;
 	border: 1px solid transparent;
 	border-radius: 0;
 	color: $white;
@@ -121,77 +126,82 @@ input[type="submit"] {
 	text-align: center;
 	transition: all 0.2s $ease;
 	vertical-align: middle;
+	white-space: nowrap;
 
 	&:hover,
 	&:focus {
-		background-color: $color-one-light;
+		background-color: $color-one-400;
 		outline: 0;
 		text-decoration: none;
 	}
 
 	&:active {
-		background-color: $color-one-dark;
+		background-color: $color-one-600;
 	}
 
 	&.button-small {
-		@include font-size-small;
+		@include font-size-400;
 	}
 
 	&.button-large {
-		@include font-size-lead;
+		@include font-size-600;
+		font-weight: 700;
+	}
+
+	&.button-strong {
 		font-weight: 700;
 	}
 
 	&.button-alt {
-		background-color: $color-two;
-		color: $color-darker;
+		background-color: $color-two-500;
+		color: $color-700;
 
 		&:hover,
 		&:focus {
-			background-color: $color-two-light;
+			background-color: $color-two-400;
 		}
 
 		&:active {
-			background-color: $color-two-dark;
+			background-color: $color-two-600;
 		}
 	}
 
 	&.button-gray {
-		background-color: $color-dark;
+		background-color: $color-600;
 
 		&:hover,
 		&:focus {
-			background-color: $color-darker;
+			background-color: $color-700;
 		}
 
 		&:active {
-			background-color: $color-darkest;
+			background-color: $color-800;
 		}
 	}
 
 	&.button-success {
-		background-color: $color-success;
+		background-color: $color-success-500;
 
 		&:hover,
 		&:focus {
-			background-color: lighten($color-success, $opacity-lowest-percent);
+			background-color: lighten($color-success-500, $opacity-10-percent);
 		}
 
 		&:active {
-			background-color: darken($color-success, $opacity-lowest-percent);
+			background-color: darken($color-success-500, $opacity-10-percent);
 		}
 	}
 
 	&.button-danger {
-		background-color: $color-alert;
+		background-color: $color-alert-500;
 
 		&:hover,
 		&:focus {
-			background-color: lighten($color-alert, $opacity-lowest-percent);
+			background-color: lighten($color-alert-500, $opacity-10-percent);
 		}
 
 		&:active {
-			background-color: darken($color-alert, $opacity-lowest-percent);
+			background-color: darken($color-alert-500, $opacity-10-percent);
 		}
 	}
 
@@ -209,33 +219,52 @@ input[type="submit"] {
 .form-groups,
 .form-group {
 	margin-bottom: 12px;
+	position: relative;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
-
-	.form-control {
-		display: block;
-		width: 100%;
-	}
 }
 
-.input-group {
-	font-size: 0;
+.form-groups {
+	display: flex;
+	flex-wrap: wrap;
 
-	> * {
-		font-size: $font-size;
-	}
-
-	.form-control {
-		display: inline-block;
-		margin-right: 8px;
-		width: 50%;
-		width: calc(50% - 4px);
+	.form-group {
+		flex: 1 1 0;
+		margin-bottom: 0;
+		margin-right: 12px;
 
 		&:last-child {
 			margin-right: 0;
 		}
+
+		&.form-group-radio,
+		&.form-group-checkbox {
+			flex: 0 1 auto;
+			margin-right: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.form-group {
+
+	&.form-group-right {
+		text-align: right;
+	}
+
+	.label-control {
+		display: inline-block;
+		margin-bottom: 4px;
+	}
+
+	.input-control {
+		display: block;
+		width: 100%;
 	}
 }
 
@@ -243,8 +272,7 @@ input[type="submit"] {
 
 	.form-group {
 
-		> label,
-		> .label {
+		.label-control {
 			color: $color-text-light;
 			display: inline-block;
 			font-weight: 700;
@@ -253,37 +281,10 @@ input[type="submit"] {
 			width: 200px;
 		}
 
-		.help {
-			color: $color-text-light;
-			font-size: $font-size-small;
-			line-height: $line-height-small;
-			margin-left: 2px;
-		}
-
-		.form-control {
+		.input-control {
 			display: inline-block;
 			vertical-align: top;
 			width: calc(100% - 206px);
-		}
-
-		.checkbox,
-		.radio {
-
-			label {
-				display: block;
-			}
-		}
-
-		button,
-		.button {
-
-			&:first-child {
-				margin-left: 206px;
-			}
-		}
-
-		.button-link {
-			margin-left: 8px;
 		}
 	}
 }

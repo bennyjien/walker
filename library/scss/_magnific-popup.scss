@@ -2,7 +2,7 @@
 	background: $black;
 	height: 100%;
 	left: 0;
-	opacity: $opacity-higher;
+	opacity: $opacity-60;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
@@ -14,7 +14,7 @@
 		transition: all 0.2s $ease;
 
 		&.mfp-ready {
-			opacity: $opacity-higher;
+			opacity: $opacity-60;
 		}
 
 		&.mfp-removing {
@@ -172,7 +172,7 @@
 }
 
 .mfp-preloader {
-	color: $color-dark;
+	color: $color-600;
 	left: 8px;
 	margin-top: -0.8em;
 	position: absolute;
@@ -186,7 +186,7 @@
 .mfp-preloader {
 
 	a {
-		color: $color-dark;
+		color: $color-600;
 
 		&:hover {
 			color: $white;
@@ -229,13 +229,13 @@ button::-moz-focus-inner {
 
 .mfp-close {
 	background-color: transparent;
-	color: $color-one;
+	color: $color-one-500;
 	font-family: Arial;
 	font-style: normal;
 	font-size: 36px;
 	height: 1em;
 	line-height: 1em;
-	opacity: $opacity-higher;
+	opacity: $opacity-60;
 	padding: 0;
 	position: absolute;
 	right: 0;
@@ -247,7 +247,7 @@ button::-moz-focus-inner {
 	&:hover,
 	&:focus {
 		background-color: transparent;
-		color: $color-one;
+		color: $color-one-500;
 		opacity: 1;
 	}
 }
@@ -262,8 +262,8 @@ button::-moz-focus-inner {
 }
 
 .mfp-counter {
-	@include font-size-smallest;
-	color: $tint-medium;
+	@include font-size-200;
+	color: $tint-50;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -275,7 +275,7 @@ button::-moz-focus-inner {
 	height: 100px;
 	margin: 0;
 	margin-top: -50px;
-	opacity: $opacity-higher;
+	opacity: $opacity-60;
 	padding: 0;
 	position: absolute;
 	top: 50%;
@@ -308,7 +308,7 @@ button::-moz-focus-inner {
 
 	&:before,
 	.mfp-b {
-		border-right: 16px solid $color-one;
+		border-right: 16px solid $color-one-500;
 		margin-left: 32px;
 	}
 }
@@ -318,7 +318,7 @@ button::-moz-focus-inner {
 
 	&:before,
 	.mfp-b {
-		border-left: 16px solid $color-one;
+		border-left: 16px solid $color-one-500;
 		margin-left: 40px;
 	}
 }
@@ -346,7 +346,7 @@ button::-moz-focus-inner {
 
 	iframe {
 		background: $black;
-		box-shadow: 0 0 8px $shade-medium;
+		box-shadow: 0 0 8px $shade-50;
 		display: block;
 		height: 100%;
 		left: 0;
@@ -371,9 +371,9 @@ button::-moz-focus-inner {
 
 	&:after {
 		content: "";
-		background: $color-darker;
+		background: $color-700;
 		bottom: 40px;
-		box-shadow: 0 0 8px $shade-medium;
+		box-shadow: 0 0 8px $shade-50;
 		display: block;
 		height: auto;
 		left: 0;
@@ -385,8 +385,8 @@ button::-moz-focus-inner {
 	}
 
 	small {
-		@include font-size-smallest;
-		color: $color-lighter;
+		@include font-size-200;
+		color: $color-300;
 		display: block;
 	}
 
@@ -447,11 +447,11 @@ button::-moz-focus-inner {
 	}
 
 	.mfp-title {
-		color: $color-darker;
+		color: $color-700;
 	}
 
 	.mfp-counter {
-		color: $color-dark;
+		color: $color-600;
 		right: 10px;
 		top: 4px;
 	}

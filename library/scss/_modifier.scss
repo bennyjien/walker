@@ -1,3 +1,5 @@
+// .only-* and .is-*
+
 .only-mobile {
 
 	@include breakpoint(walker) {
@@ -5,16 +7,8 @@
 	}
 }
 
+.only-sr,
 .is-hidden {
-	display: none;
-}
-
-.is-invisible {
-	opacity: 0;
-	visibility: hidden;
-}
-
-.sr-only {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
 	height: 1px;
@@ -28,26 +22,13 @@
 .is-loading {
 	position: relative;
 
-	&:before {
-		content: "";
-		display: block;
-		background-color: $black;
-		bottom: 0;
-		left: 0;
-		opacity: 0.8;
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 1;
-	}
-
 	&:after {
 		content: "";
 		animation: walker-spin 1.5s infinite linear;
-		border-left: 4px solid $shade-lower;
-		border-bottom: 4px solid $shade-lower;
-		border-right: 4px solid $shade-lower;
-		border-top: 4px solid $color-one;
+		border-left: 4px solid $shade-20;
+		border-bottom: 4px solid $shade-20;
+		border-right: 4px solid $shade-20;
+		border-top: 4px solid $color-one-500;
 		border-radius: 100%;
 		display: block;
 		height: 32px;
@@ -60,11 +41,29 @@
 		z-index: 2;
 	}
 
-	&.no-overlay {
+	&.is-loading-overlay {
 
 		&:before {
-			content: none;
-			display: none;
+			content: "";
+			display: block;
+			background-color: $white;
+			bottom: 0;
+			left: 0;
+			opacity: $opacity-60;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 8;
+		}
+	}
+
+	&.is-loading-small {
+
+		&:after {
+			border-width: 3px;
+			height: 16px;
+			margin: -8px 0 0 -8px;
+			width: 16px;
 		}
 	}
 }
